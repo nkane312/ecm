@@ -43,3 +43,6 @@ pscp.exe
 #MongoDB
 /MongoDB
 /mongodump
+
+#Images
+/appeal-images
