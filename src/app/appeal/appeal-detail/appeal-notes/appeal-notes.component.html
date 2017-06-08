@@ -1,0 +1,16 @@
+<div class="panel" [ngClass]="{'panel-primary': !changed, 'panel-warning': changed}">
+  <div class="panel-heading text-center" data-toggle="collapse" data-parent="#controls" data-target="#notesPanel">
+    <h2 class="panel-title">Notes&nbsp;&nbsp;<span class="glyphicon glyphicon-plus-sign"></span></h2>
+  </div>
+  <div class="panel-body" id="notesPanel" class="collapse in">
+    <div class="well" [ngClass]="{dirty: changed}" data-toggle="popover" data-placement="right" title="Notes/Special Instructions" data-content="Include any notes or special instructions here. <br><br>As an example you could inlcude the caption for our CAN images.">
+      <form #notesForm="ngForm" novalidate>
+        <div class="form-group">
+          <label for="notes">Notes/Special Instructions</label>
+          <ckeditor id="notes" [(ngModel)]="_notes" (change)="checkChanged()" name="notes"></ckeditor>
+        </div>
+        <button (click)="save()" class="btn btn-success">Save</button><button (click)="cancel()" class="btn btn-danger pull-right">Cancel</button>
+      </form>
+    </div>
+  </div>
+</div>

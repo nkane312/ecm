@@ -1,0 +1,57 @@
+<div *ngIf="info" class="panel" [ngClass]="{'panel-primary': !changed, 'panel-warning': changed}">
+  <div class="panel-heading text-center" data-toggle="collapse" data-parent="#controls" data-target="#infoPanel">
+    <h2 class="panel-title">eAppeal Info&nbsp;&nbsp;<span class="glyphicon glyphicon-envelope"></span></h2>
+  </div>
+  <div class="panel-body" id="infoPanel" class="collapse">
+    <div class="well" [ngClass]="{dirty: changed}">
+      <form #infoForm="ngForm" novalidate>
+        <div class="form-group" [class.has-error]="!name.valid && name.touched" data-toggle="popover" data-placement="right" title="eAppeal Name" data-content="This is the name of the eAppeal and will be used as the title for our internal records.">
+          <label for="appeal-name">eAppeal Name</label>
+          <input id="appeal-name" type="text" class="form-control" [(ngModel)]="info.name" (ngModelChange)="checkChanged()" #name="ngModel" name="name">
+        </div>
+        <div class="form-group" [class.has-error]="!campaign.valid && campaign.touched" data-toggle="popover" data-placement="right" title="Campaign" data-content="Select the eAppeal Campaign of the email here. <br><br>If you do not see the campaign you wish to use, you will have to create the campaign before you can create any emails for it.">
+          <label for="campaign">Campaign</label>
+          <select id="campaign" type="text" class="form-control" [ngModel]="info.campaign._id" (ngModelChange)="setCampaign($event)" (ngModelChange)="checkChanged()" #campaign name="campaign">
+            <option *ngFor="let c of campaigns | async" [ngValue]="c._id">{{c.name}}</option>
+          </select>
+        </div>
+        <div class="form-group" [class.has-error]="!template.valid && template.touched" data-toggle="popover" data-placement="right" title="Template" data-content="Select which eAppeal template you wish to use.">
+          <label for="template">Template</label>
+          <select id="template" type="text" class="form-control" [(ngModel)]="info.template" (ngModelChange)="checkChanged()" #template="ngModel" name="template">
+            <option *ngFor="let template of templates" [ngValue]="template.id">{{template.name}}</option>
+          </select>
+        </div>
+        <div class="form-group" [class.has-error]="!sender.valid && sender.touched" data-toggle="popover" data-placement="right" title="Sender Name" data-content="Include the Sender name here. <br><br>Such as 'Rabbi Yechiel Eckstein'.">
+          <label for="sender">Sender</label>
+          <input id="sender" type="text" class="form-control" [(ngModel)]="info.sender" (ngModelChange)="checkChanged()" #sender="ngModel" name="sender">
+        </div>
+        <div class="form-group" [class.has-error]="!senderAddress.valid && senderAddress.touched" data-toggle="popover" data-placement="right" title="Sender Email Address" data-content="Include the Sender name here. <br><br>Such as 'RabbiEckstein@ifcj.org'.">
+          <label for="sender-address">Sender Email Address</label>
+          <input id="sender-address" type="text" class="form-control" [(ngModel)]="info.senderAddress" (ngModelChange)="checkChanged()" #senderAddress="ngModel" name="senderAddress">
+        </div>
+        <div class="form-group" [class.has-error]="!subjectLine.valid && subjectLine.touched" data-toggle="popover" data-placement="right" title="Subject Line" data-content="Include the Subject Line of the email here.">
+          <label for="subject-line">Subject Line</label>
+          <input id="subject-line" type="text" class="form-control" [(ngModel)]="info.subjectLine" (ngModelChange)="checkChanged()" #subjectLine="ngModel" name="subjectLine">
+        </div>
+        <div class="form-group text-center" data-toggle="popover" data-placement="right" title="Send Date" data-content="Select the Date the email will send here.">
+          <div class="datepicker-wrapper">
+            <label for="send-date">Send Date</label>
+            <datepicker [(ngModel)]="info.sendDate" (ngModelChange)="checkChanged()" name="sendDate"></datepicker>
+          </div>
+        </div>
+        <div class="form-group text-center" data-toggle="popover" data-placement="right" title="Send Time" data-content="Select the Time the email will send here.">
+          <div class="datepicker-wrapper">
+            <label for="send-time">Send Time</label>
+            <timepicker class="text-center" [(ngModel)]="sendTime" (click)="changed=true" name="sendTime"></timepicker>
+          </div>
+        </div>
+        <div class="form-group text-center" [class.has-error]="!scheduled.valid && scheduled.touched" data-toggle="popover" data-placement="right" title="Scheduled" data-content="Check this box when the email is confirmed to be scheduled for send.">
+          <label for="send-date">Scheduled
+            <input type="checkbox" class="form-control" [(ngModel)]="info.scheduled" (ngModelChange)="checkChanged()" #scheduled="ngModel" name="scheduled" id="scheduled">
+          </label>
+        </div>
+        <button (click)="save()" class="btn btn-success">Save</button><button (click)="cancel()" class="btn btn-danger pull-right">Cancel</button>
+      </form>
+    </div>
+  </div>
+</div>

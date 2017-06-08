@@ -1,0 +1,14 @@
+<h2>Campaign List</h2>
+<table class="table table-striped">
+  <th>Campaign name</th><th>UTM code</th>
+  <tr *ngFor="let campaign of campaigns">
+    <td>{{ campaign.name }}</td>
+    <td>{{ campaign.utm }}</td>
+    <td><button [routerLink]="['/campaign', campaign._id]" class="btn btn-primary">Edit</button></td>
+    <td><button (click)="deleteCampaign(campaign._id)" class="btn btn-danger">Delete</button>
+  </tr>
+</table>
+<div *ngIf="errors">
+  <h2>errors</h2>
+  <pre>{{ errors }}</pre>
+</div>

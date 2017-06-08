@@ -1,0 +1,12 @@
+
+utm_campaign=2016-digital-calendar&
+s_src=EM1TL2&  (_S)
+s_subsrc=EAX1600XXEXC8&
+utm_medium=email&
+utm_source=eappeal&
+utm_content=cal-august- && (-rs || -reg) (-sus) (-d || -nd  || -md) && (html-text-link-2 || plain-text-link-2)
+
+Links
+BN - button | TL - text link | PH - photo link | VID - video link | AUD - audio link
+
+

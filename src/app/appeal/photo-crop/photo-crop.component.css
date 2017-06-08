@@ -1,0 +1,11 @@
+.add-image {
+  display:block;
+  margin:16px auto 16px auto;
+}
+.modal-dialog.modal-lg {
+  width:90%;
+}
+#image {
+  max-width:100%;
+  max-height:600px;
+}

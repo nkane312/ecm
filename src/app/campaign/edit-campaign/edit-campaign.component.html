@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-xs-12 col-sm-4 col-sm-offset-2 col-md-3 col-md-offset-3">
+    <form *ngIf="campaign" #campaignForm="ngForm" (ngSubmit)="updateCampaign();" novalidate>
+      <div class="form-group" [class.has-error]="!name.valid && name.touched">
+        <label for="campaign-name">Campaign name</label>
+        <input [(ngModel)]="campaign.name" #name="ngModel" name="name" class="form-control" id="campaign-name">
+      </div>
+      <div class="form-group" [class.has-error]="!utm.valid && utm.touched">
+        <label for="utm">UTM code</label>
+        <input [(ngModel)]="campaign.utm" #utm="ngModel" name="utm" class="form-control" id="utm">
+      </div>
+      <div class="form-group" [class.has-error]="!country.valid && country.touched">
+        <label for="country">Country</label>
+        <select [(ngModel)]="campaign.country" #country="ngModel" name="country" class="form-control" id="country">
+          <option *ngFor="let country of countries" [value]="country">{{country}}</option>
+        </select>
+      </div>
+      <div class="form-group" [class.has-error]="!templates.valid && templates.touched">
+        <h4>Templates</h4>
+        <div class="col-xs-12 col-md-4 text-center" *ngFor="let template of templates; let i = index;">
+          <label *ngIf="template.country === campaign.country"><input type="checkbox" (change)="selectTemplate(template)" class="form-control" [value]="template.id" [checked]="findTemplate(template) >= 0">{{template.name}}</label>
+        </div>
+      </div>
+      <div class="form-group text-center">
+        <button type="submit" class="btn btn-lg btn-primary" [class.disabled]="!campaignForm.valid">Save Campaign</button>
+      </div>
+    </form>
+  </div>
+</div>

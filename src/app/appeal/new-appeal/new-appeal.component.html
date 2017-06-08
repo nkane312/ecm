@@ -1,0 +1,51 @@
+<div class="row">
+  <div class="col-xs-12 col-md-4 col-md-offset-4">
+    <form #appealForm="ngForm" (ngSubmit)="appealSubmit()">
+      <div class="form-group" [class.has-error]="!name.valid && name.touched">
+        <label for="appeal-name">eAppeal name</label>
+        <input type="text" class="form-control" [(ngModel)]="info.name" #name="ngModel" name="name" id="appeal-name" placeholder="required" required>
+      </div>
+      <div class="form-group" [class.has-error]="!campaign.valid && campaign.touched">
+        <label for="campaign-name">Campaign</label>
+        <select class="form-control" [(ngModel)]="info.campaign" #campaign="ngModel" name="campaign" id="campaign-name" required>
+          <option selected disabled value="">required</option>
+          <option *ngFor=" let c of campaigns | async" [ngValue]="c">{{c.name}}</option>
+        </select>
+      </div>
+      <div *ngIf="info.campaign" class="form-group" [class.has-error]="!template.valid && template.touched">
+        <label for="template">Template</label>
+        <select class="form-control" [(ngModel)]="info.template" #template="ngModel" name="template" id="template" required>
+          <option selected disabled value="">required</option>
+          <option *ngFor=" let t of info.campaign.templates" [ngValue]="t.id">{{t.name}}</option>
+        </select>
+      </div>
+      <div class="form-group" [class.has-error]="!sender.valid && sender.touched">
+        <label for="sender-name">Sender name</label>
+        <input type="text" class="form-control" [(ngModel)]="info.sender" #sender="ngModel" name="sender" id="sender-name" placeholder="optional">
+      </div>
+      <div class="form-group" [class.has-error]="!senderAddress.valid && senderAddress.touched">
+        <label for="sender-email">Sender email address</label>
+        <input type="email" class="form-control" [(ngModel)]="info.senderAddress" #senderAddress="ngModel" name="senderAddress" id="sender-email" placeholder="optional">
+      </div>
+      <div class="form-group" [class.has-error]="!subjectLine.valid && subjectLine.touched">
+        <label for="subject-line">Subject line</label>
+        <input type="text" class="form-control" [(ngModel)]="info.subjectLine" #subjectLine="ngModel" name="subjectLine" id="subject-line" placeholder="optional">
+      </div>
+      <div class="form-group text-center" [class.has-error]="!sendDate.valid && sendDate.touched">
+        <div class="datepicker-wrapper">
+          <label for="sendDate">Send date (optional)</label>
+          <datepicker [(ngModel)]="info.sendDate" #sendDate="ngModel" name="sendDate" id="sendDate"></datepicker>
+        </div>
+      </div>
+      <div class="form-group text-center" [class.has-error]="!sendTime.valid && sendTime.touched">
+        <div class="datepicker-wrapper">
+          <label for="sendTime">Send time (optional)</label>
+          <timepicker [(ngModel)]="sendTime" name="sendTime" id="sendTime"></timepicker>
+        </div>
+      </div>
+      <div class="form-group text-center">
+        <button type="submit" class="btn btn-lg btn-primary" [class.disabled]="!appealForm.valid">Create eAppeal</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<form #loginForm="ngForm" (ngSubmit)="login(loginForm.value)" novalidate>
+  <div class="form-group">
+    <label for="loginEmail">Email address</label>
+    <input id="loginEmail" class="form-control" [(ngModel)]="loginEmail" type="text" name="loginEmail">
+  </div>
+  <div class="form-group">
+    <label for="loginEmail">Password</label>
+    <input id="loginEmail" class="form-control" [(ngModel)]="loginPassword" type="password" name="loginPassword">
+  </div>
+</form>

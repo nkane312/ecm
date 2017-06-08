@@ -1,0 +1,28 @@
+<h2>eAppeal List</h2>
+<table class="table table-striped">
+  <th *ngIf="!settings || (settings && settings.name)">Appeal name</th>
+  <th *ngIf="!settings || (settings && settings.campaign)">Campaign</th>
+  <th *ngIf="!settings || (settings && settings.sendDate)">Send Date</th>
+  <th *ngIf="!settings || (settings && settings.audience)">Audience</th>
+  <th *ngIf="!settings || (settings && settings.subsource)">Subsource</th>
+  <th *ngIf="!settings || (settings && settings.signoffs)">Signoffs</th>
+  <th *ngIf="!settings || (settings && settings.scheduled)">Scheduled</th>
+  <tr *ngFor="let appeal of appeals" [ngClass]="settings && (settings.active === appeal._id) ? 'success' : ''">
+    <td *ngIf="!settings || (settings && settings.name)">{{ appeal.info.name }}</td>
+    <td *ngIf="!settings || (settings && settings.campaign)">{{ appeal.info.hasOwnProperty('campaign') && appeal.info.campaign.hasOwnProperty('name') ? appeal.info.campaign.name : appeal.info.campaign }}</td>
+    <td *ngIf="!settings || (settings && settings.sendDate)">{{ appeal.info.sendDate | date }}</td>
+    <td *ngIf="!settings || (settings && settings.audience)">{{ appeal.codes.audience | uppercase }}</td>
+    <td *ngIf="!settings || (settings && settings.subsource)">{{ appeal.codes.s_subsrc }}</td>
+    <td *ngIf="!settings || (settings && settings.signoffs)">
+      <span *ngIf="appeal.signoffs.web" class="glyphicon glyphicon-globe text-success"></span><span *ngIf="!appeal.signoffs.web" class="glyphicon glyphicon-globe text-danger"></span>
+      <span *ngIf="appeal.signoffs.editor" class="glyphicon glyphicon-book text-success"></span><span *ngIf="!appeal.signoffs.editor" class="glyphicon glyphicon-book text-danger"></span>
+      <span *ngIf="appeal.signoffs.funDev" class="glyphicon glyphicon-usd text-success"></span><span *ngIf="!appeal.signoffs.funDev" class="glyphicon glyphicon-usd text-danger"></span></td>
+    <td *ngIf="!settings || (settings && settings.scheduled)"><span *ngIf="appeal.info.scheduled" class="glyphicon glyphicon-ok text-success"></span><span *ngIf="!appeal.info.scheduled" class="glyphicon glyphicon-alert text-danger"></span></td>
+    <td *ngIf="!settings || (settings && settings.edit)"><button [routerLink]="['/appeal', appeal._id, appeal.info.template]" class="btn btn-primary">Edit</button></td>
+    <td *ngIf="!settings || (settings && settings.delete)"><button (click)="deleteAppeal(appeal)" class="btn btn-danger">Delete</button></td>
+  </tr>
+</table>
+<div *ngIf="errors">
+  <h2>errors</h2>
+  <pre>{{ errors }}</pre>
+</div>

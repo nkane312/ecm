@@ -1,0 +1,28 @@
+<div class="row">
+  <div *ngIf="appeal?.info" class="col-xs-12 col-sm-6 col-md-3" id="controls">
+    <app-appeal-info [info]="appeal.info" (saved)="onInfoSaved($event)" (canceled)="onInfoCanceled($event)"></app-appeal-info>
+    <app-appeal-content 
+      [options]="options" 
+      [content]="appeal.content" 
+      (updated)="onContentUpdated($event)" 
+      (imageSaved)="onImageSaved($event)" 
+      (calloutSaved)="onCalloutSaved($event)" 
+      (saved)="onContentSaved($event)" 
+      (canceled)="onContentCanceled($event)">
+    </app-appeal-content>
+    <app-appeal-codes [codes]="appeal.codes" (saved)="onCodesSaved($event)" (canceled)="onCodesCanceled($event)"></app-appeal-codes>
+    <app-appeal-signoffs [signoffs]="appeal.signoffs" (saved)="onSignoffsSaved($event)" (canceled)="onSignoffsCanceled($event)"></app-appeal-signoffs>
+    <app-appeal-notes [notes]="appeal.notes" (saved)="onNotesSaved($event)" (canceled)="onNotesCanceled($event)"></app-appeal-notes>
+  </div>
+  <div class="col-xs-12 col-sm-6 col-md-9">
+    <div class="col-xs-12 col-sm-12 col-md-7">
+      <router-outlet></router-outlet>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-5">
+      <div class="text-right well">
+        <duplicate-appeal [appeal]="appeal" (groupEmitter)="onAppealDuplicated($event)"></duplicate-appeal>
+      </div>
+      <appeal-list-component [appeals]="relatedAppeals" [settings]="settings"></appeal-list-component>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,105 @@
+<button class="btn btn-primary add-image" (click)="showSettingsModal()">Add an image</button>
+<div bsModal #settingsModal="bs-modal" [config]="{backdrop: 'static'}" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" (click)="cancel()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title">Image settings</h3>
+      </div>
+      <div class="modal-body">
+        <p>
+          <label for="imageCredit">Image credit</label>
+          <input type="text" id="imageCredit" class="form-control" [(ngModel)]="imageMeta.credit" #image="ngModel" name="imageCredit">
+          <label for="imageCreditPlacement">Image credit placement</label>
+          <select id="imageCreditPlacement" class="form-control" [(ngModel)]="imageMeta.creditPlacement" #image="ngModel" name="imageCreditPlacement">
+            <option value="tl">Top left</option>
+            <option value="tr">Top right</option>
+            <option value="bl">Bottom left</option>
+            <option value="br">Bottom right</option>
+          </select>
+          <!-- Leave this empty span on the page, it is a silly hack to get the custom font to work on the canvas in the next step. -->
+          <span style="font-family: 'Architects Daughter'"></span>
+          <label for="imageCreditColor">Image credit color</label>
+          <select id="imageCreditColor" class="form-control" [(ngModel)]="imageMeta.creditColor" #image="ngModel" name="imageCreditColor">
+            <option style="color: rgba(0,0,0,1.0);" value="rgba(0,0,0,1.0)" selected>Photo Credit Color</option>
+            <option style="color: rgba(0,0,0,0.9);" value="rgba(0,0,0,0.9)">Photo Credit Color</option>
+            <option style="color: rgba(0,0,0,0.8);" value="rgba(0,0,0,0.8)">Photo Credit Color</option>
+            <option style="color: rgba(0,0,0,0.7);" value="rgba(0,0,0,0.7)">Photo Credit Color</option>
+            <option style="color: rgba(0,0,0,0.6);" value="rgba(0,0,0,0.6)">Photo Credit Color</option>
+            <option style="color: rgba(0,0,0,0.5);" value="rgba(0,0,0,0.5)">Photo Credit Color</option>
+            <option style="color: rgba(0,0,0,0.4);" value="rgba(0,0,0,0.4)">Photo Credit Color</option>
+            <option style="color: rgba(0,0,0,0.3);" value="rgba(0,0,0,0.3)">Photo Credit Color</option>
+            <option style="color: rgba(0,0,0,0.2);" value="rgba(0,0,0,0.2)">Photo Credit Color</option>
+            <option style="color: rgba(0,0,0,0.1);" value="rgba(0,0,0,0.1)">Photo Credit Color</option>
+            <option style="color: rgba(255,255,255, 1.0); background-color: #000000;" value="rgba(255,255,255,1.0)">Photo Credit Color</option>
+            <option style="color: rgba(255,255,255, 0.9); background-color: #000000;" value="rgba(255,255,255,0.9)">Photo Credit Color</option>
+            <option style="color: rgba(255,255,255, 0.8); background-color: #000000;" value="rgba(255,255,255,0.8)">Photo Credit Color</option>
+            <option style="color: rgba(255,255,255, 0.7); background-color: #000000;" value="rgba(255,255,255,0.7)">Photo Credit Color</option>
+            <option style="color: rgba(255,255,255, 0.6); background-color: #000000;" value="rgba(255,255,255,0.6)">Photo Credit Color</option>
+            <option style="color: rgba(255,255,255, 0.5); background-color: #000000;" value="rgba(255,255,255,0.5)">Photo Credit Color</option>
+            <option style="color: rgba(255,255,255, 0.4); background-color: #000000;" value="rgba(255,255,255,0.4)">Photo Credit Color</option>
+            <option style="color: rgba(255,255,255, 0.3); background-color: #000000;" value="rgba(255,255,255,0.3)">Photo Credit Color</option>
+            <option style="color: rgba(255,255,255, 0.2); background-color: #000000;" value="rgba(255,255,255,0.2)">Photo Credit Color</option>
+            <option style="color: rgba(255,255,255, 0.1); background-color: #000000;" value="rgba(255,255,255,0.1)">Photo Credit Color</option>
+          </select>
+          <label for="imageTreatment">Image treatment</label>
+          <select id="imageTreatment" class="form-control" [(ngModel)]="imageMeta.treatment" #image="ngModel" name="imageTreatment" (change)="updateSize($event.target.value)">
+            <option value="small">Small</option>
+            <option value="large">Large</option>
+            <option value="promoHeader">Promo Email Large Header</option>
+            <option value="promo">Promo Image</option>
+            <option value="polaroid">Polaroid</option>
+            <option value="calloutSmall">calloutSmall</option>
+            <option value="calloutLarge">calloutLarge</option>
+          </select>
+          <label for="imageButton">Image button</label>
+          <select id="imageButton" class="form-control" [(ngModel)]="imageMeta.button" #image="ngModel" name="imageButton">
+            <option value="">None</option>
+            <option value="play">Play button</option>
+            <option value="audio">Audio button</option>
+          </select>
+          <label for="imageCaption">Image caption</label>
+          <textarea class="form-control" id="imageCaption" [(ngModel)]="imageMeta.caption" #image="ngModel" name="imageCaption"></textarea>
+          <label for="imageCaption">Image caption size</label>
+          <input type="number" class="form-control" id="imageCaptionSize" [(ngModel)]="imageMeta.captionSize" #image="ngModel" name="imageCaptionSize">
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" (click)="cancel()">Cancel</button>
+        <button type="button" class="btn btn-primary" (click)="showCropModal()">Next</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div bsModal #cropModal="bs-modal" [config]="{backdrop: 'static'}" class="modal fade" tabindex="-1" role="dialog" (onShown)="checkOriginal()">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" (click)="cancel()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title">Crop image</h3>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-xs-12">
+            Select image
+            <file-upload [fileName]="appealId" [suffix]="suffix" (onLoaded)="createCropper($event)"></file-upload>
+          </div>
+          <div class="col-xs-12 col-md-8 col-md-offset-2">
+            <div>
+              <img id="image" src="" #img >
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 text-center">
+            <button class="btn btn-primary btn-lg" (click)="cropImage()">Crop image</button>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type ="button" class="btn btn-primary" (click)="showSettingsModal()">Go back</button>
+      </div>
+    </div>
+  </div>
+</div>

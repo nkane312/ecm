@@ -1,0 +1,9 @@
+.well {
+  margin-bottom: 0px;
+}
+.panel .panel-heading {
+  cursor: pointer;
+}
+.well.dirty{
+  background: rgb(252,248,227);
+}

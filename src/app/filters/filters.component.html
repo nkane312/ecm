@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="col-xs-12 col-sm-3 col-sm-offset-2">
+    <form #filtersForm="ngForm" (ngSubmit)="filter(filters)">
+      <div class="form-group">
+        <h4>Campaign</h4>
+        <select [(ngModel)]="filters.campaign" name="campaign" class="form-control" id="campaign-select">
+          <option selected value="">Any campaign</option>
+          <option *ngFor="let c of campaigns$ | async" [ngValue]="c">{{c.name}}</option>
+        </select>
+      </div>
+      <hr>
+      <div class="form-group text-center">
+        <h4>Appeal scheduled status</h4>
+        <label for="scheduled-any">
+          <input type="radio" checked value="" id="scheduled-any" [(ngModel)]="filters.scheduled" name="scheduled" class="form-control">Any status
+        </label>
+        <label for="scheduled-yes">
+          <input type="radio" value="yes" id="scheduled-yes" [(ngModel)]="filters.scheduled" name="scheduled" class="form-control">Scheduled
+        </label>
+        <label for="scheduled-no">
+          <input type="radio" value="no" id="scheduled-no" [(ngModel)]="filters.scheduled" name="scheduled" class="form-control">Not scheduled          
+        </label>
+      </div>
+      <hr>
+      <div class="form-group text-center">
+        <h4>Scheduled date range</h4>
+        <div class="datepicker-wrapper"><label for="startDate">Start Date</label><datepicker id="startDate" [(ngModel)]="filters.startDate" #startDate="ngModel" name="startDate"></datepicker></div>
+        <div class="datepicker-wrapper"><label for="endDate">End Date</label><datepicker id="endDate" [(ngModel)]="filters.endDate" #endDate="ngModel" name="endDate"></datepicker></div>
+      </div>
+      <div class="form-group text-center">
+        <button class="btn btn-lg btn-primary">Search</button>
+      </div>
+    </form>
+  </div>
+  <div class="col-xs-12 col-sm-6 col-sm-offset-1" *ngIf="appeals.length">
+    <appeal-list-component [appeals]="filteredAppeals"></appeal-list-component>
+  </div>
+</div>

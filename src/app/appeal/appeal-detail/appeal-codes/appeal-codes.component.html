@@ -1,0 +1,53 @@
+<div class="panel" [ngClass]="{'panel-primary': !changed, 'panel-warning': changed}">
+  <div class="panel-heading text-center" data-toggle="collapse" data-parent="#controls" data-target="#codesPanel">
+    <h2 class="panel-title">Codes&nbsp;&nbsp;<span class="glyphicon glyphicon-qrcode"></span></h2>
+  </div>
+  <div class="panel-body" id="codesPanel" class="collapse">
+    <div class="well" [ngClass]="{dirty: changed}">
+      <form #codesForm="ngForm" novalidate>
+        <div class="form-group" [class.has-error]="!subSrc.valid && subSrc.touched" data-toggle="popover" data-placement="right" title="Subsource Code" data-content="Paste in the subsource code here.">
+          <label for="sub-src">Subsource Code</label>
+          <input id="sub-src" type="text" class="form-control" [(ngModel)]="codes.s_subsrc" (ngModelChange)="checkChanged()" #subSrc="ngModel" name="subSrc">
+        </div>
+        <div class="form-group" [class.has-error]="!utmMedium.valid && utmMedium.touched" data-toggle="popover" data-placement="right" title="UTM Medium" data-content="The medium this message uses goes here. <br><br>This is 'email' by default.">
+          <label for="utm-medium">UTM Medium</label>
+          <input id="utm-medium" type="text" class="form-control" [(ngModel)]="codes.utm_medium" (ngModelChange)="checkChanged()" #utmMedium="ngModel" name="utmMedium">
+        </div>
+        <div class="form-group" [class.has-error]="!utmSource.valid && utmSource.touched" data-toggle="popover" data-placement="right" title="UTM Source" data-content="The source this message uses goes here. <br><br>This is 'eappeal' by default.">
+          <label for="utm-source">UTM Source</label>
+          <input id="utm-source" type="text" class="form-control" [(ngModel)]="codes.utm_source" (ngModelChange)="checkChanged()" #utmSource="ngModel" name="utmSource">
+        </div>
+        <div class="form-group" data-toggle="popover" data-placement="right" title="Audience" data-content="Select the Audience here. <br><br>Use 'N/A' to keep the audience as the default Regular/General audience.">
+          <label>Audience</label>
+          <div class="radio">
+            <label for="na"><input id="na" type="radio" [(ngModel)]="codes.audience" (ngModelChange)="checkChanged()" value="" name="version">N/A</label>
+          </div>
+          <div class="radio">
+            <label for="sustainer"><input id="sustainer" type="radio" [(ngModel)]="codes.audience" (ngModelChange)="checkChanged()" value="sustainer" name="audience">Sustainer</label>
+          </div>
+          <div class="radio">
+            <label for="donor"><input id="donor" type="radio" [(ngModel)]="codes.audience" (ngModelChange)="checkChanged()" value="donor" name="audience">Donor</label>
+          </div>
+          <div class="radio">
+            <label for="nonDonor"><input id="nonDonor" type="radio" [(ngModel)]="codes.audience" (ngModelChange)="checkChanged()" value="nonDonor"  name="audience">Non-donor</label>
+          </div>
+          <div class="radio">
+            <label for="middleDonor"><input id="middleDonor" type="radio" [(ngModel)]="codes.audience" (ngModelChange)="checkChanged()" value="middleDonor"  name="audience">Middle-donor</label>
+          </div>
+          <div class="radio">
+            <label for="nonResponder"><input id="nonResponder" type="radio" [(ngModel)]="codes.audience" (ngModelChange)="checkChanged()" value="nonResponder"  name="audience">Non-Responder</label>
+          </div>
+        </div>
+        <div class="form-group" [class.has-error]="!resend.valid && resend.touched" data-toggle="popover" data-placement="right" title="Send Number" data-content="A first send will be '0' or '1' and is the default. <br><br>For a first Resend set the # to '2'.">
+          <label for="resend">Send #</label>
+          <input id="resend" type="number" class="form-control" [(ngModel)]="codes.resend" (ngModelChange)="checkChanged()" #resend="ngModel" name="resend" min="0">
+        </div>
+        <div class="form-group" [class.has-error]="!series.valid && series.touched" data-toggle="popover" data-placement="right" title="Series Number" data-content="The # of the eappeal in its campaign. <br><br>The first eappeal of a campaign would have the # be '1'.">
+          <label for="series">Series #</label>
+          <input id="series" type="number" class="form-control" [(ngModel)]="codes.series" (ngModelChange)="checkChanged()" #series="ngModel" name="series" min="0">
+        </div>
+        <button (click)="save()" class="btn btn-success">Save</button><button (click)="cancel()" class="btn btn-danger pull-right">Cancel</button>
+      </form>
+    </div>
+  </div>
+</div>

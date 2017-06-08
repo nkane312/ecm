@@ -1,0 +1,124 @@
+<div class="panel" [ngClass]="{'panel-primary': !changed, 'panel-warning': changed}">
+  <div class="panel-heading text-center" data-toggle="collapse" data-parent="#controls" data-target="#contentPanel">
+    <h2 class="panel-title">eAppeal Content&nbsp;&nbsp;<span class="glyphicon glyphicon-file"></span></h2>
+  </div>
+  <div class="panel-body collapse" id="contentPanel">
+    <div class="well" [ngClass]="{dirty: changed}">
+      <form #contentForm="ngForm" novalidate>
+        
+        <div class="panel panel-primary" id="subPanel">
+          <ul class="nav nav-pills nav-justified" role="tablist">
+            <li role="presentation"><a href="#copy" aria-controls="copy" role="tab" data-toggle="tab">Copy&nbsp;&nbsp;<span class="glyphicon glyphicon-pencil"></span></a></li>
+            <li role="presentation"><a href="#images" aria-controls="images" role="tab" data-toggle="tab">Image&nbsp;&nbsp;<span class="glyphicon glyphicon-picture"></span></a></li>
+            <li *ngIf="callout" role="presentation"><a href="#callout" aria-controls="callout" role="tab" data-toggle="tab">Callout&nbsp;&nbsp;<span class="glyphicon glyphicon-bullhorn"></span></a></li>
+          </ul>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade" id="copy">
+              <div class="well" *ngIf="options && content">
+                <template ngFor let-body [ngForOf]="options.body" let-index="index">
+                  <div class="form-group" data-toggle="popover" data-placement="right" [attr.data-content]="body.tooltip">
+                    <label [attr.for]="'field-' + index">{{body.title}}</label>
+                    <ckeditor [attr.id]="'field-' + index" [(ngModel)]="content.body[index]" [config]="body.config" (change)="checkChanged()" [name]="'field-' + index"></ckeditor>
+                  </div>
+                </template>
+              </div>
+            </div>
+
+            <div role="tabpanel" class="tab-pane fade" id="images">
+              <div class="well" *ngIf="options">
+                <template ngFor let-img [ngForOf]="options.image" let-i="index">
+                  <h3 class="text-center">{{img.title}}</h3>
+                  <div class="add-image">
+                    <photo-crop [imageMeta]="content.image[i]" [suffix]="'img-' + i" (saved)="onImageSaved($event, i)"></photo-crop>
+                  </div>
+                  <div class="form-group" data-toggle="popover" data-placement="right" title="Image Info" [attr.data-content]="img.tooltip">
+                    <label [attr.for]="'imageUrl-' + i">Image URL</label>
+                    <input type="text" [attr.id]="'imageUrl-' + i" class="form-control" [(ngModel)]="content.image[i].url" (change)="checkChanged()" #image="ngModel" [name]="'imageUrl-' + i">
+                    <label [attr.for]="'imageLink-' + i">Image Link</label>
+                    <input type="text" [attr.id]="'imageLink-' + i" class="form-control" [(ngModel)]="content.image[i].link" (change)="checkChanged()" #image="ngModel" [name]="'imageLink-' + i">
+                    <div class="col-xs-5">
+                      <label [attr.for]="'merlinId-' + i">Merlin ID</label>
+                      <input type="text" [attr.id]="'merlinId-' + i" class="form-control" [(ngModel)]="content.image[i].merlinId" (change)="checkChanged()" #image="ngModel" [name]="'merlinId-' + i">
+                    </div>
+                    <div class="col-xs-2 text-center">
+                      <label><br>or</label>
+                    </div>
+                    <div class="col-xs-5">
+                      <label [attr.for]="'brightcoveId-' + i">Brightcove ID</label>
+                      <input type="text" [attr.id]="'brightcoveId-' + i" class="form-control" [(ngModel)]="content.image[i].brightcoveId" (change)="checkChanged()" #image="ngModel" [name]="'brightcoveId' + i">
+                    </div>
+                    <label [attr.for]="'imageCode-' + i">Image source code</label>
+                    <input type="text" [attr.id]="'imageCode-' + i" class="form-control" [(ngModel)]="content.image[i].code" (change)="checkChanged()" #image="ngModel" [name]="'imageCode-' + i" list="sourceCodes">
+                    <datalist id="sourceCodes">
+                      <option value="PH1">
+                      <option value="VID1">
+                    </datalist>
+                    <label [attr.for]="'imageUtm-' + i">Image UTM code</label>
+                    <input type="text" [attr.id]="'imageUtm-' + i" class="form-control" [(ngModel)]="content.image[i].utm" (change)="checkChanged()" #image="ngModel" [name]="'imageUtm-' + i" list="utmCodes">
+                    <datalist id="utmCodes">
+                      <option value="photo-link-1">
+                      <option value="video-link-1">
+                    </datalist>
+                  </div>
+                  <template [ngIf]="options.image.length > 1">
+                    <hr>
+                  </template>
+                </template>
+              </div>
+            </div>
+
+            <div *ngIf="callout" role="tabpanel" class="tab-pane fade" id="callout">
+              <div class="well">
+                <div class="add-image">
+                  <photo-crop [suffix]="callout" [imageMeta]="content.callout.image" (saved)="onCalloutSaved($event)"></photo-crop>
+                </div>
+                <div class="form-group" [class.has-error]="!callout.valid && callout.touched" data-toggle="popover" data-placement="right" title="Callout Info" data-content="Paste in the full image address from the Image Library in the Image URL. <br><br>Then add the Merlin or Brightcove ID for the image or video. <br><br>In Image source code add 'PH1' for an image or 'VID1' for a video. <br><br>In image UTM code add 'photo-link-1' for an image or 'video-link-1' for a video.">
+                  <label for="calloutImageUrl">Callout image URL</label>
+                  <input type="text" id="calloutImageUrl" class="form-control" [(ngModel)]="content.callout.image.url" (change)="checkChanged()" #callout="ngModel" name="calloutImageUrl">
+
+                  <label for="callout-headline">Callout headline</label>
+                  <ckeditor id="callout-headline" [(ngModel)]="content.callout.headline" [config]="{height: 80, disableNativeSpellChecker: false}" (change)="checkChanged()" #callout="ngModel" name="calloutHeadline"></ckeditor>
+
+                  <label for="callout-body">Callout body</label>
+                  <ckeditor id="callout-body" [(ngModel)]="content.callout.body" [config]="{height: 80, disableNativeSpellChecker: false}" (change)="checkChanged()" #callout="ngModel" name="calloutBody"></ckeditor>
+
+                  <label for="imageUrl">URL the callout will link to</label>
+                  <input type="text" id="calloutUrl" class="form-control" [(ngModel)]="content.callout.url" (change)="checkChanged()" #callout="ngModel" name="calloutUrl">
+                  <label for="calloutCode">Callout source code</label>
+                  <input type="text" id="calloutCode" class="form-control" [(ngModel)]="content.callout.code" (change)="checkChanged()" #callout="ngModel" name="calloutCode">
+                  <label for="calloutUtm">Callout UTM code</label>
+                  <input type="text" id="calloutUtm" class="form-control" [(ngModel)]="content.callout.utm" (change)="checkChanged()" #callout="ngModel" name="calloutUtm">           
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      
+        <div class="form-group" [class.has-error]="!url.valid && url.touched" data-toggle="popover" data-placement="right" title="Donation Form Link" data-content="Paste the link for the desired donation form to be linked for all of the donation links outside the body and PS copy. <br><br>And do not forget to remove any source and subsource codes from the link.">
+          <label for="url">Default donation form link</label>
+          <input type="text" id="url" class="form-control" [(ngModel)]="content.url" (change)="checkChanged()" #url="ngModel" name="url">
+        </div>
+
+        <div class="form-group" data-toggle="popover" data-placement="right" title="Donate Button Selection" data-content="Select the desired text for the donate buttons.">
+          <label for="donate-button">Donate Button Selection</label>
+          <select [(ngModel)]="content.donateButton" list="donate" (change)="checkChanged()" #donateButton="ngModel" id="donateButton" class="form-control" name="donateButton">
+            <option selected="selected">Donate Now</option>
+            <option>Give Now</option>
+            <option>Help Now</option>
+            <option>Feed Hungry Children</option>
+            <option>Download Now</option>
+          </select>
+          <!--<input type="text" [(ngModel)]="content.donateButton" list="donate" (change)="checkChanged()" #donateButton="ngModel" id="donateButton" class="form-control" name="donateButton" value="Donate Now">
+          <datalist id="donate">
+            <option value="Donate Now">
+            <option value="Give Now">
+            <option value="Help Now">
+          </datalist>-->
+        </div>
+
+        <button (click)="save()" class="btn btn-success">Save</button><button (click)="cancel()" class="btn btn-danger pull-right">Cancel</button>
+      </form>
+    </div>
+  </div>
+</div>

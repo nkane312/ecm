@@ -1,0 +1,15 @@
+.well {
+  margin-bottom: 0px;
+}
+.panel .panel-heading {
+  cursor: pointer;
+}
+#contentPanel, #copyPanel, #imagePanel {
+  padding: 0;
+}
+.well.dirty{
+  background: rgb(252,248,227);
+}
+.blue-border {
+  border: 1px solid #3176B1;
+}
