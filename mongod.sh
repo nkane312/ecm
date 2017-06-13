@@ -1,7 +1,7 @@
 #!/bin/bash
 
-mongod=/var/www/html/ecm/MongoDB/Server/3.2/bin/mongod.exe
-mongod_data=/var/www/html/ecm/data/db
+mongod=/var/www/ecm/html/MongoDB/Server/3.2/bin/mongod.exe
+mongod_data=/var/www/ecm/html/data/db
 prog=mongod.sh
 RETVAL=0
 

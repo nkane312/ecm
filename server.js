@@ -1,3 +1,4 @@
+"use strict";
 var express = require('express');
 var path = require('path');
 var fs = require('fs');
@@ -66,7 +67,7 @@ http.listen(5001, () => {
 });
 
 // Mongoose Connection
-mongoose.connect('mongodb://127.0.0.1:27017');
+mongoose.connect('mongodb://127.0.0.1:27018');
 var db = mongoose.connection;
 var Campaign = require('./src/app/schemas/campaign');
 var Appeal = require('./src/app/schemas/appeal');
@@ -358,8 +359,14 @@ db.once('open', function(){
   app.use('/assets', express.static('dist/assets'));
   //app.get('/images/*', express.static(__dirname + '/dist/images'));
 
-  app.all('/inline.js', (req, res) => {
-    res.status(200).sendFile(__dirname + '/dist/inline.js');
+  app.all('/inline.bundle.js', (req, res) => {
+    res.status(200).sendFile(__dirname + '/dist/inline.bundle.js');
+  });
+   app.all('/styles.bundle.js', (req, res) => {
+    res.status(200).sendFile(__dirname + '/dist/styles.bundle.js');
+  });
+  app.all('/vendor.bundle.js', (req, res) => {
+    res.status(200).sendFile(__dirname + '/dist/vendor.bundle.js');
   });
   app.all('/main.bundle.js', (req, res) => {
     res.status(200).sendFile(__dirname + '/dist/main.bundle.js');
