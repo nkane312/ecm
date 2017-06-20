@@ -20,7 +20,7 @@ var multer = require('multer');
 
 var storage = multer.diskStorage({
   destination: function(req, file, cb){
-    cb(null, __dirname + '/dist/assets/images')
+    cb(null, __dirname + '/dist/assets/appeal-images')
   },
   filename: function(req, file, cb){
     cb(null, file.originalname)
@@ -80,61 +80,7 @@ db.once('open', function(){
   restify.serve(router, Appeal);
 
   app.use(router);
-/*
-  // REST API for mongoose
-  // Campaigns
-  app.get('/api/campaigns', function(req, res){
-    Campaign.find({}, function(err, docs){
-      if (err) {
-        return console.error(err);
-      }
-      res.json(docs);
-    });
-  });
-  app.get('/api/campaigns/:id', function(req, res){
-    Campaign.find({ _id: req.params.id }, function(err, docs){
-      if (err) {
-        return console.error(err);
-      }
-      res.json(docs);
-    });
-  });
-  app.post('/api/campaigns', function(req, res){
-    var obj = new Campaign(req.body);
-    obj.save(function(err, obj){
-      if (err){
-        return console.error(err);
-      }
-      res.status(200).json(obj);
-    });
-  });
-  app.delete('/api/campaigns/:id', function(req, res){
-    Campaign.find({ _id: req.params.id }).remove().exec();
-    res.status(200).send(req.params.id + ' deleted');
-  });
-  // Appeals
-  app.get('/api/appeals', function(req, res){
-    Appeal.find({}, function(err, docs){
-      if (err) {
-        return console.error(err);
-      }
-      res.json(docs);
-    });
-  });
-  app.post('/api/appeals', function(req, res){
-    var obj = new Appeal(req.body);
-    obj.save(function(err, obj){
-      if (err){
-        return console.error(err);
-      }
-      res.status(200).json(obj);
-    });
-  });
-  app.delete('/api/appeals/:id', function(req, res){
-    Appeal.find({ _id: req.params.id }).remove().exec();
-    res.status(200).send(req.params.id + ' deleted');
-  });
-  */
+  
   // All other routes
   app.use('/lib', express.static(__dirname + '/src/lib'));
   app.all('/', function(req, res, next) {
@@ -152,17 +98,13 @@ db.once('open', function(){
   });
 
   app.post('/crop-image', function(req, res){
-    //let polaroid = `http://${window.location.hostname}:3000/assets/images/polaroid-template.jpg`;
     var imageChanges = req.body;
-    let originalFile = __dirname + '\\dist\\assets\\images\\' + imageChanges.fileName;
-    let editedFile = __dirname + '\\dist\\assets\\images\\final-' + imageChanges.fileName;
-    let polaroid = __dirname + '\\dist\\assets\\images\\polaroid-template.png';
-    let playButton = __dirname + '\\dist\\assets\\images\\play.png';
-    let audioButton = __dirname + '\\dist\\assets\\images\\audio.png';
+    let originalFile = __dirname + '/dist/assets/appeal-images/' + imageChanges.fileName;
+    let editedFile = __dirname + '/dist/appeal-images/final-' + imageChanges.fileName;
+    let polaroid = __dirname + '/dist/assets/images/polaroid-template.png';
+    let playButton = __dirname + '/dist/assets/images/play.png';
+    let audioButton = __dirname + '/dist/assets/images/audio.png';
     let placement = {x: undefined, y: undefined, g: undefined};
-    //let cropString = `${imageChanges.crop.width}x${imageChanges.crop.height}+${imageChanges.crop.x}+${imageChanges.crop.y}`;
-    // im convert takes an array of parameters and a callback function as arguments
-    // the array is [file you are editing, the function, that functions arguments, the outputfile]
     if (imageChanges.imageMeta.creditPlacement === 'tl'){
       placement.x = 10;
       placement.y = 10;
@@ -289,7 +231,7 @@ db.once('open', function(){
     function writeFile(fileName){
       var c = new Client();
       c.on('ready', function(){
-        c.put(`dist/assets/images/final-${fileName}`, `digital.ifcj.org/appeal-images/final-${fileName}`, function(err){
+        c.put(`${__dirname}/dist/appeal-images/final-${fileName}`, `digital.ifcj.org/appeal-images/final-${fileName}`, function(err){
           if (err){
             res.send(err);
             console.log(err);
@@ -302,59 +244,7 @@ db.once('open', function(){
         res.send('final-' + fileName);
       });    
     }
-
-    /*
-    im.convert([file, '-crop', cropString, file], function(err, stdout){
-      if (err) throw err;
-      console.log('crop successful');
-    });
-    */
-    //let textString = `-fill ${imageChanges.creditColor} -font Arial -pointsize 10 label:${imageChanges.credit}`;
-    //im.convert(['temp.jpg', '-font', textString,'temp.jpg']);
   });
-    /*
-    fs.writeFile(`dist/assets/images/${req.body.name}.jpg`, image, 'binary', function(err){
-      if (err){
-        res.send(err);
-      }
-      else {
-        var c = new Client();
-        c.on('ready', function(){
-          c.put(`dist/assets/images/${req.body.name}.jpg`, `digital.ifcj.org/appeal-images/${req.body.name}.jpg`, function(err){
-            if (err) throw err;
-            c.end();
-            res.send('finished');            
-          });
-        });
-        c.connect(creds.options);
-      }
-    })
-    */
-    /*
-    var base64Data = req.body.data.replace(/^data:image\/jpeg;base64,/, "");
-    console.log(base64Data);
-    fs.writeFile(`dist/assets/images/${req.body.id}.jpg`, base64Data, 'base64', function(err){
-      if (err){
-        res.send(err);
-      }
-      else {
-        
-        var c = new Client();
-        c.on('ready', function(){
-          c.put(`dist/assets/images/${req.body.id}.jpg`, `digital.ifcj.org/appeal-images/${req.body.id}.jpg`, function(err){
-            if(err) throw err;
-            c.end();
-            res.send('finished');
-            fs.unlink(`dist/assets/images/${req.body.id}.jpg`, (err) => {
-              if(err) throw err;
-              console.log(`deleted image ${req.body.id}.jpg`);
-            });
-          });
-        });
-        c.connect(creds.options);
-      }
-    });
-    */
   
   app.use('/assets', express.static('dist/assets'));
   //app.get('/images/*', express.static(__dirname + '/dist/images'));

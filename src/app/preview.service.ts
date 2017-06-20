@@ -45,7 +45,7 @@ export class PreviewService {
           },
           {
             title: 'Body',
-            tooltip: 'Paste in the body copy here. <br><br>Only include the copy below the salutation and above the signature. <br><br>Double-click on the existing links to add the donation form URL.<br><br>Use this code to use a firstname, ministry partner can be changed as needed:<br><strong>[[S1:first_name:Ministry partner]]</strong>',
+            tooltip: 'Paste in the body copy here. <br><br>Only include the copy below the salutation and above the signature. <br><br>Double-click on the existing links to add the donation form URL.<br><br>Use this code to use a firstname, ministry partner can be changed as needed:<br><strong>[[S1:first_name:Ministry partner]]</strong><br><br>Don\'t forget to select a style!<br>US Default: "<strong>Def. Copy</strong>"<br>CAN Default: "<strong>PassoverCopy</strong>"',
             config: {
               disableNativeSpellChecker:false,
               on: {
@@ -60,7 +60,7 @@ export class PreviewService {
           },
           {
             title: 'PS',
-            tooltip: 'Paste in the PS copy here. <br><br>Include the letters \'PS\'.',
+            tooltip: 'Paste in the PS copy here. <br><br>Include the letters \'PS\'.<br><br>Don\'t forget to select a style!<br>US Default: "<strong>Def. Copy</strong>"<br>CAN Default: "<strong>PassoverCopy</strong>"',
             config: {height:80, disableNativeSpellChecker:false}
           },
           {
@@ -76,7 +76,7 @@ export class PreviewService {
           },
           {
             title: 'Promo Body',
-            tooltip: 'Paste in the promotional body copy here. <br><br>Only include the copy below the salutation and above the signature. <br><br>Double-click on the existing links to add the donation form URL.<br><br>Use this code to use a firstname, ministry partner can be changed as needed:<br><strong>[[S1:first_name:Ministry partner]]</strong>',
+            tooltip: 'Paste in the promotional body copy here. <br><br>Only include the copy below the salutation and above the signature. <br><br>Double-click on the existing links to add the donation form URL.<br><br>Use this code to use a firstname, ministry partner can be changed as needed:<br><strong>[[S1:first_name:Ministry partner]]</strong><br><br>Don\'t forget to select a style!<br>US Default: "<strong>Def. Copy</strong>"<br>CAN Default: "<strong>PassoverCopy</strong>"',
             config: {
               disableNativeSpellChecker:false,
               on: {
@@ -91,18 +91,18 @@ export class PreviewService {
           },
           {
             title: 'Custom Signature',
-            tooltip: 'Put a custom signature here. Leave blank for the standard signature.',
+            tooltip: 'Put a custom signature here. Leave blank for the standard signature. <br><br>Type in "Yael" for a Yael signature.',
             config: {height:80, disableNativeSpellChecker:false}
           }
         ],
         image: [
           {
             title: 'Main image',
-            tooltip: 'Paste in the full image address from the Image Library in the Image URL. <br><br>Then add the Merlin or Brightcove ID for the image or video. <br><br>In Image source code add \'PH1\' for an image or \'VID1\' for a video. <br><br>In image UTM code add \'photo-link-1\' for an image or \'video-link-1\' for a video.'
+            tooltip: 'Paste in the full image address from the Image Library in the Image URL. <br><br>Then add the Merlin or Brightcove ID for the image or video. <br><br>In Image source code add \'<strong>PH1</strong>\' for an image or \'<strong>VID1</strong>\' for a video. <br><br>In image UTM code add \'<strong>photo-link-1</strong>\' for an image or \'<strong>video-link-1</strong>\' for a video'
           },
           {
             title: 'Promo image',
-            tooltip: 'Paste in the full image address from the Image Library in the Image URL. <br><br>Then add the Merlin or Brightcove ID for the image or video. <br><br>In Image source code add \'PH2\' for an image or \'VID2\' for a video. <br><br>In image UTM code add \'photo-link-2\' for an image or \'video-link-2\' for a video.'
+            tooltip: 'Paste in the full image address from the Image Library in the Image URL. <br><br>Then add the Merlin or Brightcove ID for the image or video. <br><br>In Image source code add \'<strong>PH2</strong>\' for an image or \'<strong>VID2</strong>\' for a video. <br><br>In image UTM code add \'<strong>photo-link-2</strong>\' for an image or \'<strong>video-link-2</strong>\' for a video.'
           }
         ]
       }
@@ -126,7 +126,7 @@ export class PreviewService {
           },
           {
             title: 'Body',
-            tooltip: 'Paste in the body copy here. <br><br>Only include the copy below the salutation and above the signature. <br><br>Double-click on the existing links to add the donation form URL.<br><br>Use this code to use a firstname, ministry partner can be changed as needed:<br><strong>[[S1:first_name:Ministry partner]]</strong>',
+            tooltip: 'Paste in the body copy here. <br><br>Only include the copy below the salutation and above the signature. <br><br>Double-click on the existing links to add the donation form URL.<br><br>Use this code to use a firstname, ministry partner can be changed as needed:<br><strong>[[S1:first_name:Ministry partner]]</strong><br><br>Don\'t forget to select a style!<br>US Default: "<strong>Def. Copy</strong>"<br>CAN Default: "<strong>PassoverCopy</strong>"',
             config: {
               disableNativeSpellChecker:false,
               on: {
@@ -141,19 +141,19 @@ export class PreviewService {
           },
           {
             title: 'Custom Signature',
-            tooltip: 'Put a custom signature here. Leave blank for the standard signature.',
+            tooltip: 'Put a custom signature here. Leave blank for the standard signature. <br><br>Type in "Yael" for a Yael signature.',
             config: {height:80, disableNativeSpellChecker:false}
           },
           {
             title: 'PS',
-            tooltip: 'Paste in the PS copy here. <br><br>Include the letters \'PS\'.',
+            tooltip: 'Paste in the PS copy here. <br><br>Include the letters \'PS\'.<br><br>Don\'t forget to select a style!<br>US Default: "<strong>Def. Copy</strong>"<br>CAN Default: "<strong>PassoverCopy</strong>"',
             config: {height:80, disableNativeSpellChecker:false}
           }
         ],
         image: [
           {
             title: 'Main image',
-            tooltip: 'Paste in the full image address from the Image Library in the Image URL. <br><br>Then add the Merlin or Brightcove ID for the image or video. <br><br>In Image source code add \'PH1\' for an image or \'VID1\' for a video. <br><br>In image UTM code add \'photo-link-1\' for an image or \'video-link-1\' for a video.'
+            tooltip: 'Paste in the full image address from the Image Library in the Image URL. <br><br>Then add the Merlin or Brightcove ID for the image or video. <br><br>In Image source code add \'<strong>PH1</strong>\' for an image or \'<strong>VID1</strong>\' for a video. <br><br>In image UTM code add \'<strong>photo-link-1</strong>\' for an image or \'<strong>video-link-1</strong>\' for a video.<br><br>If for some reason the Cropper tool does not show up correctly, just hit the "Go Back" button and then hit "Next" again and it should work.'
           },
         ]
       }
@@ -177,7 +177,7 @@ export class PreviewService {
           },
           {
             title: 'Body',
-            tooltip: 'Paste in the body copy here. <br><br>Only include the copy below the salutation and above the signature. <br><br>Double-click on the existing links to add the donation form URL.<br><br>Use this code to use a firstname, ministry partner can be changed as needed:<br><strong>[[S1:first_name:Ministry partner]]</strong>',
+            tooltip: 'Paste in the body copy here. <br><br>Only include the copy below the salutation and above the signature. <br><br>Double-click on the existing links to add the donation form URL.<br><br>Use this code to use a firstname, ministry partner can be changed as needed:<br><strong>[[S1:first_name:Ministry partner]]</strong><br><br>Don\'t forget to select a style!<br>US Default: "<strong>Def. Copy</strong>"<br>CAN Default: "<strong>PassoverCopy</strong>"',
             config: {
               disableNativeSpellChecker:false,
               on: {
@@ -192,19 +192,19 @@ export class PreviewService {
           },
           {
             title: 'Custom Signature',
-            tooltip: 'Put a custom signature here. Leave blank for the standard signature.',
+            tooltip: 'Put a custom signature here. Leave blank for the standard signature. <br><br>Type in "Yael" for a Yael signature.',
             config: {height:80, disableNativeSpellChecker:false}
           },
           {
             title: 'PS',
-            tooltip: 'Paste in the PS copy here. <br><br>Include the letters \'PS\'.',
+            tooltip: 'Paste in the PS copy here. <br><br>Include the letters \'PS\'.<br><br>Don\'t forget to select a style!<br>US Default: "<strong>Def. Copy</strong>"<br>CAN Default: "<strong>PassoverCopy</strong>"',
             config: {height:80, disableNativeSpellChecker:false}
           }
         ],
         image: [
           {
             title: 'Main image',
-            tooltip: 'Paste in the full image address from the Image Library in the Image URL. <br><br>Then add the Merlin or Brightcove ID for the image or video. <br><br>In Image source code add \'PH1\' for an image or \'VID1\' for a video. <br><br>In image UTM code add \'photo-link-1\' for an image or \'video-link-1\' for a video.'
+            tooltip: 'Paste in the full image address from the Image Library in the Image URL. <br><br>Then add the Merlin or Brightcove ID for the image or video. <br><br>In Image source code add \'<strong>PH1</strong>\' for an image or \'<strong>VID1</strong>\' for a video. <br><br>In image UTM code add \'<strong>photo-link-1</strong>\' for an image or \'<strong>video-link-1</strong>\' for a video.<br><br>If for some reason the Cropper tool does not show up correctly, just hit the "Go Back" button and then hit "Next" again and it should work.'
           }
         ]
       }
@@ -228,7 +228,7 @@ export class PreviewService {
           },
           {
             title: 'Body',
-            tooltip: 'Paste in the body copy here. <br><br>Only include the copy below the salutation and above the signature. <br><br>Double-click on the existing links to add the donation form URL.<br><br>Use this code to use a firstname, ministry partner can be changed as needed:<br><strong>[[S1:first_name:Ministry partner]]</strong>',
+            tooltip: 'Paste in the body copy here. <br><br>Only include the copy below the salutation and above the signature. <br><br>Double-click on the existing links to add the donation form URL.<br><br>Use this code to use a firstname, ministry partner can be changed as needed:<br><strong>[[S1:first_name:Ministry partner]]</strong><br><br>Don\'t forget to select a style!<br>US Default: "<strong>Def. Copy</strong>"<br>CAN Default: "<strong>PassoverCopy</strong>"',
             config: {
               disableNativeSpellChecker:false,
               on: {
@@ -243,19 +243,19 @@ export class PreviewService {
           },
           {
             title: 'Custom Signature',
-            tooltip: 'Put a custom signature here. Leave blank for the standard signature.',
+            tooltip: 'Put a custom signature here. Leave blank for the standard signature. <br><br>Type in "Yael" for a Yael signature.',
             config: {height:80, disableNativeSpellChecker:false}
           },
           {
             title: 'PS',
-            tooltip: 'Paste in the PS copy here. <br><br>Include the letters \'PS\'.',
+            tooltip: 'Paste in the PS copy here. <br><br>Include the letters \'PS\'.<br><br>Don\'t forget to select a style!<br>US Default: "<strong>Def. Copy</strong>"<br>CAN Default: "<strong>PassoverCopy</strong>"',
             config: {height:80, disableNativeSpellChecker:false}
           }
         ],
         image: [
           {
             title: 'Main image',
-            tooltip: 'Paste in the full image address from the Image Library in the Image URL. <br><br>Then add the Merlin or Brightcove ID for the image or video. <br><br>In Image source code add \'PH1\' for an image or \'VID1\' for a video. <br><br>In image UTM code add \'photo-link-1\' for an image or \'video-link-1\' for a video.'
+            tooltip: 'Paste in the full image address from the Image Library in the Image URL. <br><br>Then add the Merlin or Brightcove ID for the image or video. <br><br>In Image source code add \'<strong>PH1</strong>\' for an image or \'<strong>VID1</strong>\' for a video. <br><br>In image UTM code add \'<strong>photo-link-1</strong>\' for an image or \'<strong>video-link-1</strong>\' for a video.<br><br>If for some reason the Cropper tool does not show up correctly, just hit the "Go Back" button and then hit "Next" again and it should work.'
           }
         ]
       }
@@ -279,7 +279,7 @@ export class PreviewService {
           },
           {
             title: 'Body',
-            tooltip: 'Paste in the body copy here. <br><br>Only include the copy below the salutation and above the signature. <br><br>Double-click on the existing links to add the donation form URL.<br><br>Use this code to use a firstname, ministry partner can be changed as needed:<br><strong>[[S1:first_name:Ministry partner]]</strong>',
+            tooltip: 'Paste in the body copy here. <br><br>Only include the copy below the salutation and above the signature. <br><br>Double-click on the existing links to add the donation form URL.<br><br>Use this code to use a firstname, ministry partner can be changed as needed:<br><strong>[[S1:first_name:Ministry partner]]</strong><br><br>Don\'t forget to select a style!<br>US Default: "<strong>Def. Copy</strong>"<br>CAN Default: "<strong>PassoverCopy</strong>"',
             config: {
               disableNativeSpellChecker:false,
               on: {
@@ -295,19 +295,19 @@ export class PreviewService {
           },
           {
             title: 'Custom Signature',
-            tooltip: 'Put a custom signature here. Leave blank for the standard signature.',
+            tooltip: 'Put a custom signature here. Leave blank for the standard signature. <br><br>Type in "Yael" for a Yael signature.',
             config: {height:80, disableNativeSpellChecker:false}
           },
           {
             title: 'PS',
-            tooltip: 'Paste in the PS copy here. <br><br>Include the letters \'PS\'.',
+            tooltip: 'Paste in the PS copy here. <br><br>Include the letters \'PS\'.<br><br>Don\'t forget to select a style!<br>US Default: "<strong>Def. Copy</strong>"<br>CAN Default: "<strong>PassoverCopy</strong>"',
             config: {height:80, disableNativeSpellChecker:false}
           }
         ],
         image: [
           {
             title: 'Main image',
-            tooltip: 'Paste in the full image address from the Image Library in the Image URL. <br><br>Then add the Merlin or Brightcove ID for the image or video. <br><br>In Image source code add \'PH1\' for an image or \'VID1\' for a video. <br><br>In image UTM code add \'photo-link-1\' for an image or \'video-link-1\' for a video.'
+            tooltip: 'Paste in the full image address from the Image Library in the Image URL. <br><br>Then add the Merlin or Brightcove ID for the image or video. <br><br>In Image source code add \'<strong>PH1</strong>\' for an image or \'<strong>VID1</strong>\' for a video. <br><br>In image UTM code add \'<strong>photo-link-1</strong>\' for an image or \'<strong>video-link-1</strong>\' for a video.<br><br>If for some reason the Cropper tool does not show up correctly, just hit the "Go Back" button and then hit "Next" again and it should work.'
           }
         ]
       }
@@ -342,7 +342,7 @@ export class PreviewService {
           },
           {
             title: 'Body',
-            tooltip: 'Paste in the body copy here. <br><br>Only include the copy below the salutation and above the signature. <br><br>Double-click on the existing links to add the donation form URL.<br><br>Use this code to use a firstname, ministry partner can be changed as needed:<br><strong>[[S1:first_name:Ministry partner]]</strong>',
+            tooltip: 'Paste in the body copy here. <br><br>Only include the copy below the salutation and above the signature. <br><br>Double-click on the existing links to add the donation form URL.<br><br>Use this code to use a firstname, ministry partner can be changed as needed:<br><strong>[[S1:first_name:Ministry partner]]</strong><br><br>Don\'t forget to select a style!<br>US Default: "<strong>Def. Copy</strong>"<br>CAN Default: "<strong>PassoverCopy</strong>"',
             config: {
               disableNativeSpellChecker:false,
               on: {
@@ -357,7 +357,7 @@ export class PreviewService {
           },
           {
             title: 'PS',
-            tooltip: 'Paste in the PS copy here. <br><br>Include the letters \'PS\'.',
+            tooltip: 'Paste in the PS copy here. <br><br>Include the letters \'PS\'.<br><br>Don\'t forget to select a style!<br>US Default: "<strong>Def. Copy</strong>"<br>CAN Default: "<strong>PassoverCopy</strong>"',
             config: {height:80, disableNativeSpellChecker:false}
           },
           {
@@ -373,7 +373,7 @@ export class PreviewService {
           },
           {
             title: 'Promo Body',
-            tooltip: 'Paste in the promotional body copy here. <br><br>Only include the copy below the salutation and above the signature. <br><br>Double-click on the existing links to add the donation form URL.<br><br>Use this code to use a firstname, ministry partner can be changed as needed:<br><strong>[[S1:first_name:Ministry partner]]</strong>',
+            tooltip: 'Paste in the promotional body copy here. <br><br>Only include the copy below the salutation and above the signature. <br><br>Double-click on the existing links to add the donation form URL.<br><br>Use this code to use a firstname, ministry partner can be changed as needed:<br><strong>[[S1:first_name:Ministry partner]]</strong><br><br>Don\'t forget to select a style!<br>US Default: "<strong>Def. Copy</strong>"<br>CAN Default: "<strong>PassoverCopy</strong>"',
             config: {
               disableNativeSpellChecker:false,
               on: {
@@ -388,18 +388,18 @@ export class PreviewService {
           },
           {
             title: 'Custom Signature',
-            tooltip: 'Put a custom signature here. Leave blank for the standard signature.',
+            tooltip: 'Put a custom signature here. Leave blank for the standard signature. <br><br>Type in "Yael" for a Yael signature.',
             config: {height:80, disableNativeSpellChecker:false}
           }
         ],
         image: [
           {
             title: 'Main image',
-            tooltip: 'Paste in the full image address from the Image Library in the Image URL. <br><br>Then add the Merlin or Brightcove ID for the image or video. <br><br>In Image source code add \'PH1\' for an image or \'VID1\' for a video. <br><br>In image UTM code add \'photo-link-1\' for an image or \'video-link-1\' for a video.'
+            tooltip: 'Paste in the full image address from the Image Library in the Image URL. <br><br>Then add the Merlin or Brightcove ID for the image or video. <br><br>In Image source code add \'<strong>PH1</strong>\' for an image or \'<strong>VID1</strong>\' for a video. <br><br>In image UTM code add \'<strong>photo-link-1</strong>\' for an image or \'<strong>video-link-1</strong>\' for a video.<br><br>If for some reason the Cropper tool does not show up correctly, just hit the "Go Back" button and then hit "Next" again and it should work.'
           },
           {
             title: 'Promo image',
-            tooltip: 'Paste in the full image address from the Image Library in the Image URL. <br><br>Then add the Merlin or Brightcove ID for the image or video. <br><br>In Image source code add \'PH2\' for an image or \'VID2\' for a video. <br><br>In image UTM code add \'photo-link-2\' for an image or \'video-link-2\' for a video.'
+            tooltip: 'Paste in the full image address from the Image Library in the Image URL. <br><br>Then add the Merlin or Brightcove ID for the image or video. <br><br>In Image source code add \'<strong>PH2</strong>\' for an image or \'<strong>VID2</strong>\' for a video. <br><br>In image UTM code add \'<strong>photo-link-2</strong>\' for an image or \'<strong>video-link-2</strong>\' for a video.'
           }
         ]
       }
@@ -434,7 +434,7 @@ export class PreviewService {
           },
           {
             title: 'Body',
-            tooltip: 'Paste in the body copy here. <br><br>Only include the copy below the salutation and above the signature. <br><br>Double-click on the existing links to add the donation form URL.<br><br>Use this code to use a firstname, ministry partner can be changed as needed:<br><strong>[[S1:first_name:Ministry partner]]</strong>',
+            tooltip: 'Paste in the body copy here. <br><br>Only include the copy below the salutation and above the signature. <br><br>Double-click on the existing links to add the donation form URL.<br><br>Use this code to use a firstname, ministry partner can be changed as needed:<br><strong>[[S1:first_name:Ministry partner]]</strong><br><br>Don\'t forget to select a style!<br>US Default: "<strong>Def. Copy</strong>"<br>CAN Default: "<strong>PassoverCopy</strong>"',
             config: {
               disableNativeSpellChecker:false,
               on: {
@@ -449,7 +449,7 @@ export class PreviewService {
           },
           {
             title: 'PS',
-            tooltip: 'Paste in the PS copy here. <br><br>Include the letters \'PS\'.',
+            tooltip: 'Paste in the PS copy here. <br><br>Include the letters \'PS\'.<br><br>Don\'t forget to select a style!<br>US Default: "<strong>Def. Copy</strong>"<br>CAN Default: "<strong>PassoverCopy</strong>"',
             config: {height:80, disableNativeSpellChecker:false}
           },
           {
@@ -465,7 +465,7 @@ export class PreviewService {
           },
           {
             title: 'Promo Body',
-            tooltip: 'Paste in the promotional body copy here. <br><br>Only include the copy below the salutation and above the signature. <br><br>Double-click on the existing links to add the donation form URL.<br><br>Use this code to use a firstname, ministry partner can be changed as needed:<br><strong>[[S1:first_name:Ministry partner]]</strong>',
+            tooltip: 'Paste in the promotional body copy here. <br><br>Only include the copy below the salutation and above the signature. <br><br>Double-click on the existing links to add the donation form URL.<br><br>Use this code to use a firstname, ministry partner can be changed as needed:<br><strong>[[S1:first_name:Ministry partner]]</strong><br><br>Don\'t forget to select a style!<br>US Default: "<strong>Def. Copy</strong>"<br>CAN Default: "<strong>PassoverCopy</strong>"',
             config: {
               disableNativeSpellChecker:false,
               on: {
@@ -480,18 +480,18 @@ export class PreviewService {
           },
           {
             title: 'Custom Signature',
-            tooltip: 'Put a custom signature here. Leave blank for the standard signature.',
+            tooltip: 'Put a custom signature here. Leave blank for the standard signature. <br><br>Type in "Yael" for a Yael signature.',
             config: {height:80, disableNativeSpellChecker:false}
           }
         ],
         image: [
           {
             title: 'Main image',
-            tooltip: 'Paste in the full image address from the Image Library in the Image URL. <br><br>Then add the Merlin or Brightcove ID for the image or video. <br><br>In Image source code add \'PH1\' for an image or \'VID1\' for a video. <br><br>In image UTM code add \'photo-link-1\' for an image or \'video-link-1\' for a video.'
+            tooltip: 'Paste in the full image address from the Image Library in the Image URL. <br><br>Then add the Merlin or Brightcove ID for the image or video. <br><br>In Image source code add \'<strong>PH1</strong>\' for an image or \'<strong>VID1</strong>\' for a video. <br><br>In image UTM code add \'<strong>photo-link-1</strong>\' for an image or \'<strong>video-link-1</strong>\' for a video.<br><br>If for some reason the Cropper tool does not show up correctly, just hit the "Go Back" button and then hit "Next" again and it should work.'
           },
           {
             title: 'Promo image',
-            tooltip: 'Paste in the full image address from the Image Library in the Image URL. <br><br>Then add the Merlin or Brightcove ID for the image or video. <br><br>In Image source code add \'PH2\' for an image or \'VID2\' for a video. <br><br>In image UTM code add \'photo-link-2\' for an image or \'video-link-2\' for a video.'
+            tooltip: 'Paste in the full image address from the Image Library in the Image URL. <br><br>Then add the Merlin or Brightcove ID for the image or video. <br><br>In Image source code add \'<strong>PH2</strong>\' for an image or \'<strong>VID2</strong>\' for a video. <br><br>In image UTM code add \'<strong>photo-link-2</strong>\' for an image or \'<strong>video-link-2</strong>\' for a video.'
           }
         ]
       }
@@ -515,7 +515,7 @@ export class PreviewService {
           },
           {
             title: 'Body',
-            tooltip: 'Paste in the body copy here. <br><br>Only include the copy below the salutation and above the signature. <br><br>Double-click on the existing links to add the donation form URL.<br><br>Use this code to use a firstname, ministry partner can be changed as needed:<br><strong>[[S1:first_name:Ministry partner]]</strong>',
+            tooltip: 'Paste in the body copy here. <br><br>Only include the copy below the salutation and above the signature. <br><br>Double-click on the existing links to add the donation form URL.<br><br>Use this code to use a firstname, ministry partner can be changed as needed:<br><strong>[[S1:first_name:Ministry partner]]</strong><br><br>Don\'t forget to select a style!<br>US Default: "<strong>Def. Copy</strong>"<br>CAN Default: "<strong>PassoverCopy</strong>"',
             config: {
               disableNativeSpellChecker:false,
               on: {
@@ -530,19 +530,19 @@ export class PreviewService {
           },
           {
             title: 'PS',
-            tooltip: 'Paste in the PS copy here. <br><br>Include the letters \'PS\'.',
+            tooltip: 'Paste in the PS copy here. <br><br>Include the letters \'PS\'.<br><br>Don\'t forget to select a style!<br>US Default: "<strong>Def. Copy</strong>"<br>CAN Default: "<strong>PassoverCopy</strong>"',
             config: {height:80, disableNativeSpellChecker:false}
           },
           {
             title: 'Custom Signature',
-            tooltip: 'Put a custom signature here. Leave blank for the standard signature.',
+            tooltip: 'Put a custom signature here. Leave blank for the standard signature. <br><br>Type in "Yael" for a Yael signature.',
             config: {height:80, disableNativeSpellChecker:false}
           }
         ],
         image: [
           {
             title: 'Main image',
-            tooltip: 'Paste in the full image address from the Image Library in the Image URL. <br><br>Then add the Merlin or Brightcove ID for the image or video. <br><br>In Image source code add \'PH1\' for an image or \'VID1\' for a video. <br><br>In image UTM code add \'photo-link-1\' for an image or \'video-link-1\' for a video.'
+            tooltip: 'Paste in the full image address from the Image Library in the Image URL. <br><br>Then add the Merlin or Brightcove ID for the image or video. <br><br>In Image source code add \'<strong>PH1</strong>\' for an image or \'<strong>VID1</strong>\' for a video. <br><br>In image UTM code add \'<strong>photo-link-1</strong>\' for an image or \'<strong>video-link-1</strong>\' for a video.<br><br>If for some reason the Cropper tool does not show up correctly, just hit the "Go Back" button and then hit "Next" again and it should work.'
           }
         ]
       }
@@ -566,7 +566,7 @@ export class PreviewService {
           },
           {
             title: 'Body',
-            tooltip: 'Paste in the body copy here. <br><br>Only include the copy below the salutation and above the signature. <br><br>Double-click on the existing links to add the donation form URL.<br><br>Use this code to use a firstname, ministry partner can be changed as needed:<br><strong>[[S1:first_name:Ministry partner]]</strong>',
+            tooltip: 'Paste in the body copy here. <br><br>Only include the copy below the salutation and above the signature. <br><br>Double-click on the existing links to add the donation form URL.<br><br>Use this code to use a firstname, ministry partner can be changed as needed:<br><strong>[[S1:first_name:Ministry partner]]</strong><br><br>Don\'t forget to select a style!<br>US Default: "<strong>Def. Copy</strong>"<br>CAN Default: "<strong>PassoverCopy</strong>"',
             config: {
               disableNativeSpellChecker:false,
               on: {
@@ -581,19 +581,19 @@ export class PreviewService {
           },
           {
             title: 'Custom Signature',
-            tooltip: 'Put a custom signature here. Leave blank for the standard signature.',
+            tooltip: 'Put a custom signature here. Leave blank for the standard signature. <br><br>Type in "Yael" for a Yael signature.',
             config: {height:80, disableNativeSpellChecker:false}
           },
           {
             title: 'PS',
-            tooltip: 'Paste in the PS copy here. <br><br>Include the letters \'PS\'.',
+            tooltip: 'Paste in the PS copy here. <br><br>Include the letters \'PS\'.<br><br>Don\'t forget to select a style!<br>US Default: "<strong>Def. Copy</strong>"<br>CAN Default: "<strong>PassoverCopy</strong>"',
             config: {height:80, disableNativeSpellChecker:false}
           }
         ],
         image: [
           {
             title: 'Main image',
-            tooltip: 'Paste in the full image address from the Image Library in the Image URL. <br><br>Then add the Merlin or Brightcove ID for the image or video. <br><br>In Image source code add \'PH1\' for an image or \'VID1\' for a video. <br><br>In image UTM code add \'photo-link-1\' for an image or \'video-link-1\' for a video.'
+            tooltip: 'Paste in the full image address from the Image Library in the Image URL. <br><br>Then add the Merlin or Brightcove ID for the image or video. <br><br>In Image source code add \'<strong>PH1</strong>\' for an image or \'<strong>VID1</strong>\' for a video. <br><br>In image UTM code add \'<strong>photo-link-1</strong>\' for an image or \'<strong>video-link-1</strong>\' for a video.<br><br>If for some reason the Cropper tool does not show up correctly, just hit the "Go Back" button and then hit "Next" again and it should work.'
           }
         ]
       }
@@ -617,7 +617,7 @@ export class PreviewService {
           },
           {
             title: 'Body',
-            tooltip: 'Paste in the body copy here. <br><br>Only include the copy below the salutation and above the signature. <br><br>Double-click on the existing links to add the donation form URL.<br><br>Use this code to use a firstname, ministry partner can be changed as needed:<br><strong>[[S1:first_name:Ministry partner]]</strong>',
+            tooltip: 'Paste in the body copy here. <br><br>Only include the copy below the salutation and above the signature. <br><br>Double-click on the existing links to add the donation form URL.<br><br>Use this code to use a firstname, ministry partner can be changed as needed:<br><strong>[[S1:first_name:Ministry partner]]</strong><br><br>Don\'t forget to select a style!<br>US Default: "<strong>Def. Copy</strong>"<br>CAN Default: "<strong>PassoverCopy</strong>"',
             config: {
               disableNativeSpellChecker:false,
               on: {
@@ -632,19 +632,19 @@ export class PreviewService {
           },
           {
             title: 'Custom Signature',
-            tooltip: 'Put a custom signature here. Leave blank for the standard signature.',
+            tooltip: 'Put a custom signature here. Leave blank for the standard signature. <br><br>Type in "Yael" for a Yael signature.',
             config: {height:80, disableNativeSpellChecker:false}
           },
           {
             title: 'PS',
-            tooltip: 'Paste in the PS copy here. <br><br>Include the letters \'PS\'.',
+            tooltip: 'Paste in the PS copy here. <br><br>Include the letters \'PS\'.<br><br>Don\'t forget to select a style!<br>US Default: "<strong>Def. Copy</strong>"<br>CAN Default: "<strong>PassoverCopy</strong>"',
             config: {height:80, disableNativeSpellChecker:false}
           }
         ],
         image: [
           {
             title: 'Main image',
-            tooltip: 'Paste in the full image address from the Image Library in the Image URL. <br><br>Then add the Merlin or Brightcove ID for the image or video. <br><br>In Image source code add \'PH1\' for an image or \'VID1\' for a video. <br><br>In image UTM code add \'photo-link-1\' for an image or \'video-link-1\' for a video.'
+            tooltip: 'Paste in the full image address from the Image Library in the Image URL. <br><br>Then add the Merlin or Brightcove ID for the image or video. <br><br>In Image source code add \'<strong>PH1</strong>\' for an image or \'<strong>VID1</strong>\' for a video. <br><br>In image UTM code add \'<strong>photo-link-1</strong>\' for an image or \'<strong>video-link-1</strong>\' for a video.<br><br>If for some reason the Cropper tool does not show up correctly, just hit the "Go Back" button and then hit "Next" again and it should work.'
           }
         ]
       }
@@ -668,7 +668,7 @@ export class PreviewService {
           },
           {
             title: 'Body',
-            tooltip: 'Paste in the body copy here. <br><br>Only include the copy below the salutation and above the signature. <br><br>Double-click on the existing links to add the donation form URL.<br><br>Use this code to use a firstname, ministry partner can be changed as needed:<br><strong>[[S1:first_name:Ministry partner]]</strong>',
+            tooltip: 'Paste in the body copy here. <br><br>Only include the copy below the salutation and above the signature. <br><br>Double-click on the existing links to add the donation form URL.<br><br>Use this code to use a firstname, ministry partner can be changed as needed:<br><strong>[[S1:first_name:Ministry partner]]</strong><br><br>Don\'t forget to select a style!<br>US Default: "<strong>Def. Copy</strong>"<br>CAN Default: "<strong>PassoverCopy</strong>"',
             config: {
               disableNativeSpellChecker:false,
               on: {
@@ -683,19 +683,19 @@ export class PreviewService {
           },
           {
             title: 'Custom Signature',
-            tooltip: 'Put a custom signature here. Leave blank for the standard signature.',
+            tooltip: 'Put a custom signature here. Leave blank for the standard signature. <br><br>Type in "Yael" for a Yael signature.',
             config: {height:80, disableNativeSpellChecker:false}
           },
           {
             title: 'PS',
-            tooltip: 'Paste in the PS copy here. <br><br>Include the letters \'PS\'.',
+            tooltip: 'Paste in the PS copy here. <br><br>Include the letters \'PS\'.<br><br>Don\'t forget to select a style!<br>US Default: "<strong>Def. Copy</strong>"<br>CAN Default: "<strong>PassoverCopy</strong>"',
             config: {height:80, disableNativeSpellChecker:false}
           }
         ],
         image: [
           {
             title: 'Main image',
-            tooltip: 'Paste in the full image address from the Image Library in the Image URL. <br><br>Then add the Merlin or Brightcove ID for the image or video. <br><br>In Image source code add \'PH1\' for an image or \'VID1\' for a video. <br><br>In image UTM code add \'photo-link-1\' for an image or \'video-link-1\' for a video.'
+            tooltip: 'Paste in the full image address from the Image Library in the Image URL. <br><br>Then add the Merlin or Brightcove ID for the image or video. <br><br>In Image source code add \'<strong>PH1</strong>\' for an image or \'<strong>VID1</strong>\' for a video. <br><br>In image UTM code add \'<strong>photo-link-1</strong>\' for an image or \'<strong>video-link-1</strong>\' for a video.<br><br>If for some reason the Cropper tool does not show up correctly, just hit the "Go Back" button and then hit "Next" again and it should work.'
           }
         ]
       }
@@ -719,7 +719,7 @@ export class PreviewService {
           },
           {
             title: 'Body',
-            tooltip: 'Paste in the body copy here. <br><br>Only include the copy below the salutation and above the signature. <br><br>Double-click on the existing links to add the donation form URL.<br><br>Use this code to use a firstname, ministry partner can be changed as needed:<br><strong>[[S1:first_name:Ministry partner]]</strong>',
+            tooltip: 'Paste in the body copy here. <br><br>Only include the copy below the salutation and above the signature. <br><br>Double-click on the existing links to add the donation form URL.<br><br>Use this code to use a firstname, ministry partner can be changed as needed:<br><strong>[[S1:first_name:Ministry partner]]</strong><br><br>Don\'t forget to select a style!<br>US Default: "<strong>Def. Copy</strong>"<br>CAN Default: "<strong>PassoverCopy</strong>"',
             config: {
               disableNativeSpellChecker:false,
               on: {
@@ -734,19 +734,19 @@ export class PreviewService {
           },
           {
             title: 'Custom Signature',
-            tooltip: 'Put a custom signature here. Leave blank for the standard signature.',
+            tooltip: 'Put a custom signature here. Leave blank for the standard signature. <br><br>Type in "Yael" for a Yael signature.',
             config: {height:80, disableNativeSpellChecker:false}
           },
           {
             title: 'PS',
-            tooltip: 'Paste in the PS copy here. <br><br>Include the letters \'PS\'.',
+            tooltip: 'Paste in the PS copy here. <br><br>Include the letters \'PS\'.<br><br>Don\'t forget to select a style!<br>US Default: "<strong>Def. Copy</strong>"<br>CAN Default: "<strong>PassoverCopy</strong>"',
             config: {height:80, disableNativeSpellChecker:false}
           }
         ],
         image: [
           {
             title: 'Main image',
-            tooltip: 'Paste in the full image address from the Image Library in the Image URL. <br><br>Then add the Merlin or Brightcove ID for the image or video. <br><br>In Image source code add \'PH1\' for an image or \'VID1\' for a video. <br><br>In image UTM code add \'photo-link-1\' for an image or \'video-link-1\' for a video.'
+            tooltip: 'Paste in the full image address from the Image Library in the Image URL. <br><br>Then add the Merlin or Brightcove ID for the image or video. <br><br>In Image source code add \'<strong>PH1</strong>\' for an image or \'<strong>VID1</strong>\' for a video. <br><br>In image UTM code add \'<strong>photo-link-1</strong>\' for an image or \'<strong>video-link-1</strong>\' for a video.<br><br>If for some reason the Cropper tool does not show up correctly, just hit the "Go Back" button and then hit "Next" again and it should work.'
           }
         ]
       }
@@ -781,7 +781,7 @@ export class PreviewService {
           },
           {
             title: 'Body',
-            tooltip: 'Paste in the body copy here. <br><br>Only include the copy below the salutation and above the signature. <br><br>Double-click on the existing links to add the donation form URL.<br><br>Use this code to use a firstname, ministry partner can be changed as needed:<br><strong>[[S1:first_name:Ministry partner]]</strong>',
+            tooltip: 'Paste in the body copy here. <br><br>Only include the copy below the salutation and above the signature. <br><br>Double-click on the existing links to add the donation form URL.<br><br>Use this code to use a firstname, ministry partner can be changed as needed:<br><strong>[[S1:first_name:Ministry partner]]</strong><br><br>Don\'t forget to select a style!<br>US Default: "<strong>Def. Copy</strong>"<br>CAN Default: "<strong>PassoverCopy</strong>"',
             config: {
               disableNativeSpellChecker:false,
               on: {
@@ -796,7 +796,7 @@ export class PreviewService {
           },
           {
             title: 'PS',
-            tooltip: 'Paste in the PS copy here. <br><br>Include the letters \'PS\'.',
+            tooltip: 'Paste in the PS copy here. <br><br>Include the letters \'PS\'.<br><br>Don\'t forget to select a style!<br>US Default: "<strong>Def. Copy</strong>"<br>CAN Default: "<strong>PassoverCopy</strong>"',
             config: {height:80, disableNativeSpellChecker:false}
           },
           {
@@ -812,7 +812,7 @@ export class PreviewService {
           },
           {
             title: 'Promo Body',
-            tooltip: 'Paste in the promotional body copy here. <br><br>Only include the copy below the salutation and above the signature. <br><br>Double-click on the existing links to add the donation form URL.<br><br>Use this code to use a firstname, ministry partner can be changed as needed:<br><strong>[[S1:first_name:Ministry partner]]</strong>',
+            tooltip: 'Paste in the promotional body copy here. <br><br>Only include the copy below the salutation and above the signature. <br><br>Double-click on the existing links to add the donation form URL.<br><br>Use this code to use a firstname, ministry partner can be changed as needed:<br><strong>[[S1:first_name:Ministry partner]]</strong><br><br>Don\'t forget to select a style!<br>US Default: "<strong>Def. Copy</strong>"<br>CAN Default: "<strong>PassoverCopy</strong>"',
             config: {
               disableNativeSpellChecker:false,
               on: {
@@ -827,18 +827,18 @@ export class PreviewService {
           },
           {
             title: 'Custom Signature',
-            tooltip: 'Put a custom signature here. Leave blank for the standard signature.',
+            tooltip: 'Put a custom signature here. Leave blank for the standard signature. <br><br>Type in "Yael" for a Yael signature.',
             config: {height:80, disableNativeSpellChecker:false}
           }
         ],
         image: [
           {
             title: 'Main image',
-            tooltip: 'Paste in the full image address from the Image Library in the Image URL. <br><br>Then add the Merlin or Brightcove ID for the image or video. <br><br>In Image source code add \'PH1\' for an image or \'VID1\' for a video. <br><br>In image UTM code add \'photo-link-1\' for an image or \'video-link-1\' for a video.'
+            tooltip: 'Paste in the full image address from the Image Library in the Image URL. <br><br>Then add the Merlin or Brightcove ID for the image or video. <br><br>In Image source code add \'<strong>PH1</strong>\' for an image or \'<strong>VID1</strong>\' for a video. <br><br>In image UTM code add \'<strong>photo-link-1</strong>\' for an image or \'<strong>video-link-1</strong>\' for a video.<br><br>If for some reason the Cropper tool does not show up correctly, just hit the "Go Back" button and then hit "Next" again and it should work.'
           },
           {
             title: 'Promo image',
-            tooltip: 'Paste in the full image address from the Image Library in the Image URL. <br><br>Then add the Merlin or Brightcove ID for the image or video. <br><br>In Image source code add \'PH2\' for an image or \'VID2\' for a video. <br><br>In image UTM code add \'photo-link-2\' for an image or \'video-link-2\' for a video.'
+            tooltip: 'Paste in the full image address from the Image Library in the Image URL. <br><br>Then add the Merlin or Brightcove ID for the image or video. <br><br>In Image source code add \'<strong>PH2</strong>\' for an image or \'<strong>VID2</strong>\' for a video. <br><br>In image UTM code add \'<strong>photo-link-2</strong>\' for an image or \'<strong>video-link-2</strong>\' for a video.'
           }
         ]
       }
@@ -862,7 +862,7 @@ export class PreviewService {
           },
           {
             title: 'Body',
-            tooltip: 'Paste in the body copy here. <br><br>Only include the copy below the salutation and above the signature. <br><br>Double-click on the existing links to add the donation form URL.<br><br>Use this code to use a firstname, ministry partner can be changed as needed:<br><strong>[[S1:first_name:Ministry partner]]</strong>',
+            tooltip: 'Paste in the body copy here. <br><br>Only include the copy below the salutation and above the signature. <br><br>Double-click on the existing links to add the donation form URL.<br><br>Use this code to use a firstname, ministry partner can be changed as needed:<br><strong>[[S1:first_name:Ministry partner]]</strong><br><br>Don\'t forget to select a style!<br>US Default: "<strong>Def. Copy</strong>"<br>CAN Default: "<strong>PassoverCopy</strong>"',
             config: {
               disableNativeSpellChecker:false,
               on: {
@@ -877,19 +877,19 @@ export class PreviewService {
           },
           {
             title: 'Custom Signature',
-            tooltip: 'Put a custom signature here. Leave blank for the standard signature.',
+            tooltip: 'Put a custom signature here. Leave blank for the standard signature. <br><br>Type in "Yael" for a Yael signature.',
             config: {height:80, disableNativeSpellChecker:false}
           },
           {
             title: 'PS',
-            tooltip: 'Paste in the PS copy here. <br><br>Include the letters \'PS\'.',
+            tooltip: 'Paste in the PS copy here. <br><br>Include the letters \'PS\'.<br><br>Don\'t forget to select a style!<br>US Default: "<strong>Def. Copy</strong>"<br>CAN Default: "<strong>PassoverCopy</strong>"',
             config: {height:80, disableNativeSpellChecker:false}
           }
         ],
         image: [
           {
             title: 'Main image',
-            tooltip: 'Paste in the full image address from the Image Library in the Image URL. <br><br>Then add the Merlin or Brightcove ID for the image or video. <br><br>In Image source code add \'PH1\' for an image or \'VID1\' for a video. <br><br>In image UTM code add \'photo-link-1\' for an image or \'video-link-1\' for a video.'
+            tooltip: 'Paste in the full image address from the Image Library in the Image URL. <br><br>Then add the Merlin or Brightcove ID for the image or video. <br><br>In Image source code add \'<strong>PH1</strong>\' for an image or \'<strong>VID1</strong>\' for a video. <br><br>In image UTM code add \'<strong>photo-link-1</strong>\' for an image or \'<strong>video-link-1</strong>\' for a video.<br><br>If for some reason the Cropper tool does not show up correctly, just hit the "Go Back" button and then hit "Next" again and it should work.'
           }
         ]
       }
@@ -913,7 +913,7 @@ export class PreviewService {
           },
           {
             title: 'Body',
-            tooltip: 'Paste in the body copy here. <br><br>Only include the copy below the salutation and above the signature. <br><br>Double-click on the existing links to add the donation form URL.<br><br>Use this code to use a firstname, ministry partner can be changed as needed:<br><strong>[[S1:first_name:Ministry partner]]</strong>',
+            tooltip: 'Paste in the body copy here. <br><br>Only include the copy below the salutation and above the signature. <br><br>Double-click on the existing links to add the donation form URL.<br><br>Use this code to use a firstname, ministry partner can be changed as needed:<br><strong>[[S1:first_name:Ministry partner]]</strong><br><br>Don\'t forget to select a style!<br>US Default: "<strong>Def. Copy</strong>"<br>CAN Default: "<strong>PassoverCopy</strong>"',
             config: {
               disableNativeSpellChecker:false,
               on: {
@@ -928,19 +928,19 @@ export class PreviewService {
           },
           {
             title: 'Custom Signature',
-            tooltip: 'Put a custom signature here. Leave blank for the standard signature.',
+            tooltip: 'Put a custom signature here. Leave blank for the standard signature. <br><br>Type in "Yael" for a Yael signature.',
             config: {height:80, disableNativeSpellChecker:false}
           },
           {
             title: 'PS',
-            tooltip: 'Paste in the PS copy here. <br><br>Include the letters \'PS\'.',
+            tooltip: 'Paste in the PS copy here. <br><br>Include the letters \'PS\'.<br><br>Don\'t forget to select a style!<br>US Default: "<strong>Def. Copy</strong>"<br>CAN Default: "<strong>PassoverCopy</strong>"',
             config: {height:80, disableNativeSpellChecker:false}
           }
         ],
         image: [
           {
             title: 'Main image',
-            tooltip: 'Paste in the full image address from the Image Library in the Image URL. <br><br>Then add the Merlin or Brightcove ID for the image or video. <br><br>In Image source code add \'PH1\' for an image or \'VID1\' for a video. <br><br>In image UTM code add \'photo-link-1\' for an image or \'video-link-1\' for a video.'
+            tooltip: 'Paste in the full image address from the Image Library in the Image URL. <br><br>Then add the Merlin or Brightcove ID for the image or video. <br><br>In Image source code add \'<strong>PH1</strong>\' for an image or \'<strong>VID1</strong>\' for a video. <br><br>In image UTM code add \'<strong>photo-link-1</strong>\' for an image or \'<strong>video-link-1</strong>\' for a video.<br><br>If for some reason the Cropper tool does not show up correctly, just hit the "Go Back" button and then hit "Next" again and it should work.'
           }
         ]
       }

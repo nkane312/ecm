@@ -44,6 +44,9 @@ export class AppealContentComponent implements OnInit {
     this.restoreService.setItem(data);
   }
   get content(): AppealContent {
+    $(function () {
+      $('[data-toggle="popover"]').popover({trigger: 'hover focus', container: 'app-root', html: true});
+    });
     return this.restoreService.getItem();
   }
 
@@ -76,7 +79,7 @@ export class AppealContentComponent implements OnInit {
 
   ngOnInit() {
     $(function () {
-      $('[data-toggle="popover"]').popover({trigger: 'hover', container: 'app-root', html: true});
+      $('[data-toggle="popover"]').popover({trigger: 'hover focus', container: 'app-root', html: true});
     });
   }
 }

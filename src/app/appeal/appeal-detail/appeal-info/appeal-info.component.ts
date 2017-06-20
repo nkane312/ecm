@@ -64,7 +64,7 @@ export class AppealInfoComponent implements OnInit {
     this.restoreService.setItem(data);
     this.checkChanged();
     $(function () {
-      $('[data-toggle="popover"]').popover({trigger: 'hover', container: 'app-root', html: true});
+      $('[data-toggle="popover"]').popover({trigger: 'hover focus', container: 'app-root', html: true});
     });
   }
   get info(): AppealInfo {
@@ -87,7 +87,7 @@ export class AppealInfoComponent implements OnInit {
 
   ngOnInit() {
     $(function () {
-      $('[data-toggle="popover"]').popover({trigger: 'hover', container: 'app-root', html: true});
+      $('[data-toggle="popover"]').popover({trigger: 'hover focus', container: 'app-root', html: true});
     });
   }
 }

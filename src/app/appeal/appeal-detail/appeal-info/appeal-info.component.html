@@ -1,4 +1,4 @@
-<div *ngIf="info" class="panel" [ngClass]="{'panel-primary': !changed, 'panel-warning': changed}">
+<div class="panel" [ngClass]="{'panel-primary': !changed, 'panel-warning': changed}">
   <div class="panel-heading text-center" data-toggle="collapse" data-parent="#controls" data-target="#infoPanel">
     <h2 class="panel-title">eAppeal Info&nbsp;&nbsp;<span class="glyphicon glyphicon-envelope"></span></h2>
   </div>
@@ -39,7 +39,7 @@
             <datepicker [(ngModel)]="info.sendDate" (ngModelChange)="checkChanged()" name="sendDate"></datepicker>
           </div>
         </div>
-        <div class="form-group text-center" data-toggle="popover" data-placement="right" title="Send Time" data-content="Select the Time the email will send here.">
+        <div class="form-group text-center" data-toggle="popover" data-placement="right" title="Send Time" data-content="Select the Time the email will send here.<br><br>For <strong>Canada</strong>, please set the time an hour later than you would like the email to be sent to account for the timezone difference.">
           <div class="datepicker-wrapper">
             <label for="send-time">Send Time</label>
             <timepicker class="text-center" [(ngModel)]="sendTime" (click)="changed=true" name="sendTime"></timepicker>
