@@ -80,7 +80,7 @@ db.once('open', function(){
   restify.serve(router, Appeal);
 
   app.use(router);
-  
+
   // All other routes
   app.use('/lib', express.static(__dirname + '/src/lib'));
   app.all('/', function(req, res, next) {
@@ -100,7 +100,7 @@ db.once('open', function(){
   app.post('/crop-image', function(req, res){
     var imageChanges = req.body;
     let originalFile = __dirname + '/dist/assets/appeal-images/' + imageChanges.fileName;
-    let editedFile = __dirname + '/dist/appeal-images/final-' + imageChanges.fileName;
+    let editedFile = __dirname + '/dist/assets/appeal-images/final-' + imageChanges.fileName;
     let polaroid = __dirname + '/dist/assets/images/polaroid-template.png';
     let playButton = __dirname + '/dist/assets/images/play.png';
     let audioButton = __dirname + '/dist/assets/images/audio.png';
@@ -231,7 +231,7 @@ db.once('open', function(){
     function writeFile(fileName){
       var c = new Client();
       c.on('ready', function(){
-        c.put(`${__dirname}/dist/appeal-images/final-${fileName}`, `digital.ifcj.org/appeal-images/final-${fileName}`, function(err){
+        c.put(`${__dirname}/dist/assets/appeal-images/final-${fileName}`, `digital.ifcj.org/appeal-images/final-${fileName}`, function(err){
           if (err){
             res.send(err);
             console.log(err);
