@@ -53,16 +53,16 @@
                         #image="ngModel" [name]="'brightcoveId' + i">
                     </div>
                     <label [attr.for]="'imageCode-' + i">Image source code</label>
-                    <select type="text" [attr.id]="'imageCode-' + i" class="form-control" [(ngModel)]="content.image[i].code" (change)="checkChanged()"
-                      #imageCode="ngModel" [name]="'imageCode-' + i" list="sourceCodes">
-                      <option selected="selected">PH1</option>
-                      <option>VID1</option>
+                    <select [attr.id]="'imageCode-' + i" class="form-control" [(ngModel)]="content.image[i].code" (change)="checkChanged()" #imageCode="ngModel"
+                      [name]="'imageCode-' + i" name="image[i].code">
+                      <option value="PH1">PH1</option>
+                      <option value="VID1">VID1</option>
                     </select>
                     <label [attr.for]="'imageUtm-' + i">Image UTM code</label>
-                    <select type="text" [attr.id]="'imageUtm-' + i" class="form-control" [(ngModel)]="content.image[i].utm" (change)="checkChanged()"
-                      #imageUtm="ngModel" [name]="'imageUtm-' + i" list="utmCodes">
-                      <option selected="selected">photo-link-1</option>
-                      <option>video-link-1</option>
+                    <select [attr.id]="'imageUtm-' + i" class="form-control" [(ngModel)]="content.image[i].utm" (change)="checkChanged()" #imageUtm="ngModel"
+                      [name]="'imageUtm-' + i" name="image[i].utm">
+                      <option value="photo-link-1">photo-link-1</option>
+                      <option value="video-link-1">video-link-1</option>
                     </select>
                   </div>
                   <template [ngIf]="options.image.length > 1">
@@ -115,7 +115,20 @@
 
         <div class="form-group" data-toggle="popover" data-placement="right" title="Donate Button Selection" data-content="Select the desired text for the donate buttons.">
           <label for="donate-button">Donate Button Selection</label>
-          <select [(ngModel)]="content.donateButton" list="donate" (change)="checkChanged()" #donateButton="ngModel" id="donateButton"
+          <input type="text" class="form-control" [(ngModel)]="content.donateButton" (change)="checkChanged()" #donateButton="ngModel"
+            name="donateButton" list="donate">
+          <datalist id="donate">
+            <option value="Donate Now">
+              <option value="Act Now">
+                <option value="Give Now">
+                  <option value="Help Now">
+                    <option value="Feed Hungry Children">
+                      <option value="Download Now">
+                        <option value="Match My Gift">
+                          <option value="Watch Now">
+                            <option value="Join Now">
+          </datalist>
+          <!--<select [(ngModel)]="content.donateButton" list="donate" (change)="checkChanged()" #donateButton="ngModel" id="donateButton"
             class="form-control" name="donateButton">
             <option selected="selected">Donate Now</option>
             <option>Act Now</option>
@@ -126,8 +139,26 @@
             <option>Match My Gift</option>
             <option>Watch Now</option>
             <option>Join Now</option>
-          </select>
+          </select>-->
         </div>
+
+        <div id="donateRadios" class="form-group" data-toggle="popover" data-placement="right" title="Donate Button Color Selection"
+          data-content="Select the desired color for the donate buttons.">
+          <label for="donateRadios">Donate Button Color Selection</label><br />
+          <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-primary active red-btn" (click)="setDonateColor('red')">
+            <input id="red-btn" type="radio" class="form-control" [(ngModel)]="content.donateColor" (change)="checkChanged()" #donateColor="ngModel"
+            name="donateColor" value="red-btn" autocomplete="off" checked> <strong>Red</strong>
+          </label>
+            <label class="btn btn-primary orange-btn" (click)="setDonateColor('orange')">
+            <input id="orange-btn" type="radio" class="form-control" [(ngModel)]="content.donateColor" (change)="checkChanged()" #donateColor="ngModel"
+            name="donateColor" value="orange-btn" autocomplete="off">
+            <strong>Orange</strong>
+          </label>
+          </div>
+
+        </div>
+
 
         <button (click)="save()" class="btn btn-success">Save</button><button (click)="cancel()" class="btn btn-danger pull-right">Cancel</button>
       </form>

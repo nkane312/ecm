@@ -57,7 +57,8 @@ var appealSchema = new Schema({
     callout: calloutSchema,
     customSignature: { type: String, default: '' },
     image: [imageSchema],
-    donateButton: { type: String, default: 'Donate Now' }
+    donateButton: { type: String, default: '' },
+    donateColor: { type: String, default: '#9A0000' }
   },
   codes: {
     utm_medium: { type: String, default: 'email' },

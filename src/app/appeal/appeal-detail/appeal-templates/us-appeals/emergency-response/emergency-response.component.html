@@ -1,479 +1,459 @@
 <div class="well pull-right">
-  <copy-controls [htmlVersion]="htmlVersion" [htmlStyle]="htmlStyle" [plainVersion]="plainVersion"></copy-controls>
+    <copy-controls [htmlVersion]="htmlVersion" [htmlStyle]="htmlStyle" [plainVersion]="plainVersion"></copy-controls>
 </div>
 
 <div #htmlVersion>
-  <template [ngIf]="appeal">
-<!doctype html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <!--[if gte mso 9]>
+    <template [ngIf]="appeal">
+        <!doctype html>
+        <html>
+
+        <head>
+            <meta charset="utf-8">
+            <!--[if gte mso 9]>
         <style>
         #add-space {
         display: block;
         }
         </style>
     <![endif]-->
-    </head>
+        </head>
 
 
 
-<body style="-moz-box-sizing:border-box;-ms-text-size-adjust:100%;-webkit-box-sizing:border-box;-webkit-text-size-adjust:100%;Margin:0;background:#fff!important;box-sizing:border-box;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;min-width:100%;padding:0;text-align:left;width:100%!important"><span class="preheader" style="color:#f3f3f3;display:none!important;font-size:1px;line-height:1px;max-height:0;max-width:0;mso-hide:all!important;opacity:0;overflow:hidden;visibility:hidden"> {{body.plain[0]?.changingThisBreaksApplicationSecurity | removeHtml: 'space':'rsquo':'lsquo'}}</span>
-    <table
-        class="body" style="Margin:0;background:#fff!important;border-collapse:collapse;border-spacing:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;height:100%;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;width:100%">
-        <tr style="padding:0;text-align:left;vertical-align:top">
-            <td class="center" align="center" valign="top" style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">
-                <center data-parsed="" style="min-width:580px;width:100%">
-                    <table align="center" class="container header-narrow float-center" style="Margin:0 auto;background:#fff;border-collapse:collapse;border-spacing:0;float:none;margin:0 auto;padding:0;text-align:center;vertical-align:top;width:580px">
-                        <tbody>
-                            <tr style="padding:0;text-align:left;vertical-align:top">
-                                <td style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">
-                                    <p style="color:#6d6e70;font-family:'Trebuchet MS',sans-serif;font-size:16px;font-weight:normal;line-height:1.3;margin-bottom:10px; text-align:center;">Too many messages? <a style="color:#00529c; text-decoration:none; font-weight:bold;" href="https://secure.ifcj.org/site/SPageNavigator/newsletter_signup.html?autologin=true">Update your email preferences here</a>.</p>
+        <body style="-moz-box-sizing:border-box;-ms-text-size-adjust:100%;-webkit-box-sizing:border-box;-webkit-text-size-adjust:100%;Margin:0;background:#fff!important;box-sizing:border-box;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;min-width:100%;padding:0;text-align:left;width:100%!important"><span class="preheader" style="color:#f3f3f3;display:none!important;font-size:1px;line-height:1px;max-height:0;max-width:0;mso-hide:all!important;opacity:0;overflow:hidden;visibility:hidden"> {{body.plain[0]?.changingThisBreaksApplicationSecurity | removeHtml: 'space':'rsquo':'lsquo'}}</span>
+            <table class="body" style="Margin:0;background:#fff!important;border-collapse:collapse;border-spacing:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;height:100%;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                <tr style="padding:0;text-align:left;vertical-align:top">
+                    <td class="center" align="center" valign="top" style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">
+                        <center data-parsed="" style="min-width:580px;width:100%">
+                            <table align="center" class="container header-narrow float-center" style="Margin:0 auto;background:#fff;border-collapse:collapse;border-spacing:0;float:none;margin:0 auto;padding:0;text-align:center;vertical-align:top;width:580px">
+                                <tbody>
+                                    <tr style="padding:0;text-align:left;vertical-align:top">
+                                        <td style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">
+                                            <p style="color:#6d6e70;font-family:'Trebuchet MS',sans-serif;font-size:16px;font-weight:normal;line-height:1.3;margin-bottom:10px; text-align:center;">Too many messages? <a style="color:#00529c; text-decoration:none; font-weight:bold;"
+                                                    href="https://secure.ifcj.org/site/SPageNavigator/newsletter_signup.html?autologin=true">Update your email preferences here</a>.</p>
 
-                                    <table class="spacer" style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
-                                        <tbody>
-                                            <tr style="padding:0;text-align:left;vertical-align:top">
-                                                <td height="10px" style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:10px;font-weight:400;hyphens:auto;line-height:10px;margin:0;mso-line-height-rule:exactly;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">&#xA0;</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <table class="row collapse" style="border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
-                                        <tbody>
-                                            <tr style="padding:0;text-align:left;vertical-align:top">
-                                                <th class="small-12 large-6 columns first" valign="middle" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:0;padding-right:0;text-align:left;width:298px">
-                                                    <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
-                                                        <tr style="padding:0;text-align:left;vertical-align:top">
-                                                            <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">
-                                                                <center data-parsed="" style="min-width:242px;width:100%">
-                                                                    <a href="{{template.addCodes('http://www.ifcj.org', {src: 'EA', utm: 'logo'}, 'html')}}"
-                                                                        align="center" class="float-center" style="Margin:0;color:#2199e8;font-family:Helvetica,Arial,sans-serif;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left;text-decoration:none"><img src="http://digital.ifcj.org/site-assets/email-assets/ifcj-blue-logo.png"
+                                            <table class="spacer" style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                                                <tbody>
+                                                    <tr style="padding:0;text-align:left;vertical-align:top">
+                                                        <td height="10px" style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:10px;font-weight:400;hyphens:auto;line-height:10px;margin:0;mso-line-height-rule:exactly;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">&#xA0;</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <table class="row collapse" style="border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+                                                <tbody>
+                                                    <tr style="padding:0;text-align:left;vertical-align:top">
+                                                        <th class="small-12 large-6 columns first" valign="middle" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:0;padding-right:0;text-align:left;width:298px">
+                                                            <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                                                                <tr style="padding:0;text-align:left;vertical-align:top">
+                                                                    <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">
+                                                                        <center data-parsed="" style="min-width:242px;width:100%">
+                                                                            <a href="{{template.addCodes('http://www.ifcj.org', {src: 'EA', utm: 'logo'}, 'html')}}" align="center" class="float-center"
+                                                                                style="Margin:0;color:#2199e8;font-family:Helvetica,Arial,sans-serif;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left;text-decoration:none"><img src="http://digital.ifcj.org/site-assets/email-assets/ifcj-blue-logo.png"
                                                                             alt="IFCJ Logo" style="-ms-interpolation-mode:bicubic;border:none;clear:both;display:block;max-width:100%;outline:0;text-decoration:none;width:auto"></a>
-                                                                </center>
-                                                            </th>
-                                                        </tr>
-                                                    </table>
-                                                </th>
-                                                <th class="small-12 large-4 columns" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:0;padding-right:0;text-align:left;width:193.33px">
-                                                    <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
-                                                        <tr style="padding:0;text-align:left;vertical-align:top">
-                                                            <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">&nbsp;</th>
-                                                        </tr>
-                                                    </table>
-                                                </th>
-                                                <th class="small-12 large-4 columns last" valign="middle" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:0;padding-right:0;text-align:left;width:300px">
-                                                    <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
-                                                        <tr style="padding:0;text-align:left;vertical-align:top">
-                                                            <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">
-                                                                <table class="button alert float-right expanded" style="Margin:0 0 16px 0;border-collapse:collapse;border-spacing:0;margin:0 0 16px 0;padding:0;text-align:left;vertical-align:top;width:100%!important">
-                                                                    <tr style="padding:0;text-align:left;vertical-align:top">
-                                                                        <td style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;width:100%;word-wrap:break-word">
-                                                                            <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
-                                                                                <tr style="padding:0;text-align:left;vertical-align:top">
-                                                                                    <td style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;background:#9A0000;border:0 solid #9A0000;border-collapse:collapse!important;color:#fefefe;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;width:100%;word-wrap:break-word">
-                                                                                        <center data-parsed="" style="min-width:0;width:100%"><a href="{{template.addCodes(appeal.content.url, {src: 'BN1', utm: 'button-link-1'}, 'html')}}"
-                                                                                                align="center" class="float-center"
-                                                                                                style="Margin:0;border:0 solid #9A0000;border-radius:3px;color:#fefefe;display:inline-block;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;line-height:1.3;margin:0;padding:12px 16px 12px 16px;padding-left:0;padding-right:0;text-align:center;text-decoration:none;width:100%">{{ appeal.content.donateButton }}</a></center>
-                                                                                    </td>
-                                                                                </tr>
-                                                                            </table>
-                                                                        </td>
-                                                                        <td class="expander" style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0!important;text-align:left;vertical-align:top;visibility:hidden;width:0;word-wrap:break-word"></td>
-                                                                    </tr>
-                                                                </table>
-                                                            </th>
-                                                        </tr>
-                                                    </table>
-                                                </th>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table align="center" class="container headline float-center" style="Margin:0 auto;background:#fff;border-collapse:collapse;border-spacing:0;float:none;margin:0 auto;margin-bottom:5px;padding:0;text-align:center;vertical-align:top;width:580px">
-                        <tbody>
-                            <tr style="padding:0;text-align:left;vertical-align:top">
-                                <td style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">
-                                    <table class="row collapse" style="border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
-                                        <tbody>
-                                            <tr style="padding:0;text-align:left;vertical-align:top">
-                                                <th class="small-12 large-12 columns first last" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:0;padding-right:0;text-align:left;width:588px">
-                                                    <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
-                                                        <tr style="padding:0;text-align:left;vertical-align:top">
-                                                            <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">
-                                                                <h1 class="text-center" style="Margin:0;Margin-bottom:5px;color:#a61d26;font-family:Georgia,Constantia,Lucida Bright,DejaVu Serif,serif;font-size:48px;font-weight:400;line-height:40px;margin:0;margin-bottom:5px;margin-top:5px;padding:0;text-align:center;text-decoration:none;word-wrap:normal"><a href="{{template.addCodes(appeal.content.url, {src: 'TL1', utm: 'text-link-1'}, 'html')}}" style="color:#a61d26;font-family:Calibri,Candara,Segoe,'Segoe UI',Optima,Arial,sans-serif;font-size:48px;font-weight:600;line-height:40px;text-align:center;text-decoration:none;text-transform:uppercase;"><span [innerHTML]="body?.html[0]"></span></a></h1>
-                                                            </th>
-                                                            <th class="expander" style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0!important;text-align:left;visibility:hidden;width:0"></th>
-                                                        </tr>
-                                                    </table>
-                                                </th>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table align="center" class="container masthead float-center" style="Margin:0 auto;background:#fefefe;border-collapse:collapse;border-spacing:0;float:none;margin:0 auto;padding:0;text-align:center;vertical-align:top;width:580px">
-                        <tbody>
-                            <tr style="padding:0;text-align:left;vertical-align:top">
-                                <td style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">
-                                    <table class="row collapse" style="border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
-                                        <tbody>
-                                            <tr style="padding:0;text-align:left;vertical-align:top">
-                                                <a href="{{template.addCodes(appeal.content.url, {src: appeal.content.image[0].code, utm: appeal.content.image[0].utm}, 'html')}}"><img [src]="appeal.content.image[0].url" alt="Donate Now" style="-ms-interpolation-mode:bicubic;clear:both;display:block;max-width:100%;outline:0;text-decoration:none;width:auto"></a>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="spacer float-center" style="Margin:0 auto;border-collapse:collapse;border-spacing:0;float:none;margin:0 auto;padding:0;text-align:center;vertical-align:top;width:100%">
-                        <tbody>
-                            <tr style="padding:0;text-align:left;vertical-align:top">
-                                <td height="10px" style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:10px;font-weight:400;hyphens:auto;line-height:10px;margin:0;mso-line-height-rule:exactly;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">&#xA0;</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table align="center" class="container float-center" style="Margin:0 auto;background:#fefefe;border-collapse:collapse;border-spacing:0;float:none;margin:0 auto;padding:0;text-align:center;vertical-align:top;width:580px">
-                        <tbody>
-                            <tr style="padding:0;text-align:left;vertical-align:top">
-                                <td style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">
-                                    <table class="row collapse" style="border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
-                                        <tbody>
-                                            <tr style="padding:0;text-align:left;vertical-align:top">
-                                                <th class="small-12 large-6 columns first last" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:16px;padding-left:0;padding-right:0;text-align:left;width:298px">
-                                                    <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
-                                                        <tr style="padding:0;text-align:left;vertical-align:top">
-                                                            <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">
-                                                                <h3 style="Margin:0;Margin-bottom:10px;color:#a61d26;font-family:Georgia,Constantia,Lucida Bright,DejaVu Serif,serif;font-size:28px;font-weight:400;line-height:1.3;margin:0;margin-bottom:10px;margin-top:0;padding:0;text-align:left;word-wrap:normal">
-                                                                        <span [innerHTML]="body?.html[1]"></span>
-                                                                    </h3>
-                                                                    <p style="color:#505050;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:normal;line-height:21px;margin-bottom:1em;text-align:left;">[[?xx::x[[S1:first_name]]x::<em>Shalom</em>::<em>Shalom</em>, [[S1:first_name]]]],</p>
-                                                                <div [innerHTML]="body.html[2]"></div>
-                                                            </th>
-                                                        </tr>
-                                                    </table>
-                                                </th>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <table class="row collapse" style="border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
-                                        <tbody>
-                                            <tr style="padding:0;text-align:left;vertical-align:top">
-                                                <th class="small-12 large-6 columns first" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:16px;padding-left:0;padding-right:0;text-align:left;width:298px">
-                                                    <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
-                                                        <tr style="padding:0;text-align:left;vertical-align:top">
-                                                            <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">
-                                                               <template [ngIf]="body.html[6]?.changingThisBreaksApplicationSecurity === 'Rabbi' || body.html[6]?.changingThisBreaksApplicationSecurity === '' || !body.html[6]">
-                                                                          <p style="color:#505050;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:normal;line-height:21px;margin-bottom:1em;text-align:left;">
-                                                                            With prayers for <em>shalom</em>, peace,<br>
-                                                                          <img src="http://digital.ifcj.org/site-assets/email-assets/Rabbi-Sig-Clear.png" style="-ms-interpolation-mode:bicubic;clear:both;display:block;max-width:100%;outline:0;text-decoration:none;width:auto"></p>
+                                                                        </center>
+                                                                    </th>
+                                                                </tr>
+                                                            </table>
+                                                        </th>
+                                                        <th class="small-12 large-4 columns" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:0;padding-right:0;text-align:left;width:193.33px">
+                                                            <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                                                                <tr style="padding:0;text-align:left;vertical-align:top">
+                                                                    <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">&nbsp;</th>
+                                                                </tr>
+                                                            </table>
+                                                        </th>
+                                                        <th class="small-12 large-4 columns last" valign="middle" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:0;padding-right:0;text-align:left;width:300px">
+                                                            <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                                                                <tr style="padding:0;text-align:left;vertical-align:top">
+                                                                    <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">
+                                                                        <table class="button alert float-right expanded" style="Margin:0 0 16px 0;border-collapse:collapse;border-spacing:0;margin:0 0 16px 0;padding:0;text-align:left;vertical-align:top;width:100%!important">
+                                                                            <tr style="padding:0;text-align:left;vertical-align:top">
+                                                                                <td style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;width:100%;word-wrap:break-word">
+                                                                                    <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                                                                                        <tr style="padding:0;text-align:left;vertical-align:top">
+                                                                                            <td style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;background:#9A0000;border:0 solid #9A0000;border-collapse:collapse!important;color:#fefefe;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;width:100%;word-wrap:break-word">
+                                                                                                <center data-parsed="" style="min-width:0;width:100%"><a href="{{template.addCodes(appeal.content.url, {src: 'BN1', utm: 'button-link-1'}, 'html')}}"
+                                                                                                        align="center" class="float-center {{ appeal.content.donateColor }}"
+                                                                                                        style="Margin:0;border:0 solid #9A0000;border-radius:3px;color:#fefefe;display:inline-block;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;line-height:1.3;margin:0;padding:12px 16px 12px 16px;padding-left:0;padding-right:0;text-align:center;text-decoration:none;width:100%">{{ appeal.content.donateButton }}</a></center>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                </td>
+                                                                                <td class="expander" style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0!important;text-align:left;vertical-align:top;visibility:hidden;width:0;word-wrap:break-word"></td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </th>
+                                                                </tr>
+                                                            </table>
+                                                        </th>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table align="center" class="container headline float-center" style="Margin:0 auto;background:#fff;border-collapse:collapse;border-spacing:0;float:none;margin:0 auto;margin-bottom:5px;padding:0;text-align:center;vertical-align:top;width:580px">
+                                <tbody>
+                                    <tr style="padding:0;text-align:left;vertical-align:top">
+                                        <td style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">
+                                            <table class="row collapse" style="border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+                                                <tbody>
+                                                    <tr style="padding:0;text-align:left;vertical-align:top">
+                                                        <th class="small-12 large-12 columns first last" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:0;padding-right:0;text-align:left;width:588px">
+                                                            <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                                                                <tr style="padding:0;text-align:left;vertical-align:top">
+                                                                    <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">
+                                                                        <h1 class="text-center" style="Margin:0;Margin-bottom:5px;color:#a61d26;font-family:Georgia,Constantia,Lucida Bright,DejaVu Serif,serif;font-size:48px;font-weight:400;line-height:40px;margin:0;margin-bottom:5px;margin-top:5px;padding:0;text-align:center;text-decoration:none;word-wrap:normal"><a href="{{template.addCodes(appeal.content.url, {src: 'TL1', utm: 'text-link-1'}, 'html')}}"
+                                                                                style="color:#a61d26;font-family:Calibri,Candara,Segoe,'Segoe UI',Optima,Arial,sans-serif;font-size:48px;font-weight:600;line-height:40px;text-align:center;text-decoration:none;text-transform:uppercase;"><span [innerHTML]="body?.html[0]"></span></a></h1>
+                                                                    </th>
+                                                                    <th class="expander" style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0!important;text-align:left;visibility:hidden;width:0"></th>
+                                                                </tr>
+                                                            </table>
+                                                        </th>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table align="center" class="container masthead float-center" style="Margin:0 auto;background:#fefefe;border-collapse:collapse;border-spacing:0;float:none;margin:0 auto;padding:0;text-align:center;vertical-align:top;width:580px">
+                                <tbody>
+                                    <tr style="padding:0;text-align:left;vertical-align:top">
+                                        <td style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">
+                                            <table class="row collapse" style="border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+                                                <tbody>
+                                                    <tr style="padding:0;text-align:left;vertical-align:top">
+                                                        <a href="{{template.addCodes(appeal.content.url, {src: appeal.content.image[0].code, utm: appeal.content.image[0].utm}, 'html')}}"><img [src]="appeal.content.image[0].url" alt="Donate Now" style="-ms-interpolation-mode:bicubic;clear:both;display:block;max-width:100%;outline:0;text-decoration:none;width:auto"></a>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="spacer float-center" style="Margin:0 auto;border-collapse:collapse;border-spacing:0;float:none;margin:0 auto;padding:0;text-align:center;vertical-align:top;width:100%">
+                                <tbody>
+                                    <tr style="padding:0;text-align:left;vertical-align:top">
+                                        <td height="10px" style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:10px;font-weight:400;hyphens:auto;line-height:10px;margin:0;mso-line-height-rule:exactly;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">&#xA0;</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table align="center" class="container float-center" style="Margin:0 auto;background:#fefefe;border-collapse:collapse;border-spacing:0;float:none;margin:0 auto;padding:0;text-align:center;vertical-align:top;width:580px">
+                                <tbody>
+                                    <tr style="padding:0;text-align:left;vertical-align:top">
+                                        <td style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">
+                                            <table class="row collapse" style="border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+                                                <tbody>
+                                                    <tr style="padding:0;text-align:left;vertical-align:top">
+                                                        <th class="small-12 large-6 columns first last" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:16px;padding-left:0;padding-right:0;text-align:left;width:298px">
+                                                            <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                                                                <tr style="padding:0;text-align:left;vertical-align:top">
+                                                                    <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">
+                                                                        <h3 style="Margin:0;Margin-bottom:10px;color:#a61d26;font-family:Georgia,Constantia,Lucida Bright,DejaVu Serif,serif;font-size:28px;font-weight:400;line-height:1.3;margin:0;margin-bottom:10px;margin-top:0;padding:0;text-align:left;word-wrap:normal">
+                                                                            <span [innerHTML]="body?.html[1]"></span>
+                                                                        </h3>
+                                                                        <p style="color:#505050;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:normal;line-height:21px;margin-bottom:1em;text-align:left;">[[?xx::x[[S1:first_name]]x::<em>Shalom</em>::<em>Shalom</em>,
+                                                                            [[S1:first_name]]]],</p>
+                                                                        <div [innerHTML]="body.html[2]"></div>
+                                                                    </th>
+                                                                </tr>
+                                                            </table>
+                                                        </th>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <table class="row collapse" style="border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+                                                <tbody>
+                                                    <tr style="padding:0;text-align:left;vertical-align:top">
+                                                        <th class="small-12 large-6 columns first" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:16px;padding-left:0;padding-right:0;text-align:left;width:298px">
+                                                            <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                                                                <tr style="padding:0;text-align:left;vertical-align:top">
+                                                                    <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">
+                                                                        <template [ngIf]="body.html[6]?.changingThisBreaksApplicationSecurity === 'Rabbi' || body.html[6]?.changingThisBreaksApplicationSecurity === '' || !body.html[6]">
+                                                                            <p style="color:#505050;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:normal;line-height:21px;margin-bottom:1em;text-align:left;">
+                                                                                With prayers for <em>shalom</em>, peace,<br>
+                                                                                <img src="http://digital.ifcj.org/site-assets/email-assets/Rabbi-Sig-Clear.png" style="-ms-interpolation-mode:bicubic;clear:both;display:block;max-width:100%;outline:0;text-decoration:none;width:auto"></p>
 
-                                                                          <p style="color:#505050;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:normal;line-height:21px;margin-bottom:1em;text-align:left;">
-                                                                          Rabbi Yechiel Eckstein<br />Founder and President</p>
-                                                                          </template>
-                                                                          <template [ngIf]="body.html[6]?.changingThisBreaksApplicationSecurity === 'Yael'">
-                                                                          <p style="color:#505050;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:normal;line-height:21px;margin-bottom:1em;text-align:left;">
-                                                                            With blessings from the Holy Land,<br>
-                                                                          <img src="http://digital.ifcj.org/site-assets/email-assets/12-day-yael-signature.jpg" style="-ms-interpolation-mode:bicubic;clear:both;display:block;max-width:100%;outline:0;text-decoration:none;width:auto"></p>
+                                                                            <p style="color:#505050;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:normal;line-height:21px;margin-bottom:1em;text-align:left;">
+                                                                                Rabbi Yechiel Eckstein<br />Founder and President</p>
+                                                                        </template>
+                                                                        <template [ngIf]="body.html[6]?.changingThisBreaksApplicationSecurity === 'Yael'">
+                                                                            <p style="color:#505050;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:normal;line-height:21px;margin-bottom:1em;text-align:left;">
+                                                                                With blessings from the Holy Land,<br>
+                                                                                <img src="http://digital.ifcj.org/site-assets/email-assets/12-day-yael-signature.jpg" style="-ms-interpolation-mode:bicubic;clear:both;display:block;max-width:100%;outline:0;text-decoration:none;width:auto"></p>
 
-                                                                          <p style="color:#505050;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:normal;line-height:21px;margin-bottom:1em;text-align:left;">
-                                                                          Yael Eckstein<br />Senior Vice President</p>
-                                                                          </template>
-                                                                          <template [ngIf]="body.html[6]?.changingThisBreaksApplicationSecurity !== 'Rabbi' && body.html[6]?.changingThisBreaksApplicationSecurity !== 'Yael' && body.html[6]?.changingThisBreaksApplicationSecurity !== ''">
+                                                                            <p style="color:#505050;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:normal;line-height:21px;margin-bottom:1em;text-align:left;">
+                                                                                Yael Eckstein<br />Senior Vice President</p>
+                                                                        </template>
+                                                                        <template [ngIf]="body.html[6]?.changingThisBreaksApplicationSecurity !== 'Rabbi' && body.html[6]?.changingThisBreaksApplicationSecurity !== 'Yael' && body.html[6]?.changingThisBreaksApplicationSecurity !== ''">
                                                                             <p [innerHTML]="body.html[6]" style="Margin:0;Margin-bottom:10px;color:#6d6e70;font-family:'Trebuchet MS',sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;margin-bottom:10px;padding:0;text-align:left"></p>
-                                                                          </template>
-                                                            </th>
-                                                        </tr>
-                                                    </table>
-                                                </th>
-                                                <th class="small-12 large-6 columns last" valign="middle" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:16px;padding-left:0;padding-right:0;text-align:left;width:375px">
-                                                    <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
-                                                        <tr style="padding:0;text-align:left;vertical-align:top">
-                                                            <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">
-                                                                <table class="button large alert float-right expanded" style="Margin:0 0 16px 0;border-collapse:collapse;border-spacing:0;margin:0 0 16px 0;padding:0;text-align:left;vertical-align:top;width:100%!important">
-                                                                    <tr style="padding:0;text-align:left;vertical-align:top">
-                                                                        <td style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;width:100%;word-wrap:break-word">
-                                                                            <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
-                                                                                <tr style="padding:0;text-align:left;vertical-align:top">
-                                                                                    <td style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;background:#9A0000;border:0 solid #9A0000;border-collapse:collapse!important;color:#fefefe;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;width:100%;word-wrap:break-word">
-                                                                                        <center data-parsed="" style="min-width:0;width:100%"><a href="{{template.addCodes(appeal.content.url, {src: 'BN2', utm: 'button-link-2'}, 'html')}}"
-                                                                                                align="center" class="float-center"
-                                                                                                style="Margin:0;border:0 solid #9A0000;border-radius:3px;color:#fefefe;display:inline-block;font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:700;line-height:1.3;margin:0;padding:10px 20px 10px 20px;padding-left:0;padding-right:0;text-align:center;text-decoration:none;width:100%">{{ appeal.content.donateButton }}</a></center>
-                                                                                    </td>
-                                                                                </tr>
-                                                                            </table>
-                                                                        </td>
-                                                                        <td class="expander" style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0!important;text-align:left;vertical-align:top;visibility:hidden;width:0;word-wrap:break-word"></td>
-                                                                    </tr>
-                                                                </table>
-                                                            </th>
-                                                        </tr>
-                                                    </table>
-                                                </th>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <table class="row collapse" style="border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
-                                        <tbody>
-                                            <tr style="padding:0;text-align:left;vertical-align:top">
-                                                <th class="small-12 large-12 columns first last" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:16px;padding-left:0;padding-right:0;text-align:left;width:588px">
-                                                    <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
-                                                        <tr style="padding:0;text-align:left;vertical-align:top">
-                                                            <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">
-                                                                <p style="Margin:0;Margin-bottom:15px;color:#6d6e70;font-family:'Trebuchet MS',sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;margin-bottom:15px;padding:0;text-align:left"><span [innerHTML]="body?.html[3]"></span></p>
-                                                            </th>
-                                                            <th class="expander" style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0!important;text-align:left;visibility:hidden;width:0"></th>
-                                                        </tr>
-                                                    </table>
-                                                </th>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                                                        </template>
+                                                                    </th>
+                                                                </tr>
+                                                            </table>
+                                                        </th>
+                                                        <th class="small-12 large-6 columns last" valign="middle" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:16px;padding-left:0;padding-right:0;text-align:left;width:375px">
+                                                            <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                                                                <tr style="padding:0;text-align:left;vertical-align:top">
+                                                                    <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">
+                                                                        <table class="button large alert float-right expanded" style="Margin:0 0 16px 0;border-collapse:collapse;border-spacing:0;margin:0 0 16px 0;padding:0;text-align:left;vertical-align:top;width:100%!important">
+                                                                            <tr style="padding:0;text-align:left;vertical-align:top">
+                                                                                <td style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;width:100%;word-wrap:break-word">
+                                                                                    <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                                                                                        <tr style="padding:0;text-align:left;vertical-align:top">
+                                                                                            <td style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;background:#9A0000;border:0 solid #9A0000;border-collapse:collapse!important;color:#fefefe;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;width:100%;word-wrap:break-word">
+                                                                                                <center data-parsed="" style="min-width:0;width:100%"><a href="{{template.addCodes(appeal.content.url, {src: 'BN2', utm: 'button-link-2'}, 'html')}}"
+                                                                                                        align="center" class="float-center {{ appeal.content.donateColor }}"
+                                                                                                        style="Margin:0;border:0 solid #9A0000;border-radius:3px;color:#fefefe;display:inline-block;font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:700;line-height:1.3;margin:0;padding:10px 20px 10px 20px;padding-left:0;padding-right:0;text-align:center;text-decoration:none;width:100%">{{ appeal.content.donateButton }}</a></center>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                </td>
+                                                                                <td class="expander" style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0!important;text-align:left;vertical-align:top;visibility:hidden;width:0;word-wrap:break-word"></td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </th>
+                                                                </tr>
+                                                            </table>
+                                                        </th>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <table class="row collapse" style="border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+                                                <tbody>
+                                                    <tr style="padding:0;text-align:left;vertical-align:top">
+                                                        <th class="small-12 large-12 columns first last" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:16px;padding-left:0;padding-right:0;text-align:left;width:588px">
+                                                            <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                                                                <tr style="padding:0;text-align:left;vertical-align:top">
+                                                                    <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">
+                                                                        <p style="Margin:0;Margin-bottom:15px;color:#6d6e70;font-family:'Trebuchet MS',sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;margin-bottom:15px;padding:0;text-align:left"><span [innerHTML]="body?.html[3]"></span></p>
+                                                                    </th>
+                                                                    <th class="expander" style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0!important;text-align:left;visibility:hidden;width:0"></th>
+                                                                </tr>
+                                                            </table>
+                                                        </th>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
 
-                                    <template [ngIf]="body.html[4]?.changingThisBreaksApplicationSecurity !== ''">
-                                    <hr style="border-color: #a61d26;">
-                                    <table class="row collapse bottom-callout" style="border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
-                                        <tbody>
-                                            <tr style="padding:0;text-align:left;vertical-align:top">
-                                                <th class="small-12 large-6 columns first" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:0;margin:0 auto;padding:0;padding-bottom:0;padding-left:0;padding-right:10px;text-align:left;width:298px">
-                                                    <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
-                                                        <tr style="padding:0;text-align:left;vertical-align:top">
-                                                            <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">
-                                                                <a href="{{template.addCodes(appeal.content.url, {src: appeal.content.image[1].code, utm: appeal.content.image[1].utm}, 'html')}}"
-                                                                    style="color:#2199e8;font-family:Helvetica,Arial,sans-serif;font-weight:400;text-decoration:none"><img [src]="appeal.content.image[1].url"
-                                                                        style="-ms-interpolation-mode:bicubic;border:none;clear:both;display:block;max-width:100%;outline:0;text-decoration:none;width:auto"></a>
-                                                            </th>
-                                                        </tr>
-                                                    </table>
-                                                </th>
-                                                <th class="small-12 large-6 columns last" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:0;padding-right:0;text-align:left;width:298px">
-                                                    <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
-                                                        <tr style="padding:0;text-align:left;vertical-align:top">
-                                                            <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">
-                                                                <h3 style="Margin:0;Margin-bottom:10px;color:#a61d26;font-family:Georgia,Constantia,Lucida Bright,DejaVu Serif,serif;font-size:28px;font-weight:400;line-height:1.3;margin:0;margin-bottom:10px;margin-top:0;padding:0;text-align:left;word-wrap:normal"><a href="{{template.addCodes(appeal.content.url, {src: 'PRHL', utm: 'promo-text-link-1'}, 'html')}}"
-                                                                        style="color:#a61d26;font-family:Georgia,Constantia,Lucida Bright,DejaVu Serif,serif;font-size:28px;font-weight:400;text-decoration:none"><span [innerHTML]="body?.html[4]"></span></a></h3>
-                                                                 <div [innerHTML]="body.html[5]"></div>
-                                                            </th>
-                                                        </tr>
-                                                    </table>
-                                                </th>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <hr style="border-color: #a61d26;">
-                                    </template>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="spacer float-center" style="Margin:0 auto;border-collapse:collapse;border-spacing:0;float:none;margin:0 auto;padding:0;text-align:center;vertical-align:top;width:100%">
-                        <tbody>
-                            <tr style="padding:0;text-align:left;vertical-align:top">
-                                <td height="10px" style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:10px;font-weight:400;hyphens:auto;line-height:10px;margin:0;mso-line-height-rule:exactly;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">&#xA0;</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table align="center" class="wrapper footer-narrow float-center" style="Margin:0 auto;background:#00305d;border-collapse:collapse;border-spacing:0;float:none;margin:0 auto;padding:0;text-align:center;vertical-align:top;width:100%">
-                        <tr style="padding:0;text-align:left;vertical-align:top">
-                            <td class="wrapper-inner" style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:20px;text-align:left;vertical-align:top;word-wrap:break-word">
-                                <table align="center" class="container" style="Margin:0 auto;background:0 0;border-collapse:collapse;border-spacing:0;margin:0 auto;padding:0;text-align:inherit;vertical-align:top;width:580px">
-                                    <tbody>
-                                        <tr style="padding:0;text-align:left;vertical-align:top">
-                                            <td style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">
-                                                <table class="row" style="border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+                                            <template [ngIf]="body.html[4]?.changingThisBreaksApplicationSecurity !== ''">
+                                                <hr style="border-color: #a61d26;">
+                                                <table class="row collapse bottom-callout" style="border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
                                                     <tbody>
                                                         <tr style="padding:0;text-align:left;vertical-align:top">
-                                                            <center data-parsed="" style="min-width:580px;width:100%"><a href="{{template.addUtmOnly('http://www.ifcj.org/site/MessageViewer', 'vib', 'html')}}"
-                                                                    style="color:#fff;font-family:Georgia,Constantia,Lucida Bright,DejaVu Serif,serif;font-size:12px;text-decoration:none"
-                                                                    align="center" class="float-center">View in Browser</a>
-                                                                <table
-                                                                    align="center" class="menu small-vertical float-center" style="Margin:0 auto;border-collapse:collapse;border-spacing:0;float:none;margin:0 auto;padding:0;text-align:center;vertical-align:top;width:auto!important">
+                                                            <th class="small-12 large-6 columns first" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:0;margin:0 auto;padding:0;padding-bottom:0;padding-left:0;padding-right:10px;text-align:left;width:298px">
+                                                                <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
                                                                     <tr style="padding:0;text-align:left;vertical-align:top">
-                                                                        <td style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">
-                                                                            <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top">
-                                                                                <tr style="padding:0;text-align:left;vertical-align:top">
-                                                                                    <th class="menu-item float-center" style="Margin:0 auto;color:#0a0a0a;float:none;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:10px;padding-right:10px;text-align:center"><a href="{{template.addCodes(appeal.content.url, {src: 'FT1', utm: 'footer-text-donate'}, 'html')}}"
-                                                                                            style="color:#fbef98;font-family:Georgia,Constantia,Lucida Bright,DejaVu Serif,serif;font-weight:400;text-decoration:none">
+                                                                        <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">
+                                                                            <a href="{{template.addCodes(appeal.content.url, {src: appeal.content.image[1].code, utm: appeal.content.image[1].utm}, 'html')}}"
+                                                                                style="color:#2199e8;font-family:Helvetica,Arial,sans-serif;font-weight:400;text-decoration:none"><img [src]="appeal.content.image[1].url"
+                                                                        style="-ms-interpolation-mode:bicubic;border:none;clear:both;display:block;max-width:100%;outline:0;text-decoration:none;width:auto"></a>
+                                                                        </th>
+                                                                    </tr>
+                                                                </table>
+                                                            </th>
+                                                            <th class="small-12 large-6 columns last" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:0;padding-right:0;text-align:left;width:298px">
+                                                                <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                                                                    <tr style="padding:0;text-align:left;vertical-align:top">
+                                                                        <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">
+                                                                            <h3 style="Margin:0;Margin-bottom:10px;color:#a61d26;font-family:Georgia,Constantia,Lucida Bright,DejaVu Serif,serif;font-size:28px;font-weight:400;line-height:1.3;margin:0;margin-bottom:10px;margin-top:0;padding:0;text-align:left;word-wrap:normal"><a href="{{template.addCodes(appeal.content.url, {src: 'PRHL', utm: 'promo-text-link-1'}, 'html')}}"
+                                                                                    style="color:#a61d26;font-family:Georgia,Constantia,Lucida Bright,DejaVu Serif,serif;font-size:28px;font-weight:400;text-decoration:none"><span [innerHTML]="body?.html[4]"></span></a></h3>
+                                                                            <div [innerHTML]="body.html[5]"></div>
+                                                                        </th>
+                                                                    </tr>
+                                                                </table>
+                                                            </th>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <hr style="border-color: #a61d26;">
+                                            </template>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="spacer float-center" style="Margin:0 auto;border-collapse:collapse;border-spacing:0;float:none;margin:0 auto;padding:0;text-align:center;vertical-align:top;width:100%">
+                                <tbody>
+                                    <tr style="padding:0;text-align:left;vertical-align:top">
+                                        <td height="10px" style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:10px;font-weight:400;hyphens:auto;line-height:10px;margin:0;mso-line-height-rule:exactly;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">&#xA0;</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table align="center" class="wrapper footer-narrow float-center" style="Margin:0 auto;background:#00305d;border-collapse:collapse;border-spacing:0;float:none;margin:0 auto;padding:0;text-align:center;vertical-align:top;width:100%">
+                                <tr style="padding:0;text-align:left;vertical-align:top">
+                                    <td class="wrapper-inner" style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:20px;text-align:left;vertical-align:top;word-wrap:break-word">
+                                        <table align="center" class="container" style="Margin:0 auto;background:0 0;border-collapse:collapse;border-spacing:0;margin:0 auto;padding:0;text-align:inherit;vertical-align:top;width:580px">
+                                            <tbody>
+                                                <tr style="padding:0;text-align:left;vertical-align:top">
+                                                    <td style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">
+                                                        <table class="row" style="border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+                                                            <tbody>
+                                                                <tr style="padding:0;text-align:left;vertical-align:top">
+                                                                    <center data-parsed="" style="min-width:580px;width:100%"><a href="{{template.addUtmOnly('http://www.ifcj.org/site/MessageViewer', 'vib', 'html')}}"
+                                                                            style="color:#fff;font-family:Georgia,Constantia,Lucida Bright,DejaVu Serif,serif;font-size:12px;text-decoration:none"
+                                                                            align="center" class="float-center">View in Browser</a>
+                                                                        <table align="center" class="menu small-vertical float-center" style="Margin:0 auto;border-collapse:collapse;border-spacing:0;float:none;margin:0 auto;padding:0;text-align:center;vertical-align:top;width:auto!important">
+                                                                            <tr style="padding:0;text-align:left;vertical-align:top">
+                                                                                <td style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">
+                                                                                    <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top">
+                                                                                        <tr style="padding:0;text-align:left;vertical-align:top">
+                                                                                            <th class="menu-item float-center" style="Margin:0 auto;color:#0a0a0a;float:none;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:10px;padding-right:10px;text-align:center"><a href="{{template.addCodes(appeal.content.url, {src: 'FT1', utm: 'footer-text-donate'}, 'html')}}"
+                                                                                                    style="color:#fbef98;font-family:Georgia,Constantia,Lucida Bright,DejaVu Serif,serif;font-weight:400;text-decoration:none">
                                                                                             Donate Now
                                                                                             </a></th>
-                                                                                    <th
-                                                                                        class="menu-item float-center" style="Margin:0 auto;color:#0a0a0a;float:none;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:10px;padding-right:10px;text-align:center"><a href="{{template.addCodes('http://www.ifcj.org/who-we-are/about-ifcj.html', {src: 'FT2', utm: 'footer-text-about'}, 'html') }}" style="color:#fff;font-family:Georgia,Constantia,Lucida Bright,DejaVu Serif,serif;font-weight:400;text-decoration:none">About <i>The Fellowship</i></a></th>
-                                                                                        <th
-                                                                                            class="menu-item float-center" style="Margin:0 auto;color:#0a0a0a;float:none;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:10px;padding-right:10px;text-align:center"><a href="{{template.addCodes('http://www.ifcj.org/who-we-are/contact-us.html', {src: 'FT3', utm: 'footer-text-contact'}, 'html') }}" style="color:#fff;font-family:Georgia,Constantia,Lucida Bright,DejaVu Serif,serif;font-weight:400;text-decoration:none">Contact Us</a></th>
-                                                                                            <th
-                                                                                                class="menu-item float-center"
-                                                                                                style="Margin:0 auto;color:#0a0a0a;float:none;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:10px;padding-right:10px;text-align:center"><a href="http://fellowship.ifcj.org/site/TellAFriend" style="color:#fff;font-family:Georgia,Constantia,Lucida Bright,DejaVu Serif,serif;font-weight:400;text-decoration:none">Tell a Friend</a></th>
-                                                                                </tr>
-                                                                            </table>
-                                                                        </td>
-                                                                    </tr>
-                                                </table>
-                                                </center>
-                                                <center data-parsed="" style="min-width:580px;width:100%">
-                                                    <table align="center" class="menu float-center" style="Margin:0 auto;border-collapse:collapse;border-spacing:0;float:none;margin:0 auto;padding:0;text-align:center;vertical-align:top;width:auto!important">
-                                                        <tr style="padding:0;text-align:left;vertical-align:top">
-                                                            <td style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">
-                                                                <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top">
-                                                                    <tr style="padding:0;text-align:left;vertical-align:top">
-                                                                        <th class="menu-item float-center" style="Margin:0 auto;color:#0a0a0a;float:none;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:10px;padding-right:10px;text-align:center">
-                                                                            <a href="https://www.facebook.com/FellowshipFan"
-                                                                                style="Margin:0;color:#fff;font-family:Georgia,Constantia,Lucida Bright,DejaVu Serif,serif;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left;text-decoration:none"><img src="https://secure2.convio.net/ifcj/images/content/pagebuilder/white-facebook.png"
+                                                                                            <th class="menu-item float-center" style="Margin:0 auto;color:#0a0a0a;float:none;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:10px;padding-right:10px;text-align:center"><a href="{{template.addCodes('http://www.ifcj.org/who-we-are/about-ifcj.html', {src: 'FT2', utm: 'footer-text-about'}, 'html') }}"
+                                                                                                    style="color:#fff;font-family:Georgia,Constantia,Lucida Bright,DejaVu Serif,serif;font-weight:400;text-decoration:none">About <i>The Fellowship</i></a></th>
+                                                                                            <th class="menu-item float-center" style="Margin:0 auto;color:#0a0a0a;float:none;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:10px;padding-right:10px;text-align:center"><a href="{{template.addCodes('http://www.ifcj.org/who-we-are/contact-us.html', {src: 'FT3', utm: 'footer-text-contact'}, 'html') }}"
+                                                                                                    style="color:#fff;font-family:Georgia,Constantia,Lucida Bright,DejaVu Serif,serif;font-weight:400;text-decoration:none">Contact Us</a></th>
+                                                                                            <th class="menu-item float-center" style="Margin:0 auto;color:#0a0a0a;float:none;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:10px;padding-right:10px;text-align:center"><a href="http://fellowship.ifcj.org/site/TellAFriend"
+                                                                                                    style="color:#fff;font-family:Georgia,Constantia,Lucida Bright,DejaVu Serif,serif;font-weight:400;text-decoration:none">Tell a Friend</a></th>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </center>
+                                                                    <center data-parsed="" style="min-width:580px;width:100%">
+                                                                        <table align="center" class="menu float-center" style="Margin:0 auto;border-collapse:collapse;border-spacing:0;float:none;margin:0 auto;padding:0;text-align:center;vertical-align:top;width:auto!important">
+                                                                            <tr style="padding:0;text-align:left;vertical-align:top">
+                                                                                <td style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">
+                                                                                    <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top">
+                                                                                        <tr style="padding:0;text-align:left;vertical-align:top">
+                                                                                            <th class="menu-item float-center" style="Margin:0 auto;color:#0a0a0a;float:none;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:10px;padding-right:10px;text-align:center">
+                                                                                                <a href="https://www.facebook.com/FellowshipFan" style="Margin:0;color:#fff;font-family:Georgia,Constantia,Lucida Bright,DejaVu Serif,serif;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left;text-decoration:none"><img src="https://secure2.convio.net/ifcj/images/content/pagebuilder/white-facebook.png"
                                                                                     alt="Facebook Icon" style="-ms-interpolation-mode:bicubic;border:none;clear:both;display:block;max-width:100%;outline:0;text-decoration:none;width:auto"></a>
-                                                                        </th>
-                                                                        <th class="menu-item float-center" style="Margin:0 auto;color:#0a0a0a;float:none;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:10px;padding-right:10px;text-align:center">
-                                                                            <a href="https://twitter.com/TheFellowship" style="Margin:0;color:#fff;font-family:Georgia,Constantia,Lucida Bright,DejaVu Serif,serif;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left;text-decoration:none"><img src="https://secure2.convio.net/ifcj/images/content/pagebuilder/white-twitter.png"
+                                                                                            </th>
+                                                                                            <th class="menu-item float-center" style="Margin:0 auto;color:#0a0a0a;float:none;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:10px;padding-right:10px;text-align:center">
+                                                                                                <a href="https://twitter.com/TheFellowship" style="Margin:0;color:#fff;font-family:Georgia,Constantia,Lucida Bright,DejaVu Serif,serif;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left;text-decoration:none"><img src="https://secure2.convio.net/ifcj/images/content/pagebuilder/white-twitter.png"
                                                                                     alt="Twitter Icon" style="-ms-interpolation-mode:bicubic;border:none;clear:both;display:block;max-width:100%;outline:0;text-decoration:none;width:auto"></a>
-                                                                        </th>
-                                                                        <th class="menu-item float-center" style="Margin:0 auto;color:#0a0a0a;float:none;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:10px;padding-right:10px;text-align:center">
-                                                                            <a href="https://www.instagram.com/the_fellowship/"
-                                                                                style="Margin:0;color:#fff;font-family:Georgia,Constantia,Lucida Bright,DejaVu Serif,serif;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left;text-decoration:none"><img src="https://secure2.convio.net/ifcj/images/content/pagebuilder/white-instagram.png"
+                                                                                            </th>
+                                                                                            <th class="menu-item float-center" style="Margin:0 auto;color:#0a0a0a;float:none;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:10px;padding-right:10px;text-align:center">
+                                                                                                <a href="https://www.instagram.com/the_fellowship/" style="Margin:0;color:#fff;font-family:Georgia,Constantia,Lucida Bright,DejaVu Serif,serif;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left;text-decoration:none"><img src="https://secure2.convio.net/ifcj/images/content/pagebuilder/white-instagram.png"
                                                                                     alt="Instagram Logo" style="-ms-interpolation-mode:bicubic;border:none;clear:both;display:block;max-width:100%;outline:0;text-decoration:none;width:auto"></a>
-                                                                        </th>
-                                                                        <th class="menu-item float-center" style="Margin:0 auto;color:#0a0a0a;float:none;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:10px;padding-right:10px;text-align:center">
-                                                                            <a href="https://www.youtube.com/user/IFCJ25" style="Margin:0;color:#fff;font-family:Georgia,Constantia,Lucida Bright,DejaVu Serif,serif;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left;text-decoration:none"><img src="https://secure2.convio.net/ifcj/images/content/pagebuilder/white-youtube.png"
+                                                                                            </th>
+                                                                                            <th class="menu-item float-center" style="Margin:0 auto;color:#0a0a0a;float:none;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:10px;padding-right:10px;text-align:center">
+                                                                                                <a href="https://www.youtube.com/user/IFCJ25" style="Margin:0;color:#fff;font-family:Georgia,Constantia,Lucida Bright,DejaVu Serif,serif;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left;text-decoration:none"><img src="https://secure2.convio.net/ifcj/images/content/pagebuilder/white-youtube.png"
                                                                                     alt="Youtube Icon" style="-ms-interpolation-mode:bicubic;border:none;clear:both;display:block;max-width:100%;outline:0;text-decoration:none;width:auto"></a>
-                                                                        </th>
-                                                                        <th class="menu-item float-center" style="Margin:0 auto;color:#0a0a0a;float:none;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:10px;padding-right:10px;text-align:center">
-                                                                            <a href="http://feeds.feedburner.com/ifcj/thebridge"
-                                                                                style="Margin:0;color:#fff;font-family:Georgia,Constantia,Lucida Bright,DejaVu Serif,serif;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left;text-decoration:none"><img src="https://secure2.convio.net/ifcj/images/content/pagebuilder/white-rss.png"
+                                                                                            </th>
+                                                                                            <th class="menu-item float-center" style="Margin:0 auto;color:#0a0a0a;float:none;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:10px;padding-right:10px;text-align:center">
+                                                                                                <a href="http://feeds.feedburner.com/ifcj/thebridge" style="Margin:0;color:#fff;font-family:Georgia,Constantia,Lucida Bright,DejaVu Serif,serif;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left;text-decoration:none"><img src="https://secure2.convio.net/ifcj/images/content/pagebuilder/white-rss.png"
                                                                                     alt="RSS Feed Icon" style="-ms-interpolation-mode:bicubic;border:none;clear:both;display:block;max-width:100%;outline:0;text-decoration:none;width:auto"></a>
-                                                                        </th>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </center>
-                                                <center data-parsed="" style="min-width:580px;width:100%">
-                                                    <p class="text-center float-center" align="center"
-                                                        style="Margin:0;Margin-bottom:15px;color:#fff;font-family:Segoe,'Segoe UI','DejaVu Sans','Trebuchet MS',Verdana,sans-serif;font-size:12px;font-weight:400;line-height:1.3;margin:5px;margin-bottom:15px;padding:0;padding-top:5px;text-align:center">30 North LaSalle Street, Suite 4300, Chicago, IL 60602-2584</p>
-                                                    <table
-                                                        align="center" class="menu small-vertical float-center" style="Margin:0 auto;border-collapse:collapse;border-spacing:0;float:none;margin:0 auto;padding:0;text-align:center;vertical-align:top;width:auto!important">
-                                                        <tr style="padding:0;text-align:left;vertical-align:top">
-                                                            <td style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">
-                                                                <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top">
-                                                                    <tr style="padding:0;text-align:left;vertical-align:top">
-                                                                        <th class="menu-item float-center" style="Margin:0 auto;color:#0a0a0a;float:none;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:10px;padding-right:10px;text-align:center"><span style="Margin:0;color:#fff;font-family:Georgia,Constantia,Lucida Bright,DejaVu Serif,serif;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left;text-decoration:none">800-486-8844</span></th>
-                                                                        <th
-                                                                            class="menu-item float-center" style="Margin:0 auto;color:#0a0a0a;float:none;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:10px;padding-right:10px;text-align:center"><a href="{{template.addUtmOnly('http://www.ifcj.org/site/CO', 'unsubscribe', 'html') }}"
-                                                                                style="Margin:0;color:#fff;font-family:Georgia,Constantia,Lucida Bright,DejaVu Serif,serif;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left;text-decoration:none">Unsubscribe</a></th>
-                                                                            <th
-                                                                                class="menu-item float-center" style="Margin:0 auto;color:#0a0a0a;float:none;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:10px;padding-right:10px;text-align:center"><a href="{{template.addUtmOnly('http://www.ifcj.org/privacy-policy.html', 'privacy-policy', 'html') }}"
-                                                                                    style="Margin:0;color:#fff;font-family:Georgia,Constantia,Lucida Bright,DejaVu Serif,serif;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left;text-decoration:none">Privacy Policy</a></th>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                </table>
-                                <p class="text-center float-center" align="center" style="Margin:0;Margin-bottom:15px;color:#fff;font-family:Segoe,'Segoe UI','DejaVu Sans','Trebuchet MS',Verdana,sans-serif;font-size:12px;font-weight:400;line-height:1.3;margin:5px;margin-bottom:15px;padding:0;padding-top:5px;text-align:center">The Fellowship is a 501(c)(3) tax-exempt, non-profit organization<br />
-                                &copy; [[S9:pattern:yyyy]] International Fellowship of Christians and Jews&reg;<br /><br />
-                                [[S51:reus_email_disclaimer]]
-                                </center>
+                                                                                            </th>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </center>
+                                                                    <center data-parsed="" style="min-width:580px;width:100%">
+                                                                        <p class="text-center float-center" align="center" style="Margin:0;Margin-bottom:15px;color:#fff;font-family:Segoe,'Segoe UI','DejaVu Sans','Trebuchet MS',Verdana,sans-serif;font-size:12px;font-weight:400;line-height:1.3;margin:5px;margin-bottom:15px;padding:0;padding-top:5px;text-align:center">30 North LaSalle Street, Suite 4300, Chicago, IL
+                                                                            60602-2584</p>
+                                                                        <table align="center" class="menu small-vertical float-center" style="Margin:0 auto;border-collapse:collapse;border-spacing:0;float:none;margin:0 auto;padding:0;text-align:center;vertical-align:top;width:auto!important">
+                                                                            <tr style="padding:0;text-align:left;vertical-align:top">
+                                                                                <td style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">
+                                                                                    <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top">
+                                                                                        <tr style="padding:0;text-align:left;vertical-align:top">
+                                                                                            <th class="menu-item float-center" style="Margin:0 auto;color:#0a0a0a;float:none;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:10px;padding-right:10px;text-align:center"><span style="Margin:0;color:#fff;font-family:Georgia,Constantia,Lucida Bright,DejaVu Serif,serif;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left;text-decoration:none">800-486-8844</span></th>
+                                                                                            <th class="menu-item float-center" style="Margin:0 auto;color:#0a0a0a;float:none;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:10px;padding-right:10px;text-align:center"><a href="{{template.addUtmOnly('http://www.ifcj.org/site/CO', 'unsubscribe', 'html') }}"
+                                                                                                    style="Margin:0;color:#fff;font-family:Georgia,Constantia,Lucida Bright,DejaVu Serif,serif;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left;text-decoration:none">Unsubscribe</a></th>
+                                                                                            <th class="menu-item float-center" style="Margin:0 auto;color:#0a0a0a;float:none;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:10px;padding-right:10px;text-align:center"><a href="{{template.addUtmOnly('http://www.ifcj.org/privacy-policy.html', 'privacy-policy', 'html') }}"
+                                                                                                    style="Margin:0;color:#fff;font-family:Georgia,Constantia,Lucida Bright,DejaVu Serif,serif;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left;text-decoration:none">Privacy Policy</a></th>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                        <p class="text-center float-center" align="center" style="Margin:0;Margin-bottom:15px;color:#fff;font-family:Segoe,'Segoe UI','DejaVu Sans','Trebuchet MS',Verdana,sans-serif;font-size:12px;font-weight:400;line-height:1.3;margin:5px;margin-bottom:15px;padding:0;padding-top:5px;text-align:center">The Fellowship is a 501(c)(3) tax-exempt, non-profit
+                                                                            organization<br /> &copy; [[S9:pattern:yyyy]]
+                                                                            International Fellowship of Christians and Jews&reg;<br
+                                                                            /><br /> [[S51:reus_email_disclaimer]]
+                                                                    </center>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
                                 </tr>
-                                </tbody>
-                    </table>
+                            </table>
+                        </center>
                     </td>
-                    </tr>
-                    </tbody>
-                    </table>
-                    </td>
-                    </tr>
-                    </table>
-                </center>
-            </td>
-        </tr>
-        </table>
-        <!-- prevent Gmail on iOS font size manipulation -->
-        <div style="display:none;white-space:nowrap;font:15px courier;line-height:0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>
-             <img [src]="'https://pixel.app.returnpath.net/pixel.gif?r=056e9d86e427f2bf5e95ae94c4b00f528036802d&c=' + appeal.info.campaign.utm + '&s=[[S1:cons_id]]'" width="1" height="1" />
-		    <img [src]="'https://pixel.monitor1.returnpath.net/pixel.gif?r=056e9d86e427f2bf5e95ae94c4b00f528036802d&c=' + appeal.info.campaign.utm + '&s=[[S1:cons_id]]'" width="1" height="1" />
-</body>
+                </tr>
+            </table>
+            <!-- prevent Gmail on iOS font size manipulation -->
+            <div style="display:none;white-space:nowrap;font:15px courier;line-height:0">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>
+            <img [src]="'https://pixel.app.returnpath.net/pixel.gif?r=056e9d86e427f2bf5e95ae94c4b00f528036802d&c=' + appeal.info.campaign.utm + '&s=[[S1:cons_id]]'"
+                width="1" height="1" />
+            <img [src]="'https://pixel.monitor1.returnpath.net/pixel.gif?r=056e9d86e427f2bf5e95ae94c4b00f528036802d&c=' + appeal.info.campaign.utm + '&s=[[S1:cons_id]]'"
+                width="1" height="1" />
+        </body>
 
-</html>
-</template>
+        </html>
+    </template>
 </div>
 
 <div class="well">
-<h2>Plain Text Version</h2>
+    <h2>Plain Text Version</h2>
 </div>
 
 <div id="plainText" class="col-xs-12 col-md-8">
-<div #plainVersion>
-  <template [ngIf]="appeal">
-Too many messages? Update your email preferences below.
-https://secure.ifcj.org/site/SPageNavigator/newsletter_signup.html?autologin=true<br><br>
+    <div #plainVersion>
+        <template [ngIf]="appeal">
+            Too many messages? Update your email preferences below. https://secure.ifcj.org/site/SPageNavigator/newsletter_signup.html?autologin=true
+            <br><br> {{body.plain[0]?.changingThisBreaksApplicationSecurity | removeHtml: 'space':'rsquo':'lsquo'}}
+            <br><br> {{template.addCodes(appeal.content.url, {src:'TL1', utm:'text-link-1'}, 'plain') }}
+            <br><br> [[?xx::x[[S1:first_name]]x::Shalom::Shalom, [[S1:first_name]]]],
+            <br><br>
+            <p [innerHTML]="body.plain[2]"></p>
+            <br>
+            <template [ngIf]="body.plain[6]?.changingThisBreaksApplicationSecurity === 'Rabbi' || body.plain[6]?.changingThisBreaksApplicationSecurity === '' || !body.plain[6]">
+                With prayers for shalom, peace,
+                <br><br> Rabbi Yechiel Eckstein<br> Founder and President
+            </template>
+            <template [ngIf]="body.plain[6]?.changingThisBreaksApplicationSecurity === 'Yael'">
+                With blessings from the Holy Land,
+                <br><br> Yael Eckstein<br> Senior Vice President
+            </template>
+            <template [ngIf]="body.plain[6]?.changingThisBreaksApplicationSecurity !== 'Rabbi' && body.plain[6]?.changingThisBreaksApplicationSecurity !== 'Yael' && body.plain[6]?.changingThisBreaksApplicationSecurity !== ''">
+                <p [innerHTML]="body.plain[6]"></p>
+            </template>
+            <br><br>
+            <p [innerHTML]="body.plain[3]">
 
-{{body.plain[0]?.changingThisBreaksApplicationSecurity | removeHtml: 'space':'rsquo':'lsquo'}}
-<br><br>
-{{template.addCodes(appeal.content.url, {src:'TL1', utm:'text-link-1'}, 'plain') }}
-<br><br>
-[[?xx::x[[S1:first_name]]x::Shalom::Shalom, [[S1:first_name]]]],
-<br><br>
-<p [innerHTML]="body.plain[2]"></p>
-<br>
-<template [ngIf]="body.plain[6]?.changingThisBreaksApplicationSecurity === 'Rabbi' || body.plain[6]?.changingThisBreaksApplicationSecurity === '' || !body.plain[6]">
-With prayers for shalom, peace,
-<br><br>
-Rabbi Yechiel Eckstein<br>
-Founder and President
-</template>
-<template [ngIf]="body.plain[6]?.changingThisBreaksApplicationSecurity === 'Yael'">
-With blessings from the Holy Land,
-<br><br>
-Yael Eckstein<br>
-Senior Vice President
-</template>
-<template [ngIf]="body.plain[6]?.changingThisBreaksApplicationSecurity !== 'Rabbi' && body.plain[6]?.changingThisBreaksApplicationSecurity !== 'Yael' && body.plain[6]?.changingThisBreaksApplicationSecurity !== ''">
-  <p [innerHTML]="body.plain[6]"></p>
-</template>
-<br><br>
-<p [innerHTML]="body.plain[3]">
-
-</p>
-<br><br><br>
-Donate Now<br>
-{{template.addCodes(appeal.content.url, {src: 'FT1', utm: 'footer-text-donate'}, 'plain') }}
-<br><br>
-About The Fellowship<br>
-{{template.addCodes('http://www.ifcj.org/who-we-are/about-ifcj.html', {src: 'FT2', utm: 'footer-text-about'}, 'plain') }}
-<br><br>
-Contact Us<br>
-{{template.addCodes('http://www.ifcj.org/who-we-are/contact-us.html', {src: 'FT3', utm: 'footer-text-contact'}, 'plain') }}
-<br><br>
-Tell a Friend<br>
-http://fellowship.ifcj.org/site/TellAFriend<br>
-<br>
-https://www.facebook.com/FellowshipFan<br>
-http://twitter.com/TheFellowship<br>
-http://instagram.com/the_fellowship<br>
-http://www.youtube.com/user/IFCJ25<br>
-<!--https://plus.google.com/109046585374620236691<br>
+            </p>
+            <br><br><br> Donate Now<br> {{template.addCodes(appeal.content.url, {src: 'FT1', utm: 'footer-text-donate'},
+            'plain') }}
+            <br><br> About The Fellowship<br> {{template.addCodes('http://www.ifcj.org/who-we-are/about-ifcj.html', {src:
+            'FT2', utm: 'footer-text-about'}, 'plain') }}
+            <br><br> Contact Us<br> {{template.addCodes('http://www.ifcj.org/who-we-are/contact-us.html', {src: 'FT3', utm:
+            'footer-text-contact'}, 'plain') }}
+            <br><br> Tell a Friend<br> http://fellowship.ifcj.org/site/TellAFriend
+            <br>
+            <br> https://www.facebook.com/FellowshipFan
+            <br> http://twitter.com/TheFellowship
+            <br> http://instagram.com/the_fellowship
+            <br> http://www.youtube.com/user/IFCJ25
+            <br>
+            <!--https://plus.google.com/109046585374620236691<br>
 http://feeds.feedburner.com/ifcj/thebridge<br>-->
-<br>
-http://charityreports.bbb.org/public/seal.aspx?ID=553312004<br>
-<br>
-https://smarticon.geotrust.com/smarticonprofile?Referer=https://secure2.convio.net<br>
-<br>
-30 North LaSalle Street, Suite 4300, Chicago, IL 60602-2584<br>
-800-486-8844<br>
-<br>
-Unsubscribe<br>
-{{template.addUtmOnly('http://www.ifcj.org/site/CO', 'unsubscribe', 'plain') }}
-<br><br>
-Privacy Policy<br>
-{{template.addUtmOnly('http://www.ifcj.org/privacy-policy.html', 'privacy-policy', 'plain') }}
-<br><br>
-The Fellowship is a 501(c)(3) tax-exempt, non-profit organization
-<br><br>
-© [[S9:pattern:yyyy]] International Fellowship of Christians and Jews(TM)
-<br><br>
-[[S51:reus_email_disclaimer]]
-</template>
-</div>
+            <br> http://charityreports.bbb.org/public/seal.aspx?ID=553312004
+            <br>
+            <br> https://smarticon.geotrust.com/smarticonprofile?Referer=https://secure2.convio.net
+            <br>
+            <br> 30 North LaSalle Street, Suite 4300, Chicago, IL 60602-2584<br> 800-486-8844
+            <br>
+            <br> Unsubscribe
+            <br> {{template.addUtmOnly('http://www.ifcj.org/site/CO', 'unsubscribe', 'plain') }}
+            <br><br> Privacy Policy<br> {{template.addUtmOnly('http://www.ifcj.org/privacy-policy.html', 'privacy-policy',
+            'plain') }}
+            <br><br> The Fellowship is a 501(c)(3) tax-exempt, non-profit organization
+            <br><br> © [[S9:pattern:yyyy]] International Fellowship of Christians and Jews(TM)
+            <br><br> [[S51:reus_email_disclaimer]]
+        </template>
+    </div>
 </div>

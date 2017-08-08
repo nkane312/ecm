@@ -26,16 +26,15 @@ export class AppealContentComponent implements OnInit {
   private changed = false;
   private _appealId;
 
-  constructor(private restoreService: RestoreService<AppealContent>, private previewService: PreviewService) {
-  }
+  constructor(private restoreService: RestoreService<AppealContent>, private previewService: PreviewService) {}
 
-  checkChanged(){
+  checkChanged() {
     this.changed = this.restoreService.isChanged();
     //this.updated.emit(this.content);
   }
 
   @Input()
-  set content(data: AppealContent){
+  set content(data: AppealContent) {
     /*
     if (!this._content.callout){
       this._content.callout = new AppealCallout();
@@ -44,18 +43,18 @@ export class AppealContentComponent implements OnInit {
     this.restoreService.setItem(data);
   }
   get content(): AppealContent {
-    $(function () {
-      $('[data-toggle="popover"]').popover({trigger: 'hover focus', container: 'app-root', html: true});
+    $(function() {
+      $('[data-toggle="popover"]').popover({ trigger: 'hover focus', container: 'app-root', html: true });
     });
     return this.restoreService.getItem();
   }
 
   private _options;
   @Input()
-  set options(data){
+  set options(data) {
     this._options = data;
   }
-  get options(){
+  get options() {
     return this._options;
   }
 
@@ -68,18 +67,29 @@ export class AppealContentComponent implements OnInit {
     this.restoreService.restoreItem();
     this.canceled.emit(this.content);
   }
-  onImageSaved(data, i){
+  onImageSaved(data, i) {
     this.content.image[i].url = `http://digital.ifcj.org/appeal-images/${data.edited}?${Date.now()}`;
     this.content.image[i].original = data.original;
     this.save();
   }
-  onCalloutSaved(data){
+  onCalloutSaved(data) {
     this.calloutSaved.emit(data);
   }
 
+  setDonateColor(color) {
+    var input;
+    input = document.getElementById(`${color}-btn`);
+    input.click();
+  }
   ngOnInit() {
-    $(function () {
-      $('[data-toggle="popover"]').popover({trigger: 'hover focus', container: 'app-root', html: true});
+    $(function() {
+      $('[data-toggle="popover"]').popover({ trigger: 'hover focus', container: 'app-root', html: true });
     });
+    if (this.content.image[0].code === '') {
+      this.content.image[0].code = 'PH1';
+    }
+    if (this.content.image[0].utm === '') {
+      this.content.image[0].utm = 'photo-link-1';
+    }
   }
 }
