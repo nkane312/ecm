@@ -20,7 +20,13 @@
 
 
 
-        <body style="-moz-box-sizing:border-box;-ms-text-size-adjust:100%;-webkit-box-sizing:border-box;-webkit-text-size-adjust:100%;Margin:0;background:#fff!important;box-sizing:border-box;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;min-width:100%;padding:0;text-align:left;width:100%!important"><span class="preheader" style="color:#f3f3f3;display:none!important;font-size:1px;line-height:1px;max-height:0;max-width:0;mso-hide:all!important;opacity:0;overflow:hidden;visibility:hidden"> {{body.plain[0]?.changingThisBreaksApplicationSecurity | removeHtml: 'space':'rsquo':'lsquo'}}</span>
+        <body style="-moz-box-sizing:border-box;-ms-text-size-adjust:100%;-webkit-box-sizing:border-box;-webkit-text-size-adjust:100%;Margin:0;background:#fff!important;box-sizing:border-box;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;min-width:100%;padding:0;text-align:left;width:100%!important">
+            <template [ngIf]="body.plain[0]?.changingThisBreaksApplicationSecurity === ''">
+                <span class="preheader" style="color:#f3f3f3;display:none!important;font-size:1px;line-height:1px;max-height:0;max-width:0;mso-hide:all!important;opacity:0;overflow:hidden;visibility:hidden">International Fellowship of Christians and Jews®</span>
+            </template>
+            <template [ngIf]="body.plain[0]?.changingThisBreaksApplicationSecurity !== ''">
+                <span class="preheader" style="color:#f3f3f3;display:none!important;font-size:1px;line-height:1px;max-height:0;max-width:0;mso-hide:all!important;opacity:0;overflow:hidden;visibility:hidden"> {{body.plain[0]?.changingThisBreaksApplicationSecurity | removeHtml: 'space':'rsquo':'lsquo'}}</span>
+            </template>
             <table class="body" style="Margin:0;background:#fff!important;border-collapse:collapse;border-spacing:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;height:100%;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;width:100%">
                 <tr style="padding:0;text-align:left;vertical-align:top">
                     <td class="center" align="center" valign="top" style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">
@@ -71,7 +77,7 @@
                                                                                 <td style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;width:100%;word-wrap:break-word">
                                                                                     <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
                                                                                         <tr style="padding:0;text-align:left;vertical-align:top">
-                                                                                            <td style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;background:#9A0000;border:0 solid #9A0000;border-collapse:collapse!important;color:#fefefe;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;width:100%;word-wrap:break-word">
+                                                                                            <td class="{{ appeal.content.donateColor }}" style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;background:#9A0000;border:0 solid #9A0000;border-collapse:collapse!important;color:#fefefe;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;width:100%;word-wrap:break-word">
                                                                                                 <center data-parsed="" style="min-width:0;width:100%"><a href="{{template.addCodes(appeal.content.url, {src: 'BN1', utm: 'button-link-1'}, 'html')}}"
                                                                                                         align="center" class="float-center {{ appeal.content.donateColor }}"
                                                                                                         style="Margin:0;border:0 solid #9A0000;border-radius:3px;color:#fefefe;display:inline-block;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:700;line-height:1.3;margin:0;padding:12px 16px 12px 16px;padding-left:0;padding-right:0;text-align:center;text-decoration:none;width:100%">{{ appeal.content.donateButton }}</a></center>
@@ -104,8 +110,13 @@
                                                             <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
                                                                 <tr style="padding:0;text-align:left;vertical-align:top">
                                                                     <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">
-                                                                        <h1 class="text-center" style="Margin:0;Margin-bottom:5px;color:#a61d26;font-family:Georgia,Constantia,Lucida Bright,DejaVu Serif,serif;font-size:48px;font-weight:400;line-height:40px;margin:0;margin-bottom:5px;margin-top:5px;padding:0;text-align:center;text-decoration:none;word-wrap:normal"><a href="{{template.addCodes(appeal.content.url, {src: 'TL1', utm: 'text-link-1'}, 'html')}}"
-                                                                                style="color:#a61d26;font-family:Calibri,Candara,Segoe,'Segoe UI',Optima,Arial,sans-serif;font-size:48px;font-weight:600;line-height:40px;text-align:center;text-decoration:none;text-transform:uppercase;"><span [innerHTML]="body?.html[0]"></span></a></h1>
+                                                                        <template [ngIf]="body.plain[0]?.changingThisBreaksApplicationSecurity === ''">
+                                                                            <br />
+                                                                        </template>
+                                                                        <template [ngIf]="body.plain[0]?.changingThisBreaksApplicationSecurity !== ''">
+                                                                            <h1 class="text-center" style="Margin:0;Margin-bottom:5px;color:#00529c;font-family:Calibri,Candara,Segoe,'Segoe UI',Optima,Arial,sans-serif;font-size:48px;font-weight:600;line-height:40px;margin:0;margin-bottom:5px;margin-top:5px;padding:0;text-align:center;text-decoration:none;word-wrap:normal; text-transform: uppercase;"><a href="{{template.addCodes(appeal.content.url, {src: 'TL1', utm: 'text-link-1'}, 'html')}}"
+                                                                                    style="Margin:0;Margin-bottom:5px;color:#00529c;font-family:Calibri,Candara,Segoe,'Segoe UI',Optima,Arial,sans-serif;font-size:48px;font-weight:600;line-height:40px;margin:0;margin-bottom:5px;margin-top:5px;padding:0;text-align:center;text-decoration:none; text-transform: uppercase;"><span [innerHTML]="body?.html[0]"></span></a></h1>
+                                                                        </template>
                                                                     </th>
                                                                     <th class="expander" style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0!important;text-align:left;visibility:hidden;width:0"></th>
                                                                 </tr>
@@ -155,7 +166,8 @@
                                                                             <span [innerHTML]="body?.html[1]"></span>
                                                                         </h3>
                                                                         <p style="color:#505050;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:normal;line-height:21px;margin-bottom:1em;text-align:left;">[[?xx::x[[S1:first_name]]x::<em>Shalom</em>::<em>Shalom</em>,
-                                                                            [[S1:first_name]]]],</p>
+                                                                            [[S1:first_name]]]],
+                                                                        </p>
                                                                         <div [innerHTML]="body.html[2]"></div>
                                                                     </th>
                                                                 </tr>
@@ -203,7 +215,7 @@
                                                                                 <td style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;width:100%;word-wrap:break-word">
                                                                                     <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
                                                                                         <tr style="padding:0;text-align:left;vertical-align:top">
-                                                                                            <td style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;background:#9A0000;border:0 solid #9A0000;border-collapse:collapse!important;color:#fefefe;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;width:100%;word-wrap:break-word">
+                                                                                            <td class="{{ appeal.content.donateColor }}" style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;background:#9A0000;border:0 solid #9A0000;border-collapse:collapse!important;color:#fefefe;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;width:100%;word-wrap:break-word">
                                                                                                 <center data-parsed="" style="min-width:0;width:100%"><a href="{{template.addCodes(appeal.content.url, {src: 'BN2', utm: 'button-link-2'}, 'html')}}"
                                                                                                         align="center" class="float-center {{ appeal.content.donateColor }}"
                                                                                                         style="Margin:0;border:0 solid #9A0000;border-radius:3px;color:#fefefe;display:inline-block;font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:700;line-height:1.3;margin:0;padding:10px 20px 10px 20px;padding-left:0;padding-right:0;text-align:center;text-decoration:none;width:100%">{{ appeal.content.donateButton }}</a></center>
@@ -349,7 +361,8 @@
                                                                     </center>
                                                                     <center data-parsed="" style="min-width:580px;width:100%">
                                                                         <p class="text-center float-center" align="center" style="Margin:0;Margin-bottom:15px;color:#fff;font-family:Segoe,'Segoe UI','DejaVu Sans','Trebuchet MS',Verdana,sans-serif;font-size:12px;font-weight:400;line-height:1.3;margin:5px;margin-bottom:15px;padding:0;padding-top:5px;text-align:center">30 North LaSalle Street, Suite 4300, Chicago, IL
-                                                                            60602-2584</p>
+                                                                            60602-2584
+                                                                        </p>
                                                                         <table align="center" class="menu small-vertical float-center" style="Margin:0 auto;border-collapse:collapse;border-spacing:0;float:none;margin:0 auto;padding:0;text-align:center;vertical-align:top;width:auto!important">
                                                                             <tr style="padding:0;text-align:left;vertical-align:top">
                                                                                 <td style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">
@@ -366,9 +379,10 @@
                                                                             </tr>
                                                                         </table>
                                                                         <p class="text-center float-center" align="center" style="Margin:0;Margin-bottom:15px;color:#fff;font-family:Segoe,'Segoe UI','DejaVu Sans','Trebuchet MS',Verdana,sans-serif;font-size:12px;font-weight:400;line-height:1.3;margin:5px;margin-bottom:15px;padding:0;padding-top:5px;text-align:center">The Fellowship is a 501(c)(3) tax-exempt, non-profit
-                                                                            organization<br /> &copy; [[S9:pattern:yyyy]]
-                                                                            International Fellowship of Christians and Jews&reg;<br
-                                                                            /><br /> [[S51:reus_email_disclaimer]]
+                                                                            organization
+                                                                            <br /> &copy; [[S9:pattern:yyyy]] International
+                                                                            Fellowship of Christians and Jews&reg;<br /><br
+                                                                            /> [[S51:reus_email_disclaimer]]
                                                                     </center>
                                                                 </tr>
                                                             </tbody>

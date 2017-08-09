@@ -27,7 +27,7 @@ export class PreviewService {
             config: {
               height: 80,
               disableNativeSpellChecker: false,
-              //removePlugins:'stylescombo',
+              removePlugins: 'stylescombo',
               removeButtons: 'About,Indent,Outdent,Cut,Copy,Paste,Undo,Redo,Anchor,Strike,Subscript,Superscript',
               enterMode: 2
             }
@@ -38,7 +38,7 @@ export class PreviewService {
             config: {
               height: 80,
               disableNativeSpellChecker: false,
-              //removePlugins:'stylescombo',
+              removePlugins: 'stylescombo',
               removeButtons: 'About,Indent,Outdent,Cut,Copy,Paste,Undo,Redo,Anchor,Strike,Subscript,Superscript',
               enterMode: 2
             }
@@ -73,7 +73,7 @@ export class PreviewService {
             config: {
               height: 80,
               disableNativeSpellChecker: false,
-              //removePlugins:'stylescombo',
+              removePlugins: 'stylescombo',
               removeButtons: 'About,Indent,Outdent,Cut,Copy,Paste,Undo,Redo,Anchor,Strike,Subscript,Superscript',
               enterMode: 2
             }
@@ -129,7 +129,7 @@ export class PreviewService {
             config: {
               height: 80,
               disableNativeSpellChecker: false,
-              //removePlugins:'stylescombo',
+              removePlugins: 'stylescombo',
               removeButtons: 'About,Indent,Outdent,Cut,Copy,Paste,Undo,Redo,Anchor,Strike,Subscript,Superscript',
               enterMode: 2
             }
@@ -186,7 +186,7 @@ export class PreviewService {
             config: {
               height: 80,
               disableNativeSpellChecker: false,
-              //removePlugins:'stylescombo',
+              removePlugins: 'stylescombo',
               removeButtons: 'About,Indent,Outdent,Cut,Copy,Paste,Undo,Redo,Anchor,Strike,Subscript,Superscript',
               enterMode: 2
             }
@@ -243,7 +243,7 @@ export class PreviewService {
             config: {
               height: 80,
               disableNativeSpellChecker: false,
-              //removePlugins:'stylescombo',
+              removePlugins: 'stylescombo',
               removeButtons: 'About,Indent,Outdent,Cut,Copy,Paste,Undo,Redo,Anchor,Strike,Subscript,Superscript',
               enterMode: 2
             }
@@ -300,7 +300,7 @@ export class PreviewService {
             config: {
               height: 80,
               disableNativeSpellChecker: false,
-              //removePlugins:'stylescombo',
+              removePlugins: 'stylescombo',
               removeButtons: 'About,Indent,Outdent,Cut,Copy,Paste,Undo,Redo,Anchor,Strike,Subscript,Superscript',
               enterMode: 2
             }
@@ -357,7 +357,7 @@ export class PreviewService {
             config: {
               height: 80,
               disableNativeSpellChecker: false,
-              //removePlugins:'stylescombo',
+              removePlugins: 'stylescombo',
               removeButtons: 'About,Indent,Outdent,Cut,Copy,Paste,Undo,Redo,Anchor,Strike,Subscript,Superscript',
               enterMode: 2
             }
@@ -368,7 +368,7 @@ export class PreviewService {
             config: {
               height: 80,
               disableNativeSpellChecker: false,
-              //removePlugins:'stylescombo',
+              removePlugins: 'stylescombo',
               removeButtons: 'About,Indent,Outdent,Cut,Copy,Paste,Undo,Redo,Anchor,Strike,Subscript,Superscript',
               enterMode: 2
             }
@@ -403,7 +403,7 @@ export class PreviewService {
             config: {
               height: 80,
               disableNativeSpellChecker: false,
-              //removePlugins:'stylescombo',
+              removePlugins: 'stylescombo',
               removeButtons: 'About,Indent,Outdent,Cut,Copy,Paste,Undo,Redo,Anchor,Strike,Subscript,Superscript',
               enterMode: 2
             }
@@ -459,7 +459,7 @@ export class PreviewService {
             config: {
               height: 80,
               disableNativeSpellChecker: false,
-              //removePlugins:'stylescombo',
+              removePlugins: 'stylescombo',
               removeButtons: 'About,Indent,Outdent,Cut,Copy,Paste,Undo,Redo,Anchor,Strike,Subscript,Superscript',
               enterMode: 2
             }
@@ -470,7 +470,7 @@ export class PreviewService {
             config: {
               height: 80,
               disableNativeSpellChecker: false,
-              //removePlugins:'stylescombo',
+              removePlugins: 'stylescombo',
               removeButtons: 'About,Indent,Outdent,Cut,Copy,Paste,Undo,Redo,Anchor,Strike,Subscript,Superscript',
               enterMode: 2
             }
@@ -505,7 +505,7 @@ export class PreviewService {
             config: {
               height: 80,
               disableNativeSpellChecker: false,
-              //removePlugins:'stylescombo',
+              removePlugins: 'stylescombo',
               removeButtons: 'About,Indent,Outdent,Cut,Copy,Paste,Undo,Redo,Anchor,Strike,Subscript,Superscript',
               enterMode: 2
             }
@@ -561,7 +561,7 @@ export class PreviewService {
             config: {
               height: 80,
               disableNativeSpellChecker: false,
-              //removePlugins:'stylescombo',
+              removePlugins: 'stylescombo',
               removeButtons: 'About,Indent,Outdent,Cut,Copy,Paste,Undo,Redo,Anchor,Strike,Subscript,Superscript',
               enterMode: 2
             }
@@ -572,7 +572,7 @@ export class PreviewService {
             config: {
               height: 80,
               disableNativeSpellChecker: false,
-              //removePlugins:'stylescombo',
+              removePlugins: 'stylescombo',
               removeButtons: 'About,Indent,Outdent,Cut,Copy,Paste,Undo,Redo,Anchor,Strike,Subscript,Superscript',
               enterMode: 2
             }
@@ -607,7 +607,7 @@ export class PreviewService {
             config: {
               height: 80,
               disableNativeSpellChecker: false,
-              //removePlugins:'stylescombo',
+              removePlugins: 'stylescombo',
               removeButtons: 'About,Indent,Outdent,Cut,Copy,Paste,Undo,Redo,Anchor,Strike,Subscript,Superscript',
               enterMode: 2
             }
@@ -663,7 +663,7 @@ export class PreviewService {
             config: {
               height: 80,
               disableNativeSpellChecker: false,
-              //removePlugins:'stylescombo',
+              removePlugins: 'stylescombo',
               removeButtons: 'About,Indent,Outdent,Cut,Copy,Paste,Undo,Redo,Anchor,Strike,Subscript,Superscript',
               enterMode: 2
             }
@@ -720,7 +720,7 @@ export class PreviewService {
             config: {
               height: 80,
               disableNativeSpellChecker: false,
-              //removePlugins:'stylescombo',
+              removePlugins: 'stylescombo',
               removeButtons: 'About,Indent,Outdent,Cut,Copy,Paste,Undo,Redo,Anchor,Strike,Subscript,Superscript',
               enterMode: 2
             }
@@ -777,7 +777,7 @@ export class PreviewService {
             config: {
               height: 80,
               disableNativeSpellChecker: false,
-              //removePlugins:'stylescombo',
+              removePlugins: 'stylescombo',
               removeButtons: 'About,Indent,Outdent,Cut,Copy,Paste,Undo,Redo,Anchor,Strike,Subscript,Superscript',
               enterMode: 2
             }
@@ -834,7 +834,7 @@ export class PreviewService {
             config: {
               height: 80,
               disableNativeSpellChecker: false,
-              //removePlugins:'stylescombo',
+              removePlugins: 'stylescombo',
               removeButtons: 'About,Indent,Outdent,Cut,Copy,Paste,Undo,Redo,Anchor,Strike,Subscript,Superscript',
               enterMode: 2
             }
@@ -891,7 +891,7 @@ export class PreviewService {
             config: {
               height: 80,
               disableNativeSpellChecker: false,
-              //removePlugins:'stylescombo',
+              removePlugins: 'stylescombo',
               removeButtons: 'About,Indent,Outdent,Cut,Copy,Paste,Undo,Redo,Anchor,Strike,Subscript,Superscript',
               enterMode: 2
             }
@@ -948,7 +948,7 @@ export class PreviewService {
             config: {
               height: 80,
               disableNativeSpellChecker: false,
-              //removePlugins:'stylescombo',
+              removePlugins: 'stylescombo',
               removeButtons: 'About,Indent,Outdent,Cut,Copy,Paste,Undo,Redo,Anchor,Strike,Subscript,Superscript',
               enterMode: 2
             }
@@ -1050,7 +1050,7 @@ export class PreviewService {
             config: {
               height: 80,
               disableNativeSpellChecker: false,
-              //removePlugins:'stylescombo',
+              removePlugins: 'stylescombo',
               removeButtons: 'About,Indent,Outdent,Cut,Copy,Paste,Undo,Redo,Anchor,Strike,Subscript,Superscript',
               enterMode: 2
             }
@@ -1107,7 +1107,7 @@ export class PreviewService {
             config: {
               height: 80,
               disableNativeSpellChecker: false,
-              //removePlugins:'stylescombo',
+              removePlugins: 'stylescombo',
               removeButtons: 'About,Indent,Outdent,Cut,Copy,Paste,Undo,Redo,Anchor,Strike,Subscript,Superscript',
               enterMode: 2
             }
