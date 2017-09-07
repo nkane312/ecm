@@ -57,12 +57,16 @@
                       [name]="'imageCode-' + i" name="image[i].code">
                       <option value="PH1">PH1</option>
                       <option value="VID1">VID1</option>
+                      <option value="PH2">PH2</option>
+                      <option value="VID2">VID2</option>
                     </select>
                     <label [attr.for]="'imageUtm-' + i">Image UTM code</label>
                     <select [attr.id]="'imageUtm-' + i" class="form-control" [(ngModel)]="content.image[i].utm" (change)="checkChanged()" #imageUtm="ngModel"
                       [name]="'imageUtm-' + i" name="image[i].utm">
                       <option value="photo-link-1">photo-link-1</option>
                       <option value="video-link-1">video-link-1</option>
+                      <option value="photo-link-2">photo-link-2</option>
+                      <option value="video-link-2">video-link-2</option>
                     </select>
                   </div>
                   <template [ngIf]="options.image.length > 1">
@@ -128,21 +132,9 @@
                           <option value="Watch Now">
                             <option value="Join Now">
           </datalist>
-          <!--<select [(ngModel)]="content.donateButton" list="donate" (change)="checkChanged()" #donateButton="ngModel" id="donateButton"
-            class="form-control" name="donateButton">
-            <option selected="selected">Donate Now</option>
-            <option>Act Now</option>
-            <option>Give Now</option>
-            <option>Help Now</option>
-            <option>Feed Hungry Children</option>
-            <option>Download Now</option>
-            <option>Match My Gift</option>
-            <option>Watch Now</option>
-            <option>Join Now</option>
-          </select>-->
         </div>
 
-        <div id="donateRadios" class="form-group" data-toggle="popover" data-placement="right" title="Donate Button Color Selection"
+        <div id="donate-color" class="form-group" data-toggle="popover" data-placement="right" title="Donate Button Color Selection"
           data-content="Select the desired color for the donate buttons.">
           <label for="donateRadios">Donate Button Color Selection</label><br />
           <div class="btn-group" data-toggle="buttons">
@@ -156,9 +148,7 @@
             <strong>Orange</strong>
           </label>
           </div>
-
         </div>
-
 
         <button (click)="save()" class="btn btn-success">Save</button><button (click)="cancel()" class="btn btn-danger pull-right">Cancel</button>
       </form>

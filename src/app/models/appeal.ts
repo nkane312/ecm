@@ -26,6 +26,8 @@ export class AppealContent {
   callout: AppealCallout = new AppealCallout();
   customSignature: string = '';
   image: Array<AppealImage> = [new AppealImage()];
+  donateButton: string = '';
+  donateColor: string = '';
 }
 export class AppealCallout {
   headline: string = '';

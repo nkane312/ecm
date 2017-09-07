@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter, ViewChild } from '@angular/core';
 import { AppealContent, AppealCallout } from '../../../models/appeal';
+import { RadioControlValueAccessor } from '@angular/forms';
 import { RestoreService } from '../../../restore.service';
 import { PreviewService } from '../../../preview.service';
 import { Template } from '../../../preview.service';
@@ -59,6 +60,7 @@ export class AppealContentComponent implements OnInit {
   }
 
   save() {
+    console.log(this.content);
     this.restoreService.setItem(this.content);
     this.saved.emit(this.content);
     this.checkChanged();
@@ -85,11 +87,17 @@ export class AppealContentComponent implements OnInit {
     $(function() {
       $('[data-toggle="popover"]').popover({ trigger: 'hover focus', container: 'app-root', html: true });
     });
+    if (this.content.donateColor === undefined) {
+      this.content.donateColor = 'red-btn';
+    }
     if (this.content.image[0].code === '') {
       this.content.image[0].code = 'PH1';
     }
     if (this.content.image[0].utm === '') {
       this.content.image[0].utm = 'photo-link-1';
+    }
+    if (this.content.donateButton === undefined || this.content.donateButton === '') {
+      this.content.donateButton = 'Donate Now';
     }
   }
 }

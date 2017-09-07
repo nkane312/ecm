@@ -24,10 +24,14 @@ export class StandardAppealComponent {
   private body;
   private template = new TemplateCodes();
 
-  constructor(private campaignService: CampaignService, private appealService: AppealService, private sanitizer: DomSanitizer) {
+  constructor(
+    private campaignService: CampaignService,
+    private appealService: AppealService,
+    private sanitizer: DomSanitizer
+  ) {
     this._appealSub$ = this.appealService.currentAppeal$;
     this._appealSub$.subscribe(data => {
-      if (data){
+      if (data) {
         this.appeal = data;
         this.body = this.template.generateBody(this.appeal);
 
@@ -183,14 +187,20 @@ export class StandardAppealComponent {
                 width: auto!important
             }
         }
+        .red-btn {
+          background-color: #9a0000 !important;
+          border: 0px solid #9a0000 !important;
+        }
+        .orange-btn {
+          background-color: #e48c1b !important;
+          border: 0px solid #e48c1b !important;
+        }
   `;
 
-
-  ngOnInit(){
-  }
-  ngOnDestory(){
-    if (this._appealSub$){
+  ngOnInit() {}
+  ngOnDestory() {
+    if (this._appealSub$) {
       this._appealSub$.unsubscribe();
     }
-  };
+  }
 }

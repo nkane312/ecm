@@ -1,7 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 .red-btn {
   background-color: #9a0000 !important;
+  border: 1px solid #9a0000 !important;
 }
 .orange-btn {
   background-color: #e48c1b !important;
+  border: 1px solid #e48c1b !important;
 }
