@@ -15,6 +15,7 @@ import { CANStandardAppealComponent } from './can-appeals/can-standard-appeal/ca
 import { CANFastAppealComponent } from './can-appeals/can-fast-appeal/can-appeal-fast.component';
 import { FastAppealComponent } from './us-appeals/fast-appeal/fast-appeal.component';
 import { StoreEmailComponent } from './us-appeals/store-email/store-email.component';
+import { WOEAppealComponent } from './us-appeals/woe-appeal/woe-appeal.component';
 
 import { SafePipe } from '../../../safe.pipe';
 import { PlainTextPipe } from '../../../plain-text.pipe';
@@ -35,6 +36,7 @@ import { CopyControlsComponent } from './copy-controls/copy-controls.component';
     PrayerAlertComponent,
     MobileFriendlyAppealComponent,
     StoreEmailComponent,
+    WOEAppealComponent,
     CANHHDAppealComponent,
     CANHHDLargeAppealComponent,
     CANPassoverLargeAppealComponent,

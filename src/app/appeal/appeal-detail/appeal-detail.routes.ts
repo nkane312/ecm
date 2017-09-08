@@ -9,6 +9,7 @@ import { LeadGenerationComponent } from './appeal-templates/us-appeals/lead-gene
 import { PrayerAlertComponent } from './appeal-templates/us-appeals/prayer-alert/prayer-alert.component';
 import { HHDLargeAppealComponent } from './appeal-templates/us-appeals/hhd-appeal-large-img/appeal-hhd-large-img.component';
 import { StoreEmailComponent } from './appeal-templates/us-appeals/store-email/store-email.component';
+import { WOEAppealComponent } from './appeal-templates/us-appeals/woe-appeal/woe-appeal.component';
 import { MobileFriendlyAppealComponent } from './appeal-templates/us-appeals/mobile-friendly/mobile-friendly.component';
 import { CANHHDAppealComponent } from './appeal-templates/can-appeals/can-hhd-appeal/can-appeal-hhd.component';
 import { CANHHDLargeAppealComponent } from './appeal-templates/can-appeals/can-hhd-appeal-large-img/can-appeal-hhd-large-img.component';
@@ -60,6 +61,10 @@ export const appealDetailRoutes: Routes = [
   {
     path: 'storeEmail',
     component: StoreEmailComponent
+  },
+  {
+    path: 'woeAppeal',
+    component: WOEAppealComponent
   },
   {
     path: 'mobileFriendlyAppeal',
