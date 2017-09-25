@@ -4,6 +4,7 @@ import { StandardAppealComponent } from './appeal-templates/us-appeals/standard-
 import { FastAppealComponent } from './appeal-templates/us-appeals/fast-appeal/fast-appeal.component';
 import { HHDAppealComponent } from './appeal-templates/us-appeals/hhd-appeal/appeal-hhd.component';
 import { PassoverLargeAppealComponent } from './appeal-templates/us-appeals/passover-appeal-large-img/appeal-passover-large-img.component';
+import { CalendarEmailComponent } from './appeal-templates/us-appeals/calendar-email/calendar-email.component';
 import { EmergencyResponseComponent } from './appeal-templates/us-appeals/emergency-response/emergency-response.component';
 import { LeadGenerationComponent } from './appeal-templates/us-appeals/lead-generation/lead-generation.component';
 import { PrayerAlertComponent } from './appeal-templates/us-appeals/prayer-alert/prayer-alert.component';
@@ -45,6 +46,10 @@ export const appealDetailRoutes: Routes = [
   {
     path: 'passoverLargeAppeal',
     component: PassoverLargeAppealComponent
+  },
+  {
+    path: 'calendarEmail',
+    component: CalendarEmailComponent
   },
   {
     path: 'emergencyResponseAppeal',

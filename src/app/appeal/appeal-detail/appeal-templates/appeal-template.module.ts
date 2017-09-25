@@ -4,6 +4,7 @@ import { StandardAppealComponent } from './us-appeals/standard-appeal/standard-a
 import { HHDAppealComponent } from './us-appeals/hhd-appeal/appeal-hhd.component';
 import { HHDLargeAppealComponent } from './us-appeals/hhd-appeal-large-img/appeal-hhd-large-img.component';
 import { PassoverLargeAppealComponent } from './us-appeals/passover-appeal-large-img/appeal-passover-large-img.component';
+import { CalendarEmailComponent } from './us-appeals/calendar-email/calendar-email.component';
 import { EmergencyResponseComponent } from './us-appeals/emergency-response/emergency-response.component';
 import { LeadGenerationComponent } from './us-appeals/lead-generation/lead-generation.component';
 import { PrayerAlertComponent } from './us-appeals/prayer-alert/prayer-alert.component';
@@ -31,6 +32,7 @@ import { CopyControlsComponent } from './copy-controls/copy-controls.component';
     HHDAppealComponent,
     HHDLargeAppealComponent,
     PassoverLargeAppealComponent,
+    CalendarEmailComponent,
     EmergencyResponseComponent,
     LeadGenerationComponent,
     PrayerAlertComponent,
