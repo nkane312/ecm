@@ -36,7 +36,16 @@ export class CalendarEmailComponent {
         this.body = this.template.generateBody(this.appeal);
 
         this.body.html.forEach((item, index) => {
-          item = item.replace(/<a\s/g, '<a style="color:#00529c; text-decoration:none; font-weight:bold;" ');
+          if (
+            this.appeal.content.linkColor === undefined ||
+            this.appeal.content.linkColor === null ||
+            this.appeal.content.linkColor === '' ||
+            this.appeal.content.linkColor === 'blue-links'
+          ) {
+            item = item.replace(/<a\s/g, '<a style="text-decoration:none; font-weight:bold; color:#00529c;"');
+          } else {
+            item = item.replace(/<a\s/g, '<a style="text-decoration:none; font-weight:bold; color:#a61d26;"');
+          }
           this.body.html[index] = sanitizer.bypassSecurityTrustHtml(item);
         });
         this.body.plain.forEach((item, index) => {

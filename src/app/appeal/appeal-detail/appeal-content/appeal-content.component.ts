@@ -77,7 +77,11 @@ export class AppealContentComponent implements OnInit {
   onCalloutSaved(data) {
     this.calloutSaved.emit(data);
   }
-
+  setLinkColor(color) {
+    var input;
+    input = document.getElementById(`${color}-links`);
+    input.click();
+  }
   setDonateColor(color) {
     var input;
     input = document.getElementById(`${color}-btn`);
@@ -89,6 +93,9 @@ export class AppealContentComponent implements OnInit {
     });
     if (this.content.donateColor === undefined) {
       this.content.donateColor = 'red-btn';
+    }
+    if (this.content.linkColor === undefined) {
+      this.content.linkColor = 'blue-links';
     }
     if (this.content.image[0].code === '') {
       this.content.image[0].code = 'PH1';

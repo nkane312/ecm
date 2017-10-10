@@ -28,6 +28,7 @@ export class AppealContent {
   image: Array<AppealImage> = [new AppealImage()];
   donateButton: string = '';
   donateColor: string = '';
+  linkColor: string = '';
 }
 export class AppealCallout {
   headline: string = '';

@@ -133,7 +133,6 @@ export class AppealService {
       headers: headers
     });
     this.socket.emit('updateAppeal', appeal);
-    console.log(body.content.donateColor);
     this.http.patch(this._appealUrl + appeal._id, body, options).subscribe(
       data => {
         console.log(data);

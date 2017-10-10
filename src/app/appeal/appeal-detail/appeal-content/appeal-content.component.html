@@ -15,6 +15,21 @@
           <div class="tab-content">
             <div role="tabpanel" class="tab-pane fade" id="copy">
               <div class="well" *ngIf="options && content">
+                <div id="link-color" class="form-group" data-toggle="popover" data-placement="right" title="Link/Headline Color Selection"
+                  data-content="Select the desired color for the links and headline.">
+                  <label for="linkRadios">Link/Headline Color Selection</label><br />
+                  <div class="btn-group" data-toggle="buttons">
+                    <label class="btn btn-primary active blue-links-btn" (click)="setLinkColor('blue')">
+                    <input id="blue-links" type="radio" class="form-control" [(ngModel)]="content.linkColor" (change)="checkChanged()" #linkColor="ngModel"
+                    name="linkColor" value="blue-links" autocomplete="off">
+                    <strong>Blue</strong>
+                  </label>
+                    <label class="btn btn-primary red-links-btn" (click)="setLinkColor('red')">
+                      <input id="red-links" type="radio" class="form-control" [(ngModel)]="content.linkColor" (change)="checkChanged()" #linkColor="ngModel"
+                      name="linkColor" value="red-links" autocomplete="off" checked> <strong>Red</strong>
+                    </label>
+                  </div>
+                </div>
                 <template ngFor let-body [ngForOf]="options.body" let-index="index">
                   <div class="form-group" data-toggle="popover" data-placement="right" [attr.data-content]="body.tooltip">
                     <label [attr.for]="'field-' + index">{{body.title}}</label>

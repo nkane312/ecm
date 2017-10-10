@@ -23,16 +23,29 @@ export class PassoverLargeAppealComponent {
   private _appealSub$;
   private body;
   private template = new TemplateCodes();
-  
-  constructor(private campaignService: CampaignService, private appealService: AppealService, private sanitizer: DomSanitizer) {
+
+  constructor(
+    private campaignService: CampaignService,
+    private appealService: AppealService,
+    private sanitizer: DomSanitizer
+  ) {
     this._appealSub$ = this.appealService.currentAppeal$;
     this._appealSub$.subscribe(data => {
-      if (data){
+      if (data) {
         this.appeal = data;
         this.body = this.template.generateBody(this.appeal);
-        
+
         this.body.html.forEach((item, index) => {
-          item = item.replace(/<a\s/g, '<a style="color:#00529c; text-decoration:none; font-weight:bold;" ');
+          if (
+            this.appeal.content.linkColor === undefined ||
+            this.appeal.content.linkColor === null ||
+            this.appeal.content.linkColor === '' ||
+            this.appeal.content.linkColor === 'blue-links'
+          ) {
+            item = item.replace(/<a\s/g, '<a style="text-decoration:none; font-weight:bold; color:#00529c;"');
+          } else {
+            item = item.replace(/<a\s/g, '<a style="text-decoration:none; font-weight:bold; color:#a61d26;"');
+          }
           this.body.html[index] = sanitizer.bypassSecurityTrustHtml(item);
         });
         this.body.plain.forEach((item, index) => {
@@ -44,7 +57,7 @@ export class PassoverLargeAppealComponent {
 
   @ViewChild('htmlVersion') htmlVersion: ElementRef;
   @ViewChild('plainVersion') plainVersion: ElementRef;
-  
+
   private htmlStyle = `
         @media only screen{
           html{
@@ -185,11 +198,10 @@ export class PassoverLargeAppealComponent {
         }
   `;
 
-  ngOnInit(){
-  }
-  ngOnDestory(){
-    if (this._appealSub$){
+  ngOnInit() {}
+  ngOnDestory() {
+    if (this._appealSub$) {
       this._appealSub$.unsubscribe();
     }
-  };
+  }
 }

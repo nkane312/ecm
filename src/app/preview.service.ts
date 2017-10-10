@@ -845,12 +845,6 @@ export class PreviewService {
             }
           },
           {
-            title: 'Custom Signature',
-            tooltip:
-              'Put a custom signature here. Leave blank for the standard signature. <br><br>Type in "Yael" for a Yael signature.',
-            config: { height: 80, disableNativeSpellChecker: false }
-          },
-          {
             title: 'Pre-Text Preview',
             tooltip: 'Insert the pre-text preview here.',
             config: {
