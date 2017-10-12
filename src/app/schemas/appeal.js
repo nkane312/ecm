@@ -12,7 +12,7 @@ var imageSchema = new Schema({
   merlinId: { type: String, default: '' },
   brightcoveId: { type: String, default: '' },
   button: { type: String, default: '' },
-  caption: { type: String, default: '' },
+  caption: { type: String, default: 'Donate Now' },
   captionSize: { type: Number, default: 22 },
   captionColor: { type: String, default: '' },
   captionShadow: { type: String, default: '' },
