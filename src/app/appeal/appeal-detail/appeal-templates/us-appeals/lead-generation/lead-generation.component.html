@@ -52,12 +52,20 @@
                                                                         </template>
                                                                         <template [ngIf]="body.plain[0]?.changingThisBreaksApplicationSecurity !== ''">
                                                                             <template [ngIf]="appeal.content.linkColor === 'blue-links' || appeal.content.linkColor === '' || appeal.content.linkColor === undefined">
-                                                                                <h1 class="text-center" style="Margin:0;Margin-bottom:5px;color:#00529c;font-family:Calibri,Candara,Segoe,'Segoe UI',Optima,Arial,sans-serif;font-size:48px;font-weight:600;line-height:40px;margin:0;margin-bottom:5px;margin-top:5px;padding:0;text-align:center;text-decoration:none;word-wrap:normal; text-transform: uppercase;"><a href="{{template.addCodes(appeal.content.url, {src: 'TL1', utm: 'text-link-1'}, 'html')}}"
-                                                                                        style="Margin:0;Margin-bottom:5px;color:#00529c;font-family:Calibri,Candara,Segoe,'Segoe UI',Optima,Arial,sans-serif;font-size:48px;font-weight:600;line-height:40px;margin:0;margin-bottom:5px;margin-top:5px;padding:0;text-align:center;text-decoration:none; text-transform: uppercase;"><span [innerHTML]="body?.html[0]"></span></a></h1>
+                                                                                <h1 class="text-center" style="Margin:0;Margin-bottom:5px;color:#00529c;font-family:Calibri,Candara,Segoe,'Segoe UI',Optima,Arial,sans-serif;font-size:48px;font-weight:600;line-height:40px;margin:0;margin-bottom:5px;margin-top:5px;padding:0;text-align:center;text-decoration:none;word-wrap:normal; text-transform: uppercase;">
+                                                                                    <a href="{{template.addCodes(appeal.content.url, {src: 'TL1', utm: 'text-link-1'}, 'html')}}"
+                                                                                        style="Margin:0;Margin-bottom:5px;color:#00529c;font-family:Calibri,Candara,Segoe,'Segoe UI',Optima,Arial,sans-serif;font-size:48px;font-weight:600;line-height:40px;margin:0;margin-bottom:5px;margin-top:5px;padding:0;text-align:center;text-decoration:none; text-transform: uppercase;">
+                                                                                        <span [innerHTML]="body?.html[0]"></span>
+                                                                                    </a>
+                                                                                </h1>
                                                                             </template>
                                                                             <template [ngIf]="appeal.content.linkColor === 'red-links'">
-                                                                                <h1 class="text-center" style="Margin:0;Margin-bottom:5px;color:#a61d26;font-family:Calibri,Candara,Segoe,'Segoe UI',Optima,Arial,sans-serif;font-size:48px;font-weight:600;line-height:40px;margin:0;margin-bottom:5px;margin-top:5px;padding:0;text-align:center;text-decoration:none;word-wrap:normal; text-transform: uppercase;"><a href="{{template.addCodes(appeal.content.url, {src: 'TL1', utm: 'text-link-1'}, 'html')}}"
-                                                                                        style="Margin:0;Margin-bottom:5px;color:#a61d26;font-family:Calibri,Candara,Segoe,'Segoe UI',Optima,Arial,sans-serif;font-size:48px;font-weight:600;line-height:40px;margin:0;margin-bottom:5px;margin-top:5px;padding:0;text-align:center;text-decoration:none; text-transform: uppercase;"><span [innerHTML]="body?.html[0]"></span></a></h1>
+                                                                                <h1 class="text-center" style="Margin:0;Margin-bottom:5px;color:#a61d26;font-family:Calibri,Candara,Segoe,'Segoe UI',Optima,Arial,sans-serif;font-size:48px;font-weight:600;line-height:40px;margin:0;margin-bottom:5px;margin-top:5px;padding:0;text-align:center;text-decoration:none;word-wrap:normal; text-transform: uppercase;">
+                                                                                    <a href="{{template.addCodes(appeal.content.url, {src: 'TL1', utm: 'text-link-1'}, 'html')}}"
+                                                                                        style="Margin:0;Margin-bottom:5px;color:#a61d26;font-family:Calibri,Candara,Segoe,'Segoe UI',Optima,Arial,sans-serif;font-size:48px;font-weight:600;line-height:40px;margin:0;margin-bottom:5px;margin-top:5px;padding:0;text-align:center;text-decoration:none; text-transform: uppercase;">
+                                                                                        <span [innerHTML]="body?.html[0]"></span>
+                                                                                    </a>
+                                                                                </h1>
                                                                             </template>
                                                                         </template>
                                                                     </th>
@@ -79,7 +87,9 @@
                                             <table class="row collapse" style="border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
                                                 <tbody>
                                                     <tr style="padding:0;text-align:left;vertical-align:top">
-                                                        <a href="{{template.addCodes(appeal.content.url, {src: appeal.content.image[0].code, utm: appeal.content.image[0].utm}, 'html')}}"><img [src]="appeal.content.image[0].url" alt="Donate Now" style="-ms-interpolation-mode:bicubic;clear:both;display:block;max-width:100%;outline:0;text-decoration:none;width:auto"></a>
+                                                        <a href="{{template.addCodes(appeal.content.url, {src: appeal.content.image[0].code, utm: appeal.content.image[0].utm}, 'html')}}">
+                                                            <img [src]="appeal.content.image[0].url" alt="Donate Now" style="-ms-interpolation-mode:bicubic;clear:both;display:block;max-width:100%;outline:0;text-decoration:none;width:auto">
+                                                        </a>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -139,16 +149,22 @@
                                                                                         <tr style="padding:0;text-align:left;vertical-align:top">
                                                                                             <template [ngIf]="appeal.content.donateColor === 'red-btn' || appeal.content.donateColor === '' || appeal.content.donateColor === undefined">
                                                                                                 <td class="{{ appeal.content.donateColor }}" style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;background:#9A0000;border:0 solid #9A0000;border-collapse:collapse!important;color:#fefefe;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;width:100%;word-wrap:break-word">
-                                                                                                    <center data-parsed="" style="min-width:0;width:100%"><a href="{{template.addCodes(appeal.content.url, {src: 'BN2', utm: 'button-link-2'}, 'html')}}"
+                                                                                                    <center data-parsed="" style="min-width:0;width:100%">
+                                                                                                        <a href="{{template.addCodes(appeal.content.url, {src: 'BN2', utm: 'button-link-2'}, 'html')}}"
                                                                                                             align="center" class="float-center {{ appeal.content.donateColor }}"
-                                                                                                            style="Margin:0;border:0 solid #9A0000;border-radius:3px;border-collapse:collapse!important;color:#fefefe;display:inline-block;font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:700;line-height:1.3;margin:0;padding:10px 20px 10px 20px;padding-left:0;padding-right:0;text-align:center;text-decoration:none;width:100%">{{ appeal.content.donateButton }}</a></center>
+                                                                                                            style="Margin:0;border:0 solid #9A0000;border-radius:3px;border-collapse:collapse!important;color:#fefefe;display:inline-block;font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:700;line-height:1.3;margin:0;padding:10px 20px 10px 20px;padding-left:0;padding-right:0;text-align:center;text-decoration:none;width:100%">{{ appeal.content.donateButton
+                                                                                                            }}</a>
+                                                                                                    </center>
                                                                                                 </td>
                                                                                             </template>
                                                                                             <template [ngIf]="appeal.content.donateColor === 'orange-btn'">
                                                                                                 <td class="{{ appeal.content.donateColor }}" style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;background:#e48c1b;border:0 solid #e48c1b;border-collapse:collapse!important;color:#fefefe;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;width:100%;word-wrap:break-word">
-                                                                                                    <center data-parsed="" style="min-width:0;width:100%"><a href="{{template.addCodes(appeal.content.url, {src: 'BN2', utm: 'button-link-2'}, 'html')}}"
+                                                                                                    <center data-parsed="" style="min-width:0;width:100%">
+                                                                                                        <a href="{{template.addCodes(appeal.content.url, {src: 'BN2', utm: 'button-link-2'}, 'html')}}"
                                                                                                             align="center" class="float-center {{ appeal.content.donateColor }}"
-                                                                                                            style="Margin:0;border:0 solid #e48c1b;border-radius:3px;border-collapse:collapse!important;color:#fefefe;display:inline-block;font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:700;line-height:1.3;margin:0;padding:10px 20px 10px 20px;padding-left:0;padding-right:0;text-align:center;text-decoration:none;width:100%">{{ appeal.content.donateButton }}</a></center>
+                                                                                                            style="Margin:0;border:0 solid #e48c1b;border-radius:3px;border-collapse:collapse!important;color:#fefefe;display:inline-block;font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:700;line-height:1.3;margin:0;padding:10px 20px 10px 20px;padding-left:0;padding-right:0;text-align:center;text-decoration:none;width:100%">{{ appeal.content.donateButton
+                                                                                                            }}</a>
+                                                                                                    </center>
                                                                                                 </td>
                                                                                             </template>
                                                                                         </tr>
@@ -179,7 +195,9 @@
                                                             <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
                                                                 <tr style="padding:0;text-align:left;vertical-align:top">
                                                                     <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">
-                                                                        <p style="Margin:0;Margin-bottom:15px;color:#6d6e70;font-family:'Trebuchet MS',sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;margin-bottom:15px;padding:0;text-align:left"><span [innerHTML]="body?.html[3]"></span></p>
+                                                                        <p style="Margin:0;Margin-bottom:15px;color:#6d6e70;font-family:'Trebuchet MS',sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;margin-bottom:15px;padding:0;text-align:left">
+                                                                            <span [innerHTML]="body?.html[3]"></span>
+                                                                        </p>
                                                                     </th>
                                                                     <th class="expander" style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0!important;text-align:left;visibility:hidden;width:0"></th>
                                                                 </tr>
@@ -198,9 +216,10 @@
                                                                 <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
                                                                     <tr style="padding:0;text-align:left;vertical-align:top">
                                                                         <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">
-                                                                            <a href="{{template.addCodes(appeal.content.url, {src: appeal.content.image[1].code, utm: appeal.content.image[1].utm}, 'html')}}"
-                                                                                style="color:#2199e8;font-family:Helvetica,Arial,sans-serif;font-weight:400;text-decoration:none"><img [src]="appeal.content.image[1].url"
-                                                                        style="-ms-interpolation-mode:bicubic;border:none;clear:both;display:block;max-width:100%;outline:0;text-decoration:none;width:auto"></a>
+                                                                            <a href="{{template.addCodes(appeal.content.image[1].link, {src: appeal.content.image[1].code, utm: appeal.content.image[1].utm}, 'html')}}"
+                                                                                style="color:#2199e8;font-family:Helvetica,Arial,sans-serif;font-weight:400;text-decoration:none">
+                                                                                <img [src]="appeal.content.image[1].url" style="-ms-interpolation-mode:bicubic;border:none;clear:both;display:block;max-width:100%;outline:0;text-decoration:none;width:auto">
+                                                                            </a>
                                                                         </th>
                                                                     </tr>
                                                                 </table>
@@ -209,8 +228,12 @@
                                                                 <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
                                                                     <tr style="padding:0;text-align:left;vertical-align:top">
                                                                         <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">
-                                                                            <h3 style="Margin:0;Margin-bottom:10px;color:#a61d26;font-family:Georgia,Constantia,Lucida Bright,DejaVu Serif,serif;font-size:28px;font-weight:400;line-height:1.3;margin:0;margin-bottom:10px;margin-top:0;padding:0;text-align:left;word-wrap:normal"><a href="{{template.addCodes(appeal.content.url, {src: 'PRHL', utm: 'promo-text-link-1'}, 'html')}}"
-                                                                                    style="color:#a61d26;font-family:Georgia,Constantia,Lucida Bright,DejaVu Serif,serif;font-size:28px;font-weight:400;text-decoration:none"><span [innerHTML]="body?.html[4]"></span></a></h3>
+                                                                            <h3 style="Margin:0;Margin-bottom:10px;color:#a61d26;font-family:Georgia,Constantia,Lucida Bright,DejaVu Serif,serif;font-size:28px;font-weight:400;line-height:1.3;margin:0;margin-bottom:10px;margin-top:0;padding:0;text-align:left;word-wrap:normal">
+                                                                                <a href="{{template.addCodes(appeal.content.url, {src: 'PRHL', utm: 'promo-text-link-1'}, 'html')}}"
+                                                                                    style="color:#a61d26;font-family:Georgia,Constantia,Lucida Bright,DejaVu Serif,serif;font-size:28px;font-weight:400;text-decoration:none">
+                                                                                    <span [innerHTML]="body?.html[4]"></span>
+                                                                                </a>
+                                                                            </h3>
                                                                             <div [innerHTML]="body.html[5]"></div>
                                                                         </th>
                                                                     </tr>
@@ -256,12 +279,16 @@
 <div id="plainText" class="col-xs-12 col-md-8">
     <div #plainVersion>
         <template [ngIf]="appeal">
-            <br><br> {{body.plain[0]?.changingThisBreaksApplicationSecurity | removeHtml: 'space':'rsquo':'lsquo'}}
-            <br><br> {{template.addCodes(appeal.content.url, {src:'TL1', utm:'text-link-1'}, 'plain') }}
-            <br><br>
+            <br>
+            <br> {{body.plain[0]?.changingThisBreaksApplicationSecurity | removeHtml: 'space':'rsquo':'lsquo'}}
+            <br>
+            <br> {{template.addCodes(appeal.content.url, {src:'TL1', utm:'text-link-1'}, 'plain') }}
+            <br>
+            <br>
             <p [innerHTML]="body.plain[2]"></p>
             <br>
-            <br><br>
+            <br>
+            <br>
             <p [innerHTML]="body.plain[3]"></p>
         </template>
     </div>
