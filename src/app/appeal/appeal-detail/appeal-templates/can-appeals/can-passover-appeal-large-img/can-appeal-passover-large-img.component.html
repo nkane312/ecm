@@ -38,7 +38,7 @@
                                     <tbody>
                                         <tr style="padding:0;text-align:left;vertical-align:top">
                                             <td style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-wrap:break-word">
-                                                <p style="color:#6d6e70;font-family:'Trebuchet MS',sans-serif;font-size:16px;font-weight:normal;line-height:1.3;margin-bottom:10px; text-align:center;">
+                                                <p style="color:#4C4D4E;font-family:'Trebuchet MS',sans-serif;font-size:16px;font-weight:normal;line-height:1.3;margin-bottom:10px; text-align:center;">
                                                     <a style="color:#00529c; text-decoration:none; font-weight:bold;" href="{{template.addUtmOnly('http://www.ifcj.ca/site/CO', 'email-preferences', 'html') }}">Update your email preferences here</a>.</p>
 
                                                 <table class="spacer" style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
@@ -138,15 +138,15 @@
                                                                                 </template>
                                                                                 <template [ngIf]="body.plain[0]?.changingThisBreaksApplicationSecurity !== ''">
                                                                                     <template [ngIf]="appeal.content.linkColor === 'blue-links' || appeal.content.linkColor === '' || appeal.content.linkColor === undefined">
-                                                                                        <h1 class="text-center" style="Margin:0;Margin-bottom:5px;color:#00529c;font-family:Calibri,Candara,Segoe,'Segoe UI',Optima,Arial,sans-serif;font-size:48px;font-weight:600;line-height:40px;margin:0;margin-bottom:5px;margin-top:5px;padding:0;text-align:center;text-decoration:none;word-wrap:normal; text-transform: uppercase;">
-                                                                                            <a href="{{template.addCodes(appeal.content.url, {src: 'TL1', utm: 'text-link-1'}, 'html')}}" style="Margin:0;Margin-bottom:5px;color:#00529c;font-family:Calibri,Candara,Segoe,'Segoe UI',Optima,Arial,sans-serif;font-size:48px;font-weight:600;line-height:40px;margin:0;margin-bottom:5px;margin-top:5px;padding:0;text-align:center;text-decoration:none; text-transform: uppercase;">
+                                                                                        <h1 class="text-center" style="Margin:0;Margin-bottom:5px;color:#00529c;font-family:Calibri,Candara,Segoe,'Segoe UI',Optima,Arial,sans-serif;font-size:40px;font-weight:600;line-height:40px;margin:0;margin-bottom:5px;margin-top:5px;padding:0;text-align:center;text-decoration:none;word-wrap:normal; text-transform: uppercase;">
+                                                                                            <a href="{{template.addCodes(appeal.content.url, {src: 'TL1', utm: 'text-link-1'}, 'html')}}" style="Margin:0;Margin-bottom:5px;color:#00529c;font-family:Calibri,Candara,Segoe,'Segoe UI',Optima,Arial,sans-serif;font-size:40px;font-weight:600;line-height:40px;margin:0;margin-bottom:5px;margin-top:5px;padding:0;text-align:center;text-decoration:none; text-transform: uppercase;">
                                                                                                 <span [innerHTML]="body?.html[0]"></span>
                                                                                             </a>
                                                                                         </h1>
                                                                                     </template>
                                                                                     <template [ngIf]="appeal.content.linkColor === 'red-links'">
-                                                                                        <h1 class="text-center" style="Margin:0;Margin-bottom:5px;color:#a61d26;font-family:Calibri,Candara,Segoe,'Segoe UI',Optima,Arial,sans-serif;font-size:48px;font-weight:600;line-height:40px;margin:0;margin-bottom:5px;margin-top:5px;padding:0;text-align:center;text-decoration:none;word-wrap:normal; text-transform: uppercase;">
-                                                                                            <a href="{{template.addCodes(appeal.content.url, {src: 'TL1', utm: 'text-link-1'}, 'html')}}" style="Margin:0;Margin-bottom:5px;color:#a61d26;font-family:Calibri,Candara,Segoe,'Segoe UI',Optima,Arial,sans-serif;font-size:48px;font-weight:600;line-height:40px;margin:0;margin-bottom:5px;margin-top:5px;padding:0;text-align:center;text-decoration:none; text-transform: uppercase;">
+                                                                                        <h1 class="text-center" style="Margin:0;Margin-bottom:5px;color:#a61d26;font-family:Calibri,Candara,Segoe,'Segoe UI',Optima,Arial,sans-serif;font-size:40px;font-weight:600;line-height:40px;margin:0;margin-bottom:5px;margin-top:5px;padding:0;text-align:center;text-decoration:none;word-wrap:normal; text-transform: uppercase;">
+                                                                                            <a href="{{template.addCodes(appeal.content.url, {src: 'TL1', utm: 'text-link-1'}, 'html')}}" style="Margin:0;Margin-bottom:5px;color:#a61d26;font-family:Calibri,Candara,Segoe,'Segoe UI',Optima,Arial,sans-serif;font-size:40px;font-weight:600;line-height:40px;margin:0;margin-bottom:5px;margin-top:5px;padding:0;text-align:center;text-decoration:none; text-transform: uppercase;">
                                                                                                 <span [innerHTML]="body?.html[0]"></span>
                                                                                             </a>
                                                                                         </h1>
@@ -199,7 +199,7 @@
                                                 <table class="row collapse" style="border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
                                                     <tbody>
                                                         <tr style="padding:0;text-align:left;vertical-align:top">
-                                                            <th class="small-12 large-6 columns first last" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:16px;padding-left:0;padding-right:0;text-align:left;width:298px">
+                                                            <th class="small-12 large-6 columns first last" style="Margin:0 auto;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:16px;padding-left:0;padding-right:0;text-align:left;width:100%">
                                                                 <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
                                                                     <tbody>
                                                                         <tr style="padding:0;text-align:left;vertical-align:top">
@@ -207,8 +207,10 @@
                                                                                 <h3 style="Margin:0;Margin-bottom:10px;color:#00529c;font-family:Georgia,Constantia,Lucida Bright,DejaVu Serif,serif;font-size:28px;font-weight:400;line-height:1.3;margin:0;margin-bottom:10px;margin-top:0;padding:0;text-align:left;word-wrap:normal">
                                                                                     <span [innerHTML]="body?.html[1]"></span>
                                                                                 </h3>
-                                                                                <p style="color:#6d6e70;font-family:'Trebuchet MS',sans-serif;font-size:16px;font-weight:normal;line-height:1.3;margin-bottom:10px;text-align:left;">[[?xx::x[[S1:first_name]]x::Dear friend::[[S1:first_name]]]],
-                                                                                </p>
+                                                                                <p style="color:#4C4D4E;font-family:'Trebuchet MS',sans-serif;font-size:16px;font-weight:normal;line-height:1.3;margin-bottom:10px;text-align:left;">[[?xx::x[[S1:first_name]]x::
+                                                                                    <em>Shalom</em>,
+                                                                                    <em>Fellowship</em> partner::
+                                                                                    <em>Shalom</em>, [[S1:first_name]]]],</p>
 
                                                                                 <div [innerHTML]="body.html[2]"></div>
                                                                             </th>
@@ -228,30 +230,30 @@
                                                                         <tr style="padding:0;text-align:left;vertical-align:top">
                                                                             <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">
                                                                                 <template [ngIf]="body.html[6]?.changingThisBreaksApplicationSecurity === 'Rabbi' || body.html[6]?.changingThisBreaksApplicationSecurity === '' || !body.html[6]">
-                                                                                    <p style="Margin:0;Margin-bottom:10px;color:#6d6e70;font-family:'Trebuchet MS',sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;margin-bottom:10px;padding:0;text-align:left">
+                                                                                    <p style="Margin:0;Margin-bottom:10px;color:#4C4D4E;font-family:'Trebuchet MS',sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;margin-bottom:10px;padding:0;text-align:left">
                                                                                         With prayers for
                                                                                         <em>shalom</em>, peace,
                                                                                         <br>
                                                                                         <img src="http://digital.ifcj.org/site-assets/email-assets/Rabbi-Sig-Clear.png" style="-ms-interpolation-mode:bicubic;clear:both;display:block;max-width:100%;outline:0;text-decoration:none;width:auto">
                                                                                     </p>
 
-                                                                                    <p style="Margin:0;Margin-bottom:10px;color:#6d6e70;font-family:'Trebuchet MS',sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;margin-bottom:10px;padding:0;text-align:left">
+                                                                                    <p style="Margin:0;Margin-bottom:10px;color:#4C4D4E;font-family:'Trebuchet MS',sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;margin-bottom:10px;padding:0;text-align:left">
                                                                                         Rabbi Yechiel Eckstein
                                                                                         <br />President and Founder</p>
                                                                                 </template>
                                                                                 <template [ngIf]="body.html[6]?.changingThisBreaksApplicationSecurity === 'Yael'">
-                                                                                    <p style="Margin:0;Margin-bottom:10px;color:#6d6e70;font-family:'Trebuchet MS',sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;margin-bottom:10px;padding:0;text-align:left">
+                                                                                    <p style="Margin:0;Margin-bottom:10px;color:#4C4D4E;font-family:'Trebuchet MS',sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;margin-bottom:10px;padding:0;text-align:left">
                                                                                         With blessings from the Holy Land,
                                                                                         <br>
                                                                                         <img src="http://digital.ifcj.org/site-assets/email-assets/12-day-yael-signature.jpg" style="-ms-interpolation-mode:bicubic;clear:both;display:block;max-width:100%;outline:0;text-decoration:none;width:auto">
                                                                                     </p>
 
-                                                                                    <p style="Margin:0;Margin-bottom:10px;color:#6d6e70;font-family:'Trebuchet MS',sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;margin-bottom:10px;padding:0;text-align:left">
+                                                                                    <p style="Margin:0;Margin-bottom:10px;color:#4C4D4E;font-family:'Trebuchet MS',sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;margin-bottom:10px;padding:0;text-align:left">
                                                                                         Yael Eckstein
                                                                                         <br />Senior Vice President</p>
                                                                                 </template>
                                                                                 <template [ngIf]="body.html[6]?.changingThisBreaksApplicationSecurity !== 'Rabbi' && body.html[6]?.changingThisBreaksApplicationSecurity !== 'Yael' && body.html[6]?.changingThisBreaksApplicationSecurity !== ''">
-                                                                                    <p [innerHTML]="body.html[6]" style="Margin:0;Margin-bottom:10px;color:#6d6e70;font-family:'Trebuchet MS',sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;margin-bottom:10px;padding:0;text-align:left"></p>
+                                                                                    <p [innerHTML]="body.html[6]" style="Margin:0;Margin-bottom:10px;color:#4C4D4E;font-family:'Trebuchet MS',sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;margin-bottom:10px;padding:0;text-align:left"></p>
                                                                                 </template>
                                                                             </th>
                                                                         </tr>
@@ -303,7 +305,7 @@
                                                                 <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
                                                                     <tr style="padding:0;text-align:left;vertical-align:top">
                                                                         <th style="Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">
-                                                                            <p style="Margin:0;Margin-bottom:10px;color:#6d6e70;font-family:'Trebuchet MS',sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;margin-bottom:10px;padding:0;text-align:left">
+                                                                            <p style="Margin:0;Margin-bottom:10px;color:#4C4D4E;font-family:'Trebuchet MS',sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;margin-bottom:10px;padding:0;text-align:left">
                                                                                 <span [innerHTML]="body.html[3]"></span>
                                                                             </p>
                                                                         </th>
